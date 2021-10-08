@@ -1,0 +1,130 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+#update_notification{
+	background-color: #cefac6;
+	padding: 3px 20px 3px 20px;
+	border: 1px solid #999999;
+	display: none;
+	width: 165px;
+}
+.panel-heading .right_side{
+	font-size: 16px;
+	font-weight: bold;
+	color: #666666;
+}
+.panel-heading .right_side select{
+	font-size: 14px;
+}
+#form_type_warning{
+	color: #D42601;
+	font-size: 14px;
+	display: block;
+	margin-top: 8px;
+	display: inline-block;
+	display: none;
+}
+#form_name_warning{
+	color: #D42601;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+	display: inline-block;
+	display: none;
+}
+#form_name_container{
+	font-size: 16px;
+	font-weight: bold;
+	color: #666666;
+	margin: 0px 0 15px 0;
+}
+#form_name{
+	width: 400px;
+}
+#form_tools ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#form_tools ul li{
+	padding: 8px 16px 8px 16px;
+	background-color: #0F75BC;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	font-size: 13px;
+	cursor: pointer;
+}
+#form_build .form_item{
+	background-color: #FFFFFF;
+	border: 1px dotted #999999;
+}
+#form_build .form_heading{
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+}
+#form_build .edit_form_heading,
+#form_build .save_form_heading,
+#form_build .edit_field_label,
+#form_build .save_field_label,
+#form_build .edit_checkbox_label,
+#form_build .save_checkbox_label,
+#form_build .edit_radio_label,
+#form_build .save_radio_label{
+	display: inline-block;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#form_build .add_form_element{
+	cursor: pointer;
+}
+#form_build .edit_form_heading img,
+#form_build .save_form_heading img,
+#form_build .edit_field_label img,
+#form_build .save_field_label img,
+#form_build .add_form_element img,
+#form_build .edit_checkbox_label img,
+#form_build .save_checkbox_label img,
+#form_build .edit_radio_label img,
+#form_build .save_radio_label img{
+	height: 36px;
+}
+#form_build .form_text_input,
+#form_build .form_label_text,
+#form_build .form_textarea_input{
+	width: 500px;
+	margin-right: 5px;
+}
+#form_build .form_textarea_input{
+	margin-top: 5px;
+}
+#form_build .text_area_controls{
+	display: inline-block;
+	width: 34px;
+}
+#form_build .up_arrow,
+#form_build .down_arrow{
+	cursor: pointer;
+	margin-bottom: 0px;
+}
+#form_build .up_arrow img,
+#form_build .down_arrow img{
+	height: 30px;
+}
+#form_build .checkbox_label,
+#form_build .radio_label{
+	display: inline-block;
+	margin-left: 10px;
+}
+#form_build .dropdown{
+	margin-top: 5px;
+	margin-bottom: 15px;
+	display: inline-block;
+}

@@ -1,0 +1,28 @@
+
+@font-face {
+    font-family: 'aileronsregular';
+    src: url('../fonts/ailerons-typeface-webfont.woff2') format('woff2'),
+         url('../fonts/ailerons-typeface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'new_york_escaperegular';
+    src: url('../fonts/newyorkescape-webfont.woff2') format('woff2'),
+         url('../fonts/newyorkescape-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/Helvetica.woff') format('woff'),
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helvetica_neue';
+    src: url('../fonts/HelveticaNeueLTStd-UltLtEx.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLTStd-UltLtEx.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

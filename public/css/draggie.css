@@ -1,0 +1,38 @@
+.draggable {
+  user-select: none;
+}
+
+.draggable.transitioning {
+  transition: 0.5s top cubic-bezier(0.645, 0.045, 0.355, 1), 0.6s left cubic-bezier(0.645, 0.045, 0.355, 1);
+  will-change: top, left;
+}
+
+.target {
+  width: 150px;
+  height: 30px;
+  background-color: #FFFFFF;
+  transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: white;
+  user-select: none;
+  display: none;
+}
+#target{
+	width: 150px;
+  height: 30px;
+  background-color: #FFFFFF;
+  transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: white;
+  user-select: none;
+  display: inline-block;
+}
+.is-dragging .target {
+  border: 1px dashed #222222;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+}
+
+.target.hovering {
+  border: 1px dashed #222222;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+}

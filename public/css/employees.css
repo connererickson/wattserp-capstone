@@ -1,0 +1,19 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+/******************
+ * MANAGE EMPLOYEES
+ *****************/
+#create_employee_row{
+	display: none;
+}
+#employee_personal_information td, #employee_emergency_contact td{
+	padding: 8px;
+}

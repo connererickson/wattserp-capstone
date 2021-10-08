@@ -1,0 +1,104 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+/******************
+ * MANAGE DIRECTORY
+ *****************/
+#administrate_directory .directory_function_container{
+	display: none;
+}
+#administrate_directory .directory_function_container .type_name{
+	display: inline-block;
+	width: 200px;
+}
+#administrate_directory .directory_function_container .type_container{
+	padding: 10px;
+}
+#administrate_directory .directory_function_container h4{
+	font-weight: bold;
+	display: inline-block;
+}
+#directory_contact_form .crm_form,
+#directory_location_form .crm_form{
+	padding: 0;
+}
+#directory_contact_form .crm_form input,
+#directory_location_form .crm_form input,
+#directory_location_form .crm_form select
+{
+	max-width: 500px;
+}
+#contacts .directory_contact_name
+{
+	font-size: 18px;
+}
+#contacts .directory_contact_title{
+	font-size: 14px;
+	font-weight: bold;
+}
+#contacts .directory_contact_phone{
+	font-weight: bold;
+}
+#contacts .directory_contact_phone .phone{
+	font-weight: normal;
+}
+#contacts .directory_edit_contact,
+#locations .directory_edit_location{
+	float: right;
+	cursor: pointer;
+}
+#locations .directory_address,
+#locations .directory_city,
+#locations .directory_state,
+#locations .directory_zip{
+	font-size: 16px;
+}
+#stakeholder .stakec_container span,
+#news .news_container span{
+	font-size: 11px;
+	font-weight: bold;
+}
+#stakeholder #sc_message,
+#news #news_message{
+	height: 100px;
+	resize: none;
+}
+#stakeholder .stakec_container,
+#news .news_container{
+	padding-left: 15px;
+}
+#stakeholder .edit_stakeholdercorrespondence img,
+#news .edit_news img{
+	height: 32px;
+	margin-top: 10px;
+}
+#stakeholder #sc_save_edit,
+#news #news_save_edit{
+	margin-right: 10px;
+	margin-top: 5px;
+}
+#stakeholder #sc_cancel_edit,
+#news #news_cancel_edit{
+	margin-top: 5px;
+}
+#rates .rates_heading,
+#manage_rates .rates_heading{
+	font-weight: bold;
+}
+#rates_table_headers{
+	border-bottom: 2px solid #ddd;
+}
+#rates .rates_table_data, 
+#manage_rates .rates_table_data{
+    border-top: 1px solid #ddd;
+}
+#add_interval{
+	margin-bottom: 20px;
+}

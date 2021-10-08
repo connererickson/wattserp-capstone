@@ -1,0 +1,108 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+/******************
+ * TRAINING STYLES
+ *****************/
+
+#training_course_content{
+	border: 1px solid #444444;
+	margin: 20px;
+}
+.training_course_slide_image{
+	text-align: center;
+}
+.training_course_slide_info{
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #444444;
+}
+.training_course_slide_info .slide_name{
+	font-weight: bold;
+	font-size: 18px;
+	float: left;
+}
+.training_course_slide_info .slide_audio{
+	font-weight: bold;
+	font-size: 18px;
+	float: none;
+	display: inline-block;
+}
+.training_course_slide_info .slide_timer{
+	font-weight: bold;
+	font-size: 18px;
+	float: right;
+}
+#training_course_controls{
+	height: 80px;
+	width: 100%;
+	text-align: center;
+	padding: 3px;
+	border: 1px solid #444444;
+}
+#training_course_back{
+	float: left;
+	cursor: pointer;
+}
+#training_course_back img{
+	height: 70px;
+	opacity: .5;
+}
+#training_course_pause, #training_course_play{
+	display: inline-block;
+	cursor: pointer;
+}
+#training_course_pause img, #training_course_play img{
+	height: 70px;
+	opacity: .5;
+}
+#training_course_forward{
+	float: right;
+	cursor: pointer;
+}
+#training_course_forward img{
+	height: 70px;
+	opacity: .5;
+}
+#training_course_controls .tbutton_active img{
+	opacity: 1;
+}
+.slide_container{
+	display: none;
+}
+#training_course_play_button{
+	height: 150px;
+	cursor: pointer;
+	margin: 200px;
+}
+#slides_area .slide_name{
+	margin: 0px;
+}
+#slides_area .slide_inner{
+	padding-bottom: 20px;
+}
+#slides_area .slide_img img{
+	height: 200px;
+	width: auto;
+}
+#slides_area .slide .target{
+	height: 0px;
+}
+#training_slideshow .finished_training{
+	font-size: 20px;
+}
+#loading_certificate img{
+	height: 200px;
+}
+#show_certificate{
+	display: none;
+}

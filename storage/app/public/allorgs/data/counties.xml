@@ -1,0 +1,3791 @@
+<states updated="2007-10-17">
+    <state>
+        <name>Alabama</name>
+        <abv>AL</abv>
+        <counties>
+            <county>Autauga County</county>
+            <county>Baldwin County</county>
+            <county>Barbour County</county>
+            <county>Bibb County</county>
+            <county>Blount County</county>
+            <county>Bullock County</county>
+            <county>Butler County</county>
+            <county>Calhoun County</county>
+            <county>Chambers County</county>
+            <county>Cherokee County</county>
+            <county>Chilton County</county>
+            <county>Choctaw County</county>
+            <county>Clarke County</county>
+            <county>Clay County</county>
+            <county>Cleburne County</county>
+            <county>Coffee County</county>
+            <county>Colbert County</county>
+            <county>Conecuh County</county>
+            <county>Coosa County</county>
+            <county>Covington County</county>
+            <county>Crenshaw County</county>
+            <county>Cullman County</county>
+            <county>Dale County</county>
+            <county>Dallas County</county>
+            <county>DeKalb County</county>
+            <county>Elmore County</county>
+            <county>Escambia County</county>
+            <county>Etowah County</county>
+            <county>Fayette County</county>
+            <county>Franklin County</county>
+            <county>Geneva County</county>
+            <county>Greene County</county>
+            <county>Hale County</county>
+            <county>Henry County</county>
+            <county>Houston County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Lamar County</county>
+            <county>Lauderdale County</county>
+            <county>Lawrence County</county>
+            <county>Lee County</county>
+            <county>Limestone County</county>
+            <county>Lowndes County</county>
+            <county>Macon County</county>
+            <county>Madison County</county>
+            <county>Marengo County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Mobile County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Perry County</county>
+            <county>Pickens County</county>
+            <county>Pike County</county>
+            <county>Randolph County</county>
+            <county>Russell County</county>
+            <county>Shelby County</county>
+            <county>St. Clair County</county>
+            <county>Sumter County</county>
+            <county>Talladega County</county>
+            <county>Tallapoosa County</county>
+            <county>Tuscaloosa County</county>
+            <county>Walker County</county>
+            <county>Washington County</county>
+            <county>Wilcox County</county>
+            <county>Winston County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Alaska</name>
+        <abv>AK</abv>
+        <counties>
+            <county>Anchorage Borough</county>
+            <county>Bethel Census Area</county>
+            <county>Bristol Bay Borough</county>
+            <county>Dillingham Census Area</county>
+            <county>Fairbanks North Star Borough</county>
+            <county>Haines Borough</county>
+            <county>Juneau Borough</county>
+            <county>Kenai Peninsula Borough</county>
+            <county>Ketchikan Gateway Borough</county>
+            <county>Kodiak Island Borough</county>
+            <county>Matanuska-Susitna Borough</county>
+            <county>Nome Census Area</county>
+            <county>North Slope Borough</county>
+            <county>Prince of Wales-Outer Ketchikan Census A</county>
+            <county>Sitka Borough</county>
+            <county>Skagway-Hoonah-Angoon Census Area</county>
+            <county>Southeast Fairbanks Census Area</county>
+            <county>Valdez-Cordova Census Area</county>
+            <county>Wade Hampton Census Area</county>
+            <county>Wrangell-Petersburg Census Area</county>
+            <county>Yakutat Borough</county>
+            <county>Yukon-Koyukuk Census Area</county>
+        </counties>
+    </state>
+    <state>
+        <name>Arizona</name>
+        <abv>AZ</abv>
+        <counties>
+            <county>Apache County</county>
+            <county>Cochise County</county>
+            <county>Coconino County</county>
+            <county>Gila County</county>
+            <county>Graham County</county>
+            <county>Greenlee County</county>
+            <county>La Paz County</county>
+            <county>Maricopa County</county>
+            <county>Mohave County</county>
+            <county>Navajo County</county>
+            <county>Pima County</county>
+            <county>Pinal County</county>
+            <county>Santa Cruz County</county>
+            <county>Yavapai County</county>
+            <county>Yuma County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Arkansas</name>
+        <abv>AR</abv>
+        <counties>
+            <county>Arkansas County</county>
+            <county>Ashley County</county>
+            <county>Baxter County</county>
+            <county>Benton County</county>
+            <county>Boone County</county>
+            <county>Bradley County</county>
+            <county>Calhoun County</county>
+            <county>Carroll County</county>
+            <county>Chicot County</county>
+            <county>Clark County</county>
+            <county>Clay County</county>
+            <county>Cleburne County</county>
+            <county>Cleveland County</county>
+            <county>Columbia County</county>
+            <county>Conway County</county>
+            <county>Craighead County</county>
+            <county>Crawford County</county>
+            <county>Crittenden County</county>
+            <county>Cross County</county>
+            <county>Dallas County</county>
+            <county>Desha County</county>
+            <county>Drew County</county>
+            <county>Faulkner County</county>
+            <county>Franklin County</county>
+            <county>Fulton County</county>
+            <county>Garland County</county>
+            <county>Grant County</county>
+            <county>Greene County</county>
+            <county>Hempstead County</county>
+            <county>Hot Spring County</county>
+            <county>Howard County</county>
+            <county>Independence County</county>
+            <county>Izard County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Johnson County</county>
+            <county>Lafayette County</county>
+            <county>Lawrence County</county>
+            <county>Lee County</county>
+            <county>Lincoln County</county>
+            <county>Little River County</county>
+            <county>Logan County</county>
+            <county>Lonoke County</county>
+            <county>Madison County</county>
+            <county>Marion County</county>
+            <county>Miller County</county>
+            <county>Mississippi County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Nevada County</county>
+            <county>Newton County</county>
+            <county>Ouachita County</county>
+            <county>Perry County</county>
+            <county>Phillips County</county>
+            <county>Pike County</county>
+            <county>Poinsett County</county>
+            <county>Polk County</county>
+            <county>Pope County</county>
+            <county>Prairie County</county>
+            <county>Pulaski County</county>
+            <county>Randolph County</county>
+            <county>Saline County</county>
+            <county>Scott County</county>
+            <county>Searcy County</county>
+            <county>Sebastian County</county>
+            <county>Sevier County</county>
+            <county>Sharp County</county>
+            <county>St. Francis County</county>
+            <county>Stone County</county>
+            <county>Union County</county>
+            <county>Van Buren County</county>
+            <county>Washington County</county>
+            <county>White County</county>
+            <county>Woodruff County</county>
+            <county>Yell County</county>
+        </counties>
+    </state>
+    <state>
+        <name>California</name>
+        <abv>CA</abv>
+        <counties>
+            <county>Alameda County</county>
+            <county>Alpine County</county>
+            <county>Amador County</county>
+            <county>Butte County</county>
+            <county>Calaveras County</county>
+            <county>Colusa County</county>
+            <county>Contra Costa County</county>
+            <county>Del Norte County</county>
+            <county>El Dorado County</county>
+            <county>Fresno County</county>
+            <county>Glenn County</county>
+            <county>Humboldt County</county>
+            <county>Imperial County</county>
+            <county>Inyo County</county>
+            <county>Kern County</county>
+            <county>Kings County</county>
+            <county>Lake County</county>
+            <county>Lassen County</county>
+            <county>Los Angeles County</county>
+            <county>Madera County</county>
+            <county>Marin County</county>
+            <county>Mariposa County</county>
+            <county>Mendocino County</county>
+            <county>Merced County</county>
+            <county>Modoc County</county>
+            <county>Mono County</county>
+            <county>Monterey County</county>
+            <county>Napa County</county>
+            <county>Nevada County</county>
+            <county>Orange County</county>
+            <county>Placer County</county>
+            <county>Plumas County</county>
+            <county>Riverside County</county>
+            <county>Sacramento County</county>
+            <county>San Benito County</county>
+            <county>San Bernardino County</county>
+            <county>San Diego County</county>
+            <county>San Francisco County</county>
+            <county>San Joaquin County</county>
+            <county>San Luis Obispo County</county>
+            <county>San Mateo County</county>
+            <county>Santa Barbara County</county>
+            <county>Santa Clara County</county>
+            <county>Santa Cruz County</county>
+            <county>Shasta County</county>
+            <county>Sierra County</county>
+            <county>Siskiyou County</county>
+            <county>Solano County</county>
+            <county>Sonoma County</county>
+            <county>Stanislaus County</county>
+            <county>Sutter County</county>
+            <county>Tehama County</county>
+            <county>Trinity County</county>
+            <county>Tulare County</county>
+            <county>Tuolumne County</county>
+            <county>Ventura County</county>
+            <county>Yolo County</county>
+            <county>Yuba County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Colorado</name>
+        <abv>CO</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Alamosa County</county>
+            <county>Arapahoe County</county>
+            <county>Archuleta County</county>
+            <county>Baca County</county>
+            <county>Bent County</county>
+            <county>Boulder County</county>
+            <county>Broomfield County</county>
+            <county>Chaffee County</county>
+            <county>Cheyenne County</county>
+            <county>Clear Creek County</county>
+            <county>Conejos County</county>
+            <county>Costilla County</county>
+            <county>Crowley County</county>
+            <county>Custer County</county>
+            <county>Delta County</county>
+            <county>Denver County</county>
+            <county>Dolores County</county>
+            <county>Douglas County</county>
+            <county>Eagle County</county>
+            <county>El Paso County</county>
+            <county>Elbert County</county>
+            <county>Fremont County</county>
+            <county>Garfield County</county>
+            <county>Gilpin County</county>
+            <county>Grand County</county>
+            <county>Gunnison County</county>
+            <county>Hinsdale County</county>
+            <county>Huerfano County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Kiowa County</county>
+            <county>Kit Carson County</county>
+            <county>La Plata County</county>
+            <county>Lake County</county>
+            <county>Larimer County</county>
+            <county>Las Animas County</county>
+            <county>Lincoln County</county>
+            <county>Logan County</county>
+            <county>Mesa County</county>
+            <county>Mineral County</county>
+            <county>Moffat County</county>
+            <county>Montezuma County</county>
+            <county>Montrose County</county>
+            <county>Morgan County</county>
+            <county>Otero County</county>
+            <county>Ouray County</county>
+            <county>Park County</county>
+            <county>Phillips County</county>
+            <county>Pitkin County</county>
+            <county>Prowers County</county>
+            <county>Pueblo County</county>
+            <county>Rio Blanco County</county>
+            <county>Rio Grande County</county>
+            <county>Routt County</county>
+            <county>Saguache County</county>
+            <county>San Juan County</county>
+            <county>San Miguel County</county>
+            <county>Sedgwick County</county>
+            <county>Summit County</county>
+            <county>Teller County</county>
+            <county>Washington County</county>
+            <county>Weld County</county>
+            <county>Yuma County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Connecticut</name>
+        <abv>CT</abv>
+        <counties>
+            <county>Fairfield County</county>
+            <county>Hartford County</county>
+            <county>Litchfield County</county>
+            <county>Middlesex County</county>
+            <county>New Haven County</county>
+            <county>New London County</county>
+            <county>Tolland County</county>
+            <county>Windham County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Delaware</name>
+        <abv>DE</abv>
+        <counties>
+            <county>Kent County</county>
+            <county>New Castle County</county>
+            <county>Sussex County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Florida</name>
+        <abv>FL</abv>
+        <counties>
+            <county>Alachua County</county>
+            <county>Baker County</county>
+            <county>Bay County</county>
+            <county>Bradford County</county>
+            <county>Brevard County</county>
+            <county>Broward County</county>
+            <county>Calhoun County</county>
+            <county>Charlotte County</county>
+            <county>Citrus County</county>
+            <county>Clay County</county>
+            <county>Collier County</county>
+            <county>Columbia County</county>
+            <county>DeSoto County</county>
+            <county>Dixie County</county>
+            <county>Duval County</county>
+            <county>Escambia County</county>
+            <county>Flagler County</county>
+            <county>Franklin County</county>
+            <county>Gadsden County</county>
+            <county>Gilchrist County</county>
+            <county>Glades County</county>
+            <county>Gulf County</county>
+            <county>Hamilton County</county>
+            <county>Hardee County</county>
+            <county>Hendry County</county>
+            <county>Hernando County</county>
+            <county>Highlands County</county>
+            <county>Hillsborough County</county>
+            <county>Holmes County</county>
+            <county>Indian River County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Lafayette County</county>
+            <county>Lake County</county>
+            <county>Lee County</county>
+            <county>Leon County</county>
+            <county>Levy County</county>
+            <county>Liberty County</county>
+            <county>Madison County</county>
+            <county>Manatee County</county>
+            <county>Marion County</county>
+            <county>Martin County</county>
+            <county>Miami-Dade County</county>
+            <county>Monroe County</county>
+            <county>Nassau County</county>
+            <county>Okaloosa County</county>
+            <county>Okeechobee County</county>
+            <county>Orange County</county>
+            <county>Osceola County</county>
+            <county>Palm Beach County</county>
+            <county>Pasco County</county>
+            <county>Pinellas County</county>
+            <county>Polk County</county>
+            <county>Putnam County</county>
+            <county>Santa Rosa County</county>
+            <county>Sarasota County</county>
+            <county>Seminole County</county>
+            <county>St. Johns County</county>
+            <county>St. Lucie County</county>
+            <county>Sumter County</county>
+            <county>Suwannee County</county>
+            <county>Taylor County</county>
+            <county>Union County</county>
+            <county>Volusia County</county>
+            <county>Wakulla County</county>
+            <county>Walton County</county>
+            <county>Washington County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Georgia</name>
+        <abv>GA</abv>
+        <counties>
+            <county>Appling County</county>
+            <county>Atkinson County</county>
+            <county>Bacon County</county>
+            <county>Baker County</county>
+            <county>Baldwin County</county>
+
+            <county>Banks County</county>
+            <county>Barrow County</county>
+            <county>Bartow County</county>
+            <county>Ben Hill County</county>
+            <county>Berrien County</county>
+            <county>Bibb County</county>
+
+            <county>Bleckley County</county>
+            <county>Brantley County</county>
+            <county>Brooks County</county>
+            <county>Bryan County</county>
+            <county>Bulloch County</county>
+            <county>Burke County</county>
+
+            <county>Butts County</county>
+            <county>Calhoun County</county>
+            <county>Camden County</county>
+            <county>Candler County</county>
+            <county>Carroll County</county>
+            <county>Catoosa County</county>
+
+            <county>Charlton County</county>
+            <county>Chatham County</county>
+            <county>Chattahoochee County</county>
+            <county>Chattooga County</county>
+            <county>Cherokee County</county>
+            <county>Clarke County</county>
+
+            <county>Clay County</county>
+            <county>Clayton County</county>
+            <county>Clinch County</county>
+            <county>Cobb County</county>
+            <county>Coffee County</county>
+            <county>Colquitt County</county>
+
+            <county>Columbia County</county>
+            <county>Cook County</county>
+            <county>Coweta County</county>
+            <county>Crawford County</county>
+            <county>Crisp County</county>
+            <county>Dade County</county>
+
+            <county>Dawson County</county>
+            <county>Decatur County</county>
+            <county>DeKalb County</county>
+            <county>Dodge County</county>
+            <county>Dooly County</county>
+            <county>Dougherty County</county>
+
+            <county>Douglas County</county>
+            <county>Early County</county>
+            <county>Echols County</county>
+            <county>Effingham County</county>
+            <county>Elbert County</county>
+            <county>Emanuel County</county>
+
+            <county>Evans County</county>
+            <county>Fannin County</county>
+            <county>Fayette County</county>
+            <county>Floyd County</county>
+            <county>Forsyth County</county>
+            <county>Franklin County</county>
+
+            <county>Fulton County</county>
+            <county>Gilmer County</county>
+            <county>Glascock County</county>
+            <county>Glynn County</county>
+            <county>Gordon County</county>
+            <county>Grady County</county>
+
+            <county>Greene County</county>
+            <county>Gwinnett County</county>
+            <county>Habersham County</county>
+            <county>Hall County</county>
+            <county>Hancock County</county>
+            <county>Haralson County</county>
+
+            <county>Harris County</county>
+            <county>Hart County</county>
+            <county>Heard County</county>
+            <county>Henry County</county>
+            <county>Houston County</county>
+            <county>Irwin County</county>
+
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jeff Davis County</county>
+            <county>Jefferson County</county>
+            <county>Jenkins County</county>
+            <county>Johnson County</county>
+
+            <county>Jones County</county>
+            <county>Lamar County</county>
+            <county>Lanier County</county>
+            <county>Laurens County</county>
+            <county>Lee County</county>
+            <county>Liberty County</county>
+
+            <county>Lincoln County</county>
+            <county>Long County</county>
+            <county>Lowndes County</county>
+            <county>Lumpkin County</county>
+            <county>Macon County</county>
+            <county>Madison County</county>
+
+            <county>Marion County</county>
+            <county>McDuffie County</county>
+            <county>McIntosh County</county>
+            <county>Meriwether County</county>
+            <county>Miller County</county>
+            <county>Mitchell County</county>
+
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Murray County</county>
+            <county>Muscogee County</county>
+            <county>Newton County</county>
+
+            <county>Oconee County</county>
+            <county>Oglethorpe County</county>
+            <county>Paulding County</county>
+            <county>Peach County</county>
+            <county>Pickens County</county>
+            <county>Pierce County</county>
+
+            <county>Pike County</county>
+            <county>Polk County</county>
+            <county>Pulaski County</county>
+            <county>Putnam County</county>
+            <county>Quitman County</county>
+            <county>Rabun County</county>
+
+            <county>Randolph County</county>
+            <county>Richmond County</county>
+            <county>Rockdale County</county>
+            <county>Schley County</county>
+            <county>Screven County</county>
+            <county>Seminole County</county>
+
+            <county>Spalding County</county>
+            <county>Stephens County</county>
+            <county>Stewart County</county>
+            <county>Sumter County</county>
+            <county>Talbot County</county>
+            <county>Taliaferro County</county>
+
+            <county>Tattnall County</county>
+            <county>Taylor County</county>
+            <county>Telfair County</county>
+            <county>Terrell County</county>
+            <county>Thomas County</county>
+            <county>Tift County</county>
+
+            <county>Toombs County</county>
+            <county>Towns County</county>
+            <county>Treutlen County</county>
+            <county>Troup County</county>
+            <county>Turner County</county>
+            <county>Twiggs County</county>
+
+            <county>Union County</county>
+            <county>Upson County</county>
+            <county>Walker County</county>
+            <county>Walton County</county>
+            <county>Ware County</county>
+            <county>Warren County</county>
+
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Webster County</county>
+            <county>Wheeler County</county>
+            <county>White County</county>
+            <county>Whitfield County</county>
+
+            <county>Wilcox County</county>
+            <county>Wilkes County</county>
+            <county>Wilkinson County</county>
+            <county>Worth County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Hawaii</name>
+        <abv>HI</abv>
+        <counties>
+            <county>Hawaii County</county>
+            <county>Honolulu County</county>
+            <county>Kalawao County</county>
+            <county>Kauai County</county>
+            <county>Maui County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Idaho</name>
+        <abv>ID</abv>
+        <counties>
+            <county>Ada County</county>
+            <county>Adams County</county>
+            <county>Bannock County</county>
+            <county>Bear Lake County</county>
+            <county>Benewah County</county>
+
+            <county>Bingham County</county>
+            <county>Blaine County</county>
+            <county>Boise County</county>
+            <county>Bonner County</county>
+            <county>Bonneville County</county>
+            <county>Boundary County</county>
+
+            <county>Butte County</county>
+            <county>Camas County</county>
+            <county>Canyon County</county>
+            <county>Caribou County</county>
+            <county>Cassia County</county>
+            <county>Clark County</county>
+
+            <county>Clearwater County</county>
+            <county>Custer County</county>
+            <county>Elmore County</county>
+            <county>Franklin County</county>
+            <county>Fremont County</county>
+            <county>Gem County</county>
+            <county>Gooding County</county>
+            <county>Idaho County</county>
+            <county>Jefferson County</county>
+            <county>Jerome County</county>
+            <county>Kootenai County</county>
+            <county>Latah County</county>
+
+            <county>Lemhi County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Madison County</county>
+            <county>Minidoka County</county>
+            <county>Nez Perce County</county>
+
+            <county>Oneida County</county>
+            <county>Owyhee County</county>
+            <county>Payette County</county>
+            <county>Power County</county>
+            <county>Shoshone County</county>
+            <county>Teton County</county>
+
+            <county>Twin Falls County</county>
+            <county>Valley County</county>
+            <county>Washington County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Illinois</name>
+        <abv>IL</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Alexander County</county>
+            <county>Bond County</county>
+            <county>Boone County</county>
+            <county>Brown County</county>
+
+            <county>Bureau County</county>
+            <county>Calhoun County</county>
+            <county>Carroll County</county>
+            <county>Cass County</county>
+            <county>Champaign County</county>
+            <county>Christian County</county>
+
+            <county>Clark County</county>
+            <county>Clay County</county>
+            <county>Clinton County</county>
+            <county>Coles County</county>
+            <county>Cook County</county>
+            <county>Crawford County</county>
+
+            <county>Cumberland County</county>
+            <county>De Witt County</county>
+            <county>DeKalb County</county>
+            <county>Douglas County</county>
+            <county>DuPage County</county>
+            <county>Edgar County</county>
+
+            <county>Edwards County</county>
+            <county>Effingham County</county>
+            <county>Fayette County</county>
+            <county>Ford County</county>
+            <county>Franklin County</county>
+            <county>Fulton County</county>
+
+            <county>Gallatin County</county>
+            <county>Greene County</county>
+            <county>Grundy County</county>
+            <county>Hamilton County</county>
+            <county>Hancock County</county>
+            <county>Hardin County</county>
+
+            <county>Henderson County</county>
+            <county>Henry County</county>
+            <county>Iroquois County</county>
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jefferson County</county>
+
+            <county>Jersey County</county>
+            <county>Jo Daviess County</county>
+            <county>Johnson County</county>
+            <county>Kane County</county>
+            <county>Kankakee County</county>
+            <county>Kendall County</county>
+
+            <county>Knox County</county>
+            <county>La Salle County</county>
+            <county>Lake County</county>
+            <county>Lawrence County</county>
+            <county>Lee County</county>
+            <county>Livingston County</county>
+
+            <county>Logan County</county>
+            <county>Macon County</county>
+            <county>Macoupin County</county>
+            <county>Madison County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+
+            <county>Mason County</county>
+            <county>Massac County</county>
+            <county>McDonough County</county>
+            <county>McHenry County</county>
+            <county>McLean County</county>
+            <county>Menard County</county>
+
+            <county>Mercer County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Moultrie County</county>
+            <county>Ogle County</county>
+
+            <county>Peoria County</county>
+            <county>Perry County</county>
+            <county>Piatt County</county>
+            <county>Pike County</county>
+            <county>Pope County</county>
+            <county>Pulaski County</county>
+
+            <county>Putnam County</county>
+            <county>Randolph County</county>
+            <county>Richland County</county>
+            <county>Rock Island County</county>
+            <county>Saline County</county>
+            <county>Sangamon County</county>
+
+            <county>Schuyler County</county>
+            <county>Scott County</county>
+            <county>Shelby County</county>
+            <county>St. Clair County</county>
+            <county>Stark County</county>
+            <county>Stephenson County</county>
+
+            <county>Tazewell County</county>
+            <county>Union County</county>
+            <county>Vermilion County</county>
+            <county>Wabash County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+
+            <county>Wayne County</county>
+            <county>White County</county>
+            <county>Whiteside County</county>
+            <county>Will County</county>
+            <county>Williamson County</county>
+            <county>Winnebago County</county>
+
+            <county>Woodford County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Indiana</name>
+        <abv>IN</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Allen County</county>
+            <county>Bartholomew County</county>
+            <county>Benton County</county>
+            <county>Blackford County</county>
+
+            <county>Boone County</county>
+            <county>Brown County</county>
+            <county>Carroll County</county>
+            <county>Cass County</county>
+            <county>Clark County</county>
+            <county>Clay County</county>
+
+            <county>Clinton County</county>
+            <county>Crawford County</county>
+            <county>Daviess County</county>
+            <county>De Kalb County</county>
+            <county>Dearborn County</county>
+            <county>Decatur County</county>
+
+            <county>Delaware County</county>
+            <county>Dubois County</county>
+            <county>Elkhart County</county>
+            <county>Fayette County</county>
+            <county>Floyd County</county>
+            <county>Fountain County</county>
+
+            <county>Franklin County</county>
+            <county>Fulton County</county>
+            <county>Gibson County</county>
+            <county>Grant County</county>
+            <county>Greene County</county>
+            <county>Hamilton County</county>
+
+            <county>Hancock County</county>
+            <county>Harrison County</county>
+            <county>Hendricks County</county>
+            <county>Henry County</county>
+            <county>Howard County</county>
+            <county>Huntington County</county>
+
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jay County</county>
+            <county>Jefferson County</county>
+            <county>Jennings County</county>
+            <county>Johnson County</county>
+
+            <county>Knox County</county>
+            <county>Kosciusko County</county>
+            <county>La Porte County</county>
+            <county>Lagrange County</county>
+            <county>Lake County</county>
+            <county>Lawrence County</county>
+
+            <county>Madison County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Martin County</county>
+            <county>Miami County</county>
+            <county>Monroe County</county>
+
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Newton County</county>
+            <county>Noble County</county>
+            <county>Ohio County</county>
+            <county>Orange County</county>
+
+            <county>Owen County</county>
+            <county>Parke County</county>
+            <county>Perry County</county>
+            <county>Pike County</county>
+            <county>Porter County</county>
+            <county>Posey County</county>
+
+            <county>Pulaski County</county>
+            <county>Putnam County</county>
+            <county>Randolph County</county>
+            <county>Ripley County</county>
+            <county>Rush County</county>
+            <county>Scott County</county>
+
+            <county>Shelby County</county>
+            <county>Spencer County</county>
+            <county>St. Joseph County</county>
+            <county>Starke County</county>
+            <county>Steuben County</county>
+            <county>Sullivan County</county>
+
+            <county>Switzerland County</county>
+            <county>Tippecanoe County</county>
+            <county>Tipton County</county>
+            <county>Union County</county>
+            <county>Vanderburgh County</county>
+            <county>Vermillion County</county>
+
+            <county>Vigo County</county>
+            <county>Wabash County</county>
+            <county>Warren County</county>
+            <county>Warrick County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+
+            <county>Wells County</county>
+            <county>White County</county>
+            <county>Whitley County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Iowa</name>
+        <abv>IA</abv>
+        <counties>
+            <county>Adair County</county>
+            <county>Adams County</county>
+            <county>Allamakee County</county>
+            <county>Appanoose County</county>
+            <county>Audubon County</county>
+
+            <county>Benton County</county>
+            <county>Black Hawk County</county>
+            <county>Boone County</county>
+            <county>Bremer County</county>
+            <county>Buchanan County</county>
+            <county>Buena Vista County</county>
+
+            <county>Butler County</county>
+            <county>Calhoun County</county>
+            <county>Carroll County</county>
+            <county>Cass County</county>
+            <county>Cedar County</county>
+            <county>Cerro Gordo County</county>
+
+            <county>Cherokee County</county>
+            <county>Chickasaw County</county>
+            <county>Clarke County</county>
+            <county>Clay County</county>
+            <county>Clayton County</county>
+            <county>Clinton County</county>
+
+            <county>Crawford County</county>
+            <county>Dallas County</county>
+            <county>Davis County</county>
+            <county>Decatur County</county>
+            <county>Delaware County</county>
+            <county>Des Moines County</county>
+
+            <county>Dickinson County</county>
+            <county>Dubuque County</county>
+            <county>Emmet County</county>
+            <county>Fayette County</county>
+            <county>Floyd County</county>
+            <county>Franklin County</county>
+
+            <county>Fremont County</county>
+            <county>Greene County</county>
+            <county>Grundy County</county>
+            <county>Guthrie County</county>
+            <county>Hamilton County</county>
+            <county>Hancock County</county>
+
+            <county>Hardin County</county>
+            <county>Harrison County</county>
+            <county>Henry County</county>
+            <county>Howard County</county>
+            <county>Humboldt County</county>
+            <county>Ida County</county>
+
+            <county>Iowa County</county>
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jefferson County</county>
+            <county>Johnson County</county>
+            <county>Jones County</county>
+
+            <county>Keokuk County</county>
+            <county>Kossuth County</county>
+            <county>Lee County</county>
+            <county>Linn County</county>
+            <county>Louisa County</county>
+            <county>Lucas County</county>
+
+            <county>Lyon County</county>
+            <county>Madison County</county>
+            <county>Mahaska County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Mills County</county>
+
+            <county>Mitchell County</county>
+            <county>Monona County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Muscatine County</county>
+            <county>O'Brien County</county>
+
+            <county>Osceola County</county>
+            <county>Page County</county>
+            <county>Palo Alto County</county>
+            <county>Plymouth County</county>
+            <county>Pocahontas County</county>
+            <county>Polk County</county>
+
+            <county>Pottawattamie County</county>
+            <county>Poweshiek County</county>
+            <county>Ringgold County</county>
+            <county>Sac County</county>
+            <county>Scott County</county>
+            <county>Shelby County</county>
+
+            <county>Sioux County</county>
+            <county>Story County</county>
+            <county>Tama County</county>
+            <county>Taylor County</county>
+            <county>Union County</county>
+            <county>Van Buren County</county>
+
+            <county>Wapello County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Webster County</county>
+            <county>Winnebago County</county>
+
+            <county>Winneshiek County</county>
+            <county>Woodbury County</county>
+            <county>Worth County</county>
+            <county>Wright County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Kansas</name>
+        <abv>KS</abv>
+        <counties>
+            <county>Allen County</county>
+            <county>Anderson County</county>
+            <county>Atchison County</county>
+            <county>Barber County</county>
+            <county>Barton County</county>
+
+            <county>Bourbon County</county>
+            <county>Brown County</county>
+            <county>Butler County</county>
+            <county>Chase County</county>
+            <county>Chautauqua County</county>
+            <county>Cherokee County</county>
+
+            <county>Cheyenne County</county>
+            <county>Clark County</county>
+            <county>Clay County</county>
+            <county>Cloud County</county>
+            <county>Coffey County</county>
+            <county>Comanche County</county>
+
+            <county>Cowley County</county>
+            <county>Crawford County</county>
+            <county>Decatur County</county>
+            <county>Dickinson County</county>
+            <county>Doniphan County</county>
+            <county>Douglas County</county>
+
+            <county>Edwards County</county>
+            <county>Elk County</county>
+            <county>Ellis County</county>
+            <county>Ellsworth County</county>
+            <county>Finney County</county>
+            <county>Ford County</county>
+
+            <county>Franklin County</county>
+            <county>Geary County</county>
+            <county>Gove County</county>
+            <county>Graham County</county>
+            <county>Grant County</county>
+            <county>Gray County</county>
+
+            <county>Greeley County</county>
+            <county>Greenwood County</county>
+            <county>Hamilton County</county>
+            <county>Harper County</county>
+            <county>Harvey County</county>
+            <county>Haskell County</county>
+
+            <county>Hodgeman County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Jewell County</county>
+            <county>Johnson County</county>
+            <county>Kearny County</county>
+
+            <county>Kingman County</county>
+            <county>Kiowa County</county>
+            <county>Labette County</county>
+            <county>Lane County</county>
+            <county>Leavenworth County</county>
+            <county>Lincoln County</county>
+
+            <county>Linn County</county>
+            <county>Logan County</county>
+            <county>Lyon County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>McPherson County</county>
+
+            <county>Meade County</county>
+            <county>Miami County</county>
+            <county>Mitchell County</county>
+            <county>Montgomery County</county>
+            <county>Morris County</county>
+            <county>Morton County</county>
+
+            <county>Nemaha County</county>
+            <county>Neosho County</county>
+            <county>Ness County</county>
+            <county>Norton County</county>
+            <county>Osage County</county>
+            <county>Osborne County</county>
+
+            <county>Ottawa County</county>
+            <county>Pawnee County</county>
+            <county>Phillips County</county>
+            <county>Pottawatomie County</county>
+            <county>Pratt County</county>
+            <county>Rawlins County</county>
+
+            <county>Reno County</county>
+            <county>Republic County</county>
+            <county>Rice County</county>
+            <county>Riley County</county>
+            <county>Rooks County</county>
+            <county>Rush County</county>
+
+            <county>Russell County</county>
+            <county>Saline County</county>
+            <county>Scott County</county>
+            <county>Sedgwick County</county>
+            <county>Seward County</county>
+            <county>Shawnee County</county>
+
+            <county>Sheridan County</county>
+            <county>Sherman County</county>
+            <county>Smith County</county>
+            <county>Stafford County</county>
+            <county>Stanton County</county>
+            <county>Stevens County</county>
+
+            <county>Sumner County</county>
+            <county>Thomas County</county>
+            <county>Trego County</county>
+            <county>Wabaunsee County</county>
+            <county>Wallace County</county>
+            <county>Washington County</county>
+
+            <county>Wichita County</county>
+            <county>Wilson County</county>
+            <county>Woodson County</county>
+            <county>Wyandotte County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Kentucky</name>
+        <abv>KY</abv>
+        <counties>
+            <county>Adair County</county>
+            <county>Allen County</county>
+            <county>Anderson County</county>
+            <county>Ballard County</county>
+            <county>Barren County</county>
+
+            <county>Bath County</county>
+            <county>Bell County</county>
+            <county>Boone County</county>
+            <county>Bourbon County</county>
+            <county>Boyd County</county>
+            <county>Boyle County</county>
+
+            <county>Bracken County</county>
+            <county>Breathitt County</county>
+            <county>Breckenridge County</county>
+            <county>Bullitt County</county>
+            <county>Butler County</county>
+            <county>Caldwell County</county>
+
+            <county>Calloway County</county>
+            <county>Campbell County</county>
+            <county>Carlisle County</county>
+            <county>Carroll County</county>
+            <county>Carter County</county>
+            <county>Casey County</county>
+
+            <county>Christian County</county>
+            <county>Clark County</county>
+            <county>Clay County</county>
+            <county>Clinton County</county>
+            <county>Crittenden County</county>
+            <county>Cumberland County</county>
+
+            <county>Daviess County</county>
+            <county>Edmonson County</county>
+            <county>Elliott County</county>
+            <county>Estill County</county>
+            <county>Fayette County</county>
+            <county>Fleming County</county>
+
+            <county>Floyd County</county>
+            <county>Franklin County</county>
+            <county>Fulton County</county>
+            <county>Gallatin County</county>
+            <county>Garrard County</county>
+            <county>Grant County</county>
+
+            <county>Graves County</county>
+            <county>Grayson County</county>
+            <county>Green County</county>
+            <county>Greenup County</county>
+            <county>Hancock County</county>
+            <county>Hardin County</county>
+
+            <county>Harlan County</county>
+            <county>Harrison County</county>
+            <county>Hart County</county>
+            <county>Henderson County</county>
+            <county>Henry County</county>
+            <county>Hickman County</county>
+
+            <county>Hopkins County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Jessamine County</county>
+            <county>Johnson County</county>
+            <county>Kenton County</county>
+
+            <county>Knott County</county>
+            <county>Knox County</county>
+            <county>Larue County</county>
+            <county>Laurel County</county>
+            <county>Lawrence County</county>
+            <county>Lee County</county>
+
+            <county>Leslie County</county>
+            <county>Letcher County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Livingston County</county>
+            <county>Logan County</county>
+
+            <county>Lyon County</county>
+            <county>Madison County</county>
+            <county>Magoffin County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Martin County</county>
+
+            <county>Mason County</county>
+            <county>McCracken County</county>
+            <county>McCreary County</county>
+            <county>McLean County</county>
+            <county>Meade County</county>
+            <county>Menifee County</county>
+
+            <county>Mercer County</county>
+            <county>Metcalfe County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Muhlenberg County</county>
+
+            <county>Nelson County</county>
+            <county>Nicholas County</county>
+            <county>Ohio County</county>
+            <county>Oldham County</county>
+            <county>Owen County</county>
+            <county>Owsley County</county>
+
+            <county>Pendleton County</county>
+            <county>Perry County</county>
+            <county>Pike County</county>
+            <county>Powell County</county>
+            <county>Pulaski County</county>
+            <county>Robertson County</county>
+
+            <county>Rockcastle County</county>
+            <county>Rowan County</county>
+            <county>Russell County</county>
+            <county>Scott County</county>
+            <county>Shelby County</county>
+            <county>Simpson County</county>
+
+            <county>Spencer County</county>
+            <county>Taylor County</county>
+            <county>Todd County</county>
+            <county>Trigg County</county>
+            <county>Trimble County</county>
+            <county>Union County</county>
+
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Webster County</county>
+            <county>Whitley County</county>
+            <county>Wolfe County</county>
+
+            <county>Woodford County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Louisiana</name>
+        <abv>LA</abv>
+        <counties>
+            <county>Acadia Parish</county>
+            <county>Allen Parish</county>
+            <county>Ascension Parish</county>
+            <county>Assumption Parish</county>
+            <county>Avoyelles Parish</county>
+
+            <county>Beauregard Parish</county>
+            <county>Bienville Parish</county>
+            <county>Bossier Parish</county>
+            <county>Caddo Parish</county>
+            <county>Calcasieu Parish</county>
+            <county>Caldwell Parish</county>
+
+            <county>Cameron Parish</county>
+            <county>Catahoula Parish</county>
+            <county>Claiborne Parish</county>
+            <county>Concordia Parish</county>
+            <county>De Soto Parish</county>
+            <county>East Baton Rouge Parish</county>
+
+            <county>East Carroll Parish</county>
+            <county>East Feliciana Parish</county>
+            <county>Evangeline Parish</county>
+            <county>Franklin Parish</county>
+            <county>Grant Parish</county>
+            <county>Iberia Parish</county>
+
+            <county>Iberville Parish</county>
+            <county>Jackson Parish</county>
+            <county>Jefferson Davis Parish</county>
+            <county>Jefferson Parish</county>
+            <county>La Salle Parish</county>
+            <county>Lafayette Parish</county>
+
+            <county>Lafourche Parish</county>
+            <county>Lincoln Parish</county>
+            <county>Livingston Parish</county>
+            <county>Madison Parish</county>
+            <county>Morehouse Parish</county>
+            <county>Natchitoches Parish</county>
+
+            <county>Orleans Parish</county>
+            <county>Ouachita Parish</county>
+            <county>Plaquemines Parish</county>
+            <county>Pointe Coupee Parish</county>
+            <county>Rapides Parish</county>
+            <county>Red River Parish</county>
+
+            <county>Richland Parish</county>
+            <county>Sabine Parish</county>
+            <county>St. Bernard Parish</county>
+            <county>St. Charles Parish</county>
+            <county>St. Helena Parish</county>
+            <county>St. James Parish</county>
+
+            <county>St. John the Baptist Parish</county>
+            <county>St. Landry Parish</county>
+            <county>St. Martin Parish</county>
+            <county>St. Mary Parish</county>
+            <county>St. Tammany Parish</county>
+            <county>Tangipahoa Parish</county>
+
+            <county>Tensas Parish</county>
+            <county>Terrebonne Parish</county>
+            <county>Union Parish</county>
+            <county>Vermilion Parish</county>
+            <county>Vernon Parish</county>
+            <county>Washington Parish</county>
+
+            <county>Webster Parish</county>
+            <county>West Baton Rouge Parish</county>
+            <county>West Carroll Parish</county>
+            <county>West Feliciana Parish</county>
+            <county>Winn Parish</county>
+        </counties>
+    </state>
+    <state>
+        <name>Maine</name>
+        <abv>ME</abv>
+        <counties>
+            <county>Androscoggin County</county>
+            <county>Aroostook County</county>
+            <county>Cumberland County</county>
+            <county>Franklin County</county>
+            <county>Hancock County</county>
+
+            <county>Kennebec County</county>
+            <county>Knox County</county>
+            <county>Lincoln County</county>
+            <county>Oxford County</county>
+            <county>Penobscot County</county>
+            <county>Piscataquis County</county>
+
+            <county>Sagadahoc County</county>
+            <county>Somerset County</county>
+            <county>Waldo County</county>
+            <county>Washington County</county>
+            <county>York County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Maryland</name>
+        <abv>MD</abv>
+        <counties>
+            <county>Allegany County</county>
+            <county>Anne Arundel County</county>
+            <county>Baltimore City</county>
+            <county>Baltimore County</county>
+            <county>Calvert County</county>
+
+            <county>Caroline County</county>
+            <county>Carroll County</county>
+            <county>Cecil County</county>
+            <county>Charles County</county>
+            <county>Dorchester County</county>
+            <county>Frederick County</county>
+
+            <county>Garrett County</county>
+            <county>Harford County</county>
+            <county>Howard County</county>
+            <county>Kent County</county>
+            <county>Montgomery County</county>
+            <county>Prince George's County</county>
+
+            <county>Queen Anne's County</county>
+            <county>Somerset County</county>
+            <county>St. Mary's County</county>
+            <county>Talbot County</county>
+            <county>Washington County</county>
+            <county>Wicomico County</county>
+
+            <county>Worcester County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Massachusetts</name>
+        <abv>MA</abv>
+        <counties>
+            <county>Barnstable County</county>
+            <county>Berkshire County</county>
+            <county>Bristol County</county>
+            <county>Dukes County</county>
+            <county>Essex County</county>
+
+            <county>Franklin County</county>
+            <county>Hampden County</county>
+            <county>Hampshire County</county>
+            <county>Middlesex County</county>
+            <county>Nantucket County</county>
+            <county>Norfolk County</county>
+
+            <county>Plymouth County</county>
+            <county>Suffolk County</county>
+            <county>Worcester County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Michigan</name>
+        <abv>MI</abv>
+        <counties>
+            <county>Alcona County</county>
+            <county>Alger County</county>
+            <county>Allegan County</county>
+            <county>Alpena County</county>
+            <county>Antrim County</county>
+
+            <county>Arenac County</county>
+            <county>Baraga County</county>
+            <county>Barry County</county>
+            <county>Bay County</county>
+            <county>Benzie County</county>
+            <county>Berrien County</county>
+
+            <county>Branch County</county>
+            <county>Calhoun County</county>
+            <county>Cass County</county>
+            <county>Charlevoix County</county>
+            <county>Cheboygan County</county>
+            <county>Chippewa County</county>
+
+            <county>Clare County</county>
+            <county>Clinton County</county>
+            <county>Crawford County</county>
+            <county>Delta County</county>
+            <county>Dickinson County</county>
+            <county>Eaton County</county>
+
+            <county>Emmet County</county>
+            <county>Genesee County</county>
+            <county>Gladwin County</county>
+            <county>Gogebic County</county>
+            <county>Grand Traverse County</county>
+            <county>Gratiot County</county>
+
+            <county>Hillsdale County</county>
+            <county>Houghton County</county>
+            <county>Huron County</county>
+            <county>Ingham County</county>
+            <county>Ionia County</county>
+            <county>Iosco County</county>
+
+            <county>Iron County</county>
+            <county>Isabella County</county>
+            <county>Jackson County</county>
+            <county>Kalamazoo County</county>
+            <county>Kalkaska County</county>
+            <county>Kent County</county>
+
+            <county>Keweenaw County</county>
+            <county>Lake County</county>
+            <county>Lapeer County</county>
+            <county>Leelanau County</county>
+            <county>Lenawee County</county>
+            <county>Livingston County</county>
+
+            <county>Luce County</county>
+            <county>Mackinac County</county>
+            <county>Macomb County</county>
+            <county>Manistee County</county>
+            <county>Marquette County</county>
+            <county>Mason County</county>
+
+            <county>Mecosta County</county>
+            <county>Menominee County</county>
+            <county>Midland County</county>
+            <county>Missaukee County</county>
+            <county>Monroe County</county>
+            <county>Montcalm County</county>
+
+            <county>Montmorency County</county>
+            <county>Muskegon County</county>
+            <county>Newaygo County</county>
+            <county>Oakland County</county>
+            <county>Oceana County</county>
+            <county>Ogemaw County</county>
+
+            <county>Ontonagon County</county>
+            <county>Osceola County</county>
+            <county>Oscoda County</county>
+            <county>Otsego County</county>
+            <county>Ottawa County</county>
+            <county>Presque Isle County</county>
+
+            <county>Roscommon County</county>
+            <county>Saginaw County</county>
+            <county>Sanilac County</county>
+            <county>Schoolcraft County</county>
+            <county>Shiawassee County</county>
+            <county>St. Clair County</county>
+
+            <county>St. Joseph County</county>
+            <county>Tuscola County</county>
+            <county>Van Buren County</county>
+            <county>Washtenaw County</county>
+            <county>Wayne County</county>
+            <county>Wexford County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Minnesota</name>
+        <abv>MN</abv>
+        <counties>
+            <county>Aitkin County</county>
+            <county>Anoka County</county>
+            <county>Becker County</county>
+            <county>Beltrami County</county>
+            <county>Benton County</county>
+
+            <county>Big Stone County</county>
+            <county>Blue Earth County</county>
+            <county>Brown County</county>
+            <county>Carlton County</county>
+            <county>Carver County</county>
+            <county>Cass County</county>
+
+            <county>Chippewa County</county>
+            <county>Chisago County</county>
+            <county>Clay County</county>
+            <county>Clearwater County</county>
+            <county>Cook County</county>
+            <county>Cottonwood County</county>
+
+            <county>Crow Wing County</county>
+            <county>Dakota County</county>
+            <county>Dodge County</county>
+            <county>Douglas County</county>
+            <county>Faribault County</county>
+            <county>Fillmore County</county>
+
+            <county>Freeborn County</county>
+            <county>Goodhue County</county>
+            <county>Grant County</county>
+            <county>Hennepin County</county>
+            <county>Houston County</county>
+            <county>Hubbard County</county>
+
+            <county>Isanti County</county>
+            <county>Itasca County</county>
+            <county>Jackson County</county>
+            <county>Kanabec County</county>
+            <county>Kandiyohi County</county>
+            <county>Kittson County</county>
+
+            <county>Koochiching County</county>
+            <county>Lac qui Parle County</county>
+            <county>Lake of the Woods County</county>
+            <county>Lake County</county>
+            <county>Le Sueur County</county>
+            <county>Lincoln County</county>
+
+            <county>Lyon County</county>
+            <county>Mahnomen County</county>
+            <county>Marshall County</county>
+            <county>Martin County</county>
+            <county>McLeod County</county>
+            <county>Meeker County</county>
+
+            <county>Mille Lacs County</county>
+            <county>Morrison County</county>
+            <county>Mower County</county>
+            <county>Murray County</county>
+            <county>Nicollet County</county>
+            <county>Nobles County</county>
+
+            <county>Norman County</county>
+            <county>Olmsted County</county>
+            <county>Otter Tail County</county>
+            <county>Pennington County</county>
+            <county>Pine County</county>
+            <county>Pipestone County</county>
+
+            <county>Polk County</county>
+            <county>Pope County</county>
+            <county>Ramsey County</county>
+            <county>Red Lake County</county>
+            <county>Redwood County</county>
+            <county>Renville County</county>
+
+            <county>Rice County</county>
+            <county>Rock County</county>
+            <county>Roseau County</county>
+            <county>Scott County</county>
+            <county>Sherburne County</county>
+            <county>Sibley County</county>
+
+            <county>St. Louis County</county>
+            <county>Stearns County</county>
+            <county>Steele County</county>
+            <county>Stevens County</county>
+            <county>Swift County</county>
+            <county>Todd County</county>
+
+            <county>Traverse County</county>
+            <county>Wabasha County</county>
+            <county>Wadena County</county>
+            <county>Waseca County</county>
+            <county>Washington County</county>
+            <county>Watonwan County</county>
+
+            <county>Wilkin County</county>
+            <county>Winona County</county>
+            <county>Wright County</county>
+            <county>Yellow Medicine County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Mississippi</name>
+        <abv>MS</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Alcorn County</county>
+            <county>Amite County</county>
+            <county>Attala County</county>
+            <county>Benton County</county>
+
+            <county>Bolivar County</county>
+            <county>Calhoun County</county>
+            <county>Carroll County</county>
+            <county>Chickasaw County</county>
+            <county>Choctaw County</county>
+            <county>Claiborne County</county>
+
+            <county>Clarke County</county>
+            <county>Clay County</county>
+            <county>Coahoma County</county>
+            <county>Copiah County</county>
+            <county>Covington County</county>
+            <county>DeSoto County</county>
+
+            <county>Forrest County</county>
+            <county>Franklin County</county>
+            <county>George County</county>
+            <county>Greene County</county>
+            <county>Grenada County</county>
+            <county>Hancock County</county>
+
+            <county>Harrison County</county>
+            <county>Hinds County</county>
+            <county>Holmes County</county>
+            <county>Humphreys County</county>
+            <county>Issaquena County</county>
+            <county>Itawamba County</county>
+
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jefferson County</county>
+            <county>Jefferson Davis County</county>
+            <county>Jones County</county>
+            <county>Kemper County</county>
+
+            <county>Lafayette County</county>
+            <county>Lamar County</county>
+            <county>Lauderdale County</county>
+            <county>Lawrence County</county>
+            <county>Leake County</county>
+            <county>Lee County</county>
+
+            <county>Leflore County</county>
+            <county>Lincoln County</county>
+            <county>Lowndes County</county>
+            <county>Madison County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Neshoba County</county>
+            <county>Newton County</county>
+            <county>Noxubee County</county>
+            <county>Oktibbeha County</county>
+
+            <county>Panola County</county>
+            <county>Pearl River County</county>
+            <county>Perry County</county>
+            <county>Pike County</county>
+            <county>Pontotoc County</county>
+            <county>Prentiss County</county>
+
+            <county>Quitman County</county>
+            <county>Rankin County</county>
+            <county>Scott County</county>
+            <county>Sharkey County</county>
+            <county>Simpson County</county>
+            <county>Smith County</county>
+
+            <county>Stone County</county>
+            <county>Sunflower County</county>
+            <county>Tallahatchie County</county>
+            <county>Tate County</county>
+            <county>Tippah County</county>
+            <county>Tishomingo County</county>
+
+            <county>Tunica County</county>
+            <county>Union County</county>
+            <county>Walthall County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+
+            <county>Webster County</county>
+            <county>Wilkinson County</county>
+            <county>Winston County</county>
+            <county>Yalobusha County</county>
+            <county>Yazoo County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Missouri</name>
+        <abv>MO</abv>
+        <counties>
+            <county>Adair County</county>
+            <county>Andrew County</county>
+            <county>Atchison County</county>
+            <county>Audrain County</county>
+            <county>Barry County</county>
+
+            <county>Barton County</county>
+            <county>Bates County</county>
+            <county>Benton County</county>
+            <county>Bollinger County</county>
+            <county>Boone County</county>
+            <county>Buchanan County</county>
+
+            <county>Butler County</county>
+            <county>Caldwell County</county>
+            <county>Callaway County</county>
+            <county>Camden County</county>
+            <county>Cape Girardeau County</county>
+            <county>Carroll County</county>
+
+            <county>Carter County</county>
+            <county>Cass County</county>
+            <county>Cedar County</county>
+            <county>Chariton County</county>
+            <county>Christian County</county>
+            <county>Clark County</county>
+
+            <county>Clay County</county>
+            <county>Clinton County</county>
+            <county>Cole County</county>
+            <county>Cooper County</county>
+            <county>Crawford County</county>
+            <county>Dade County</county>
+
+            <county>Dallas County</county>
+            <county>Daviess County</county>
+            <county>Dent County</county>
+            <county>DeKalb County</county>
+            <county>Douglas County</county>
+            <county>Dunklin County</county>
+
+            <county>Franklin County</county>
+            <county>Gasconade County</county>
+            <county>Gentry County</county>
+            <county>Greene County</county>
+            <county>Grundy County</county>
+            <county>Harrison County</county>
+
+            <county>Henry County</county>
+            <county>Hickory County</county>
+            <county>Holt County</county>
+            <county>Howard County</county>
+            <county>Howell County</county>
+            <county>Iron County</county>
+
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jefferson County</county>
+            <county>Johnson County</county>
+            <county>Knox County</county>
+            <county>Laclede County</county>
+
+            <county>Lafayette County</county>
+            <county>Lawrence County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Linn County</county>
+            <county>Livingston County</county>
+
+            <county>Macon County</county>
+            <county>Madison County</county>
+            <county>Maries County</county>
+            <county>Marion County</county>
+            <county>McDonald County</county>
+            <county>Mercer County</county>
+
+            <county>Miller County</county>
+            <county>Mississippi County</county>
+            <county>Moniteau County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+
+            <county>New Madrid County</county>
+            <county>Newton County</county>
+            <county>Nodaway County</county>
+            <county>Oregon County</county>
+            <county>Osage County</county>
+            <county>Ozark County</county>
+
+            <county>Pemiscot County</county>
+            <county>Perry County</county>
+            <county>Pettis County</county>
+            <county>Phelps County</county>
+            <county>Pike County</county>
+            <county>Platte County</county>
+
+            <county>Polk County</county>
+            <county>Pulaski County</county>
+            <county>Putnam County</county>
+            <county>Ralls County</county>
+            <county>Randolph County</county>
+            <county>Ray County</county>
+
+            <county>Reynolds County</county>
+            <county>Ripley County</county>
+            <county>Saline County</county>
+            <county>Schuyler County</county>
+            <county>Scotland County</county>
+            <county>Scott County</county>
+
+            <county>Shannon County</county>
+            <county>Shelby County</county>
+            <county>St. Charles County</county>
+            <county>St. Clair County</county>
+            <county>St. Francois County</county>
+            <county>St. Louis city</county>
+
+            <county>St. Louis County</county>
+            <county>Ste. Genevieve County</county>
+            <county>Stoddard County</county>
+            <county>Stone County</county>
+            <county>Sullivan County</county>
+            <county>Taney County</county>
+
+            <county>Texas County</county>
+            <county>Vernon County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Webster County</county>
+
+            <county>Worth County</county>
+            <county>Wright County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Montana</name>
+        <abv>MT</abv>
+        <counties>
+            <county>Beaverhead County</county>
+            <county>Big Horn County</county>
+            <county>Blaine County</county>
+            <county>Broadwater County</county>
+            <county>Carbon County</county>
+
+            <county>Carter County</county>
+            <county>Cascade County</county>
+            <county>Chouteau County</county>
+            <county>Custer County</county>
+            <county>Daniels County</county>
+            <county>Dawson County</county>
+
+            <county>Deer Lodge County</county>
+            <county>Fallon County</county>
+            <county>Fergus County</county>
+            <county>Flathead County</county>
+            <county>Gallatin County</county>
+            <county>Garfield County</county>
+
+            <county>Glacier County</county>
+            <county>Golden Valley County</county>
+            <county>Granite County</county>
+            <county>Hill County</county>
+            <county>Jefferson County</county>
+            <county>Judith Basin County</county>
+
+            <county>Lake County</county>
+            <county>Lewis and Clark County</county>
+            <county>Liberty County</county>
+            <county>Lincoln County</county>
+            <county>Madison County</county>
+            <county>McCone County</county>
+
+            <county>Meagher County</county>
+            <county>Mineral County</county>
+            <county>Missoula County</county>
+            <county>Musselshell County</county>
+            <county>Park County</county>
+            <county>Petroleum County</county>
+
+            <county>Phillips County</county>
+            <county>Pondera County</county>
+            <county>Powder River County</county>
+            <county>Powell County</county>
+            <county>Prairie County</county>
+            <county>Ravalli County</county>
+
+            <county>Richland County</county>
+            <county>Roosevelt County</county>
+            <county>Rosebud County</county>
+            <county>Sanders County</county>
+            <county>Sheridan County</county>
+            <county>Silver Bow County</county>
+
+            <county>Stillwater County</county>
+            <county>Sweet Grass County</county>
+            <county>Teton County</county>
+            <county>Toole County</county>
+            <county>Treasure County</county>
+            <county>Valley County</county>
+
+            <county>Wheatland County</county>
+            <county>Wibaux County</county>
+            <county>Yellowstone County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Nebraska</name>
+        <abv>NE</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Antelope County</county>
+            <county>Arthur County</county>
+            <county>Banner County</county>
+            <county>Blaine County</county>
+
+            <county>Boone County</county>
+            <county>Box Butte County</county>
+            <county>Boyd County</county>
+            <county>Brown County</county>
+            <county>Buffalo County</county>
+            <county>Burt County</county>
+
+            <county>Butler County</county>
+            <county>Cass County</county>
+            <county>Cedar County</county>
+            <county>Chase County</county>
+            <county>Cherry County</county>
+            <county>Cheyenne County</county>
+
+            <county>Clay County</county>
+            <county>Colfax County</county>
+            <county>Cuming County</county>
+            <county>Custer County</county>
+            <county>Dakota County</county>
+            <county>Dawes County</county>
+
+            <county>Dawson County</county>
+            <county>Deuel County</county>
+            <county>Dixon County</county>
+            <county>Dodge County</county>
+            <county>Douglas County</county>
+            <county>Dundy County</county>
+
+            <county>Fillmore County</county>
+            <county>Franklin County</county>
+            <county>Frontier County</county>
+            <county>Furnas County</county>
+            <county>Gage County</county>
+            <county>Garden County</county>
+
+            <county>Garfield County</county>
+            <county>Gosper County</county>
+            <county>Grant County</county>
+            <county>Greeley County</county>
+            <county>Hall County</county>
+            <county>Hamilton County</county>
+
+            <county>Harlan County</county>
+            <county>Hayes County</county>
+            <county>Hitchcock County</county>
+            <county>Holt County</county>
+            <county>Hooker County</county>
+            <county>Howard County</county>
+
+            <county>Jefferson County</county>
+            <county>Johnson County</county>
+            <county>Kearney County</county>
+            <county>Keith County</county>
+            <county>Keya Paha County</county>
+            <county>Kimball County</county>
+
+            <county>Knox County</county>
+            <county>Lancaster County</county>
+            <county>Lincoln County</county>
+            <county>Logan County</county>
+            <county>Loup County</county>
+            <county>Madison County</county>
+
+            <county>McPherson County</county>
+            <county>Merrick County</county>
+            <county>Morrill County</county>
+            <county>Nance County</county>
+            <county>Nemaha County</county>
+            <county>Nuckolls County</county>
+
+            <county>Otoe County</county>
+            <county>Pawnee County</county>
+            <county>Perkins County</county>
+            <county>Phelps County</county>
+            <county>Pierce County</county>
+            <county>Platte County</county>
+
+            <county>Polk County</county>
+            <county>Red Willow County</county>
+            <county>Richardson County</county>
+            <county>Rock County</county>
+            <county>Saline County</county>
+            <county>Sarpy County</county>
+
+            <county>Saunders County</county>
+            <county>Scotts Bluff County</county>
+            <county>Seward County</county>
+            <county>Sheridan County</county>
+            <county>Sherman County</county>
+            <county>Sioux County</county>
+
+            <county>Stanton County</county>
+            <county>Thayer County</county>
+            <county>Thomas County</county>
+            <county>Thurston County</county>
+            <county>Valley County</county>
+            <county>Washington County</county>
+
+            <county>Wayne County</county>
+            <county>Webster County</county>
+            <county>Wheeler County</county>
+            <county>York County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Nevada</name>
+        <abv>NV</abv>
+        <counties>
+            <county>Churchill County</county>
+            <county>Clark County</county>
+            <county>Douglas County</county>
+            <county>Elko County</county>
+            <county>Esmeralda County</county>
+
+            <county>Eureka County</county>
+            <county>Humboldt County</county>
+            <county>Lander County</county>
+            <county>Lincoln County</county>
+            <county>Lyon County</county>
+            <county>Mineral County</county>
+
+            <county>Nye County</county>
+            <county>Pershing County</county>
+            <county>Storey County</county>
+            <county>Washoe County</county>
+            <county>White Pine County</county>
+        </counties>
+    </state>
+    <state>
+        <name>New Hampshire</name>
+        <abv>NH</abv>
+        <counties>
+            <county>Belknap County</county>
+            <county>Carroll County</county>
+            <county>Cheshire County</county>
+            <county>Coos County</county>
+            <county>Grafton County</county>
+
+            <county>Hillsboro County</county>
+            <county>Merrimack County</county>
+            <county>Rockingham County</county>
+            <county>Strafford County</county>
+            <county>Sullivan County</county>
+        </counties>
+    </state>
+    <state>
+        <name>New Jersey</name>
+        <abv>NJ</abv>
+        <counties>
+            <county>Atlantic County</county>
+            <county>Bergen County</county>
+            <county>Burlington County</county>
+            <county>Camden County</county>
+            <county>Cape May County</county>
+
+            <county>Cumberland County</county>
+            <county>Essex County</county>
+            <county>Gloucester County</county>
+            <county>Hudson County</county>
+            <county>Hunterdon County</county>
+            <county>Mercer County</county>
+
+            <county>Middlesex County</county>
+            <county>Monmouth County</county>
+            <county>Morris County</county>
+            <county>Ocean County</county>
+            <county>Passaic County</county>
+            <county>Salem County</county>
+
+            <county>Somerset County</county>
+            <county>Sussex County</county>
+            <county>Union County</county>
+            <county>Warren County</county>
+        </counties>
+    </state>
+    <state>
+        <name>New Mexico</name>
+        <abv>NM</abv>
+        <counties>
+            <county>Bernalillo County</county>
+            <county>Catron County</county>
+            <county>Chaves County</county>
+            <county>Cibola County</county>
+            <county>Colfax County</county>
+
+            <county>Curry County</county>
+            <county>DeBaca County</county>
+            <county>Dona Ana County</county>
+            <county>Eddy County</county>
+            <county>Grant County</county>
+            <county>Guadalupe County</county>
+
+            <county>Harding County</county>
+            <county>Hidalgo County</county>
+            <county>Lea County</county>
+            <county>Lincoln County</county>
+            <county>Los Alamos County</county>
+            <county>Luna County</county>
+
+            <county>McKinley County</county>
+            <county>Mora County</county>
+            <county>Otero County</county>
+            <county>Quay County</county>
+            <county>Rio Arriba County</county>
+            <county>Roosevelt County</county>
+
+            <county>San Juan County</county>
+            <county>San Miguel County</county>
+            <county>Sandoval County</county>
+            <county>Santa Fe County</county>
+            <county>Sierra County</county>
+            <county>Socorro County</county>
+
+            <county>Taos County</county>
+            <county>Torrance County</county>
+            <county>Union County</county>
+            <county>Valencia County</county>
+        </counties>
+    </state>
+    <state>
+        <name>New York</name>
+        <abv>NY</abv>
+        <counties>
+            <county>Albany County</county>
+            <county>Allegany County</county>
+            <county>Bronx County</county>
+            <county>Broome County</county>
+            <county>Cattaraugus County</county>
+
+            <county>Cayuga County</county>
+            <county>Chautauqua County</county>
+            <county>Chemung County</county>
+            <county>Chenango County</county>
+            <county>Clinton County</county>
+            <county>Columbia County</county>
+
+            <county>Cortland County</county>
+            <county>Delaware County</county>
+            <county>Dutchess County</county>
+            <county>Erie County</county>
+            <county>Essex County</county>
+            <county>Franklin County</county>
+
+            <county>Fulton County</county>
+            <county>Genesee County</county>
+            <county>Greene County</county>
+            <county>Hamilton County</county>
+            <county>Herkimer County</county>
+            <county>Jefferson County</county>
+
+            <county>Kings County</county>
+            <county>Lewis County</county>
+            <county>Livingston County</county>
+            <county>Madison County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+
+            <county>Nassau County</county>
+            <county>New York County</county>
+            <county>Niagara County</county>
+            <county>Oneida County</county>
+            <county>Onondaga County</county>
+            <county>Ontario County</county>
+
+            <county>Orange County</county>
+            <county>Orleans County</county>
+            <county>Oswego County</county>
+            <county>Otsego County</county>
+            <county>Putnam County</county>
+            <county>Queens County</county>
+
+            <county>Rensselaer County</county>
+            <county>Richmond County</county>
+            <county>Rockland County</county>
+            <county>Saratoga County</county>
+            <county>Schenectady County</county>
+            <county>Schoharie County</county>
+
+            <county>Schuyler County</county>
+            <county>Seneca County</county>
+            <county>St. Lawrence County</county>
+            <county>Steuben County</county>
+            <county>Suffolk County</county>
+            <county>Sullivan County</county>
+
+            <county>Tioga County</county>
+            <county>Tompkins County</county>
+            <county>Ulster County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+
+            <county>Westchester County</county>
+            <county>Wyoming County</county>
+            <county>Yates County</county>
+        </counties>
+    </state>
+    <state>
+        <name>North Carolina</name>
+        <abv>NC</abv>
+        <counties>
+            <county>Alamance County</county>
+            <county>Alexander County</county>
+            <county>Alleghany County</county>
+            <county>Anson County</county>
+            <county>Ashe County</county>
+
+            <county>Avery County</county>
+            <county>Beaufort County</county>
+            <county>Bertie County</county>
+            <county>Bladen County</county>
+            <county>Brunswick County</county>
+            <county>Buncombe County</county>
+
+            <county>Burke County</county>
+            <county>Cabarrus County</county>
+            <county>Caldwell County</county>
+            <county>Camden County</county>
+            <county>Carteret County</county>
+            <county>Caswell County</county>
+
+            <county>Catawba County</county>
+            <county>Chatham County</county>
+            <county>Cherokee County</county>
+            <county>Chowan County</county>
+            <county>Clay County</county>
+            <county>Cleveland County</county>
+
+            <county>Columbus County</county>
+            <county>Craven County</county>
+            <county>Cumberland County</county>
+            <county>Currituck County</county>
+            <county>Dare County</county>
+            <county>Davidson County</county>
+
+            <county>Davie County</county>
+            <county>Duplin County</county>
+            <county>Durham County</county>
+            <county>Edgecombe County</county>
+            <county>Forsyth County</county>
+            <county>Franklin County</county>
+
+            <county>Gaston County</county>
+            <county>Gates County</county>
+            <county>Graham County</county>
+            <county>Granville County</county>
+            <county>Greene County</county>
+            <county>Guilford County</county>
+
+            <county>Halifax County</county>
+            <county>Harnett County</county>
+            <county>Haywood County</county>
+            <county>Henderson County</county>
+            <county>Hertford County</county>
+            <county>Hoke County</county>
+
+            <county>Hyde County</county>
+            <county>Iredell County</county>
+            <county>Jackson County</county>
+            <county>Johnston County</county>
+            <county>Jones County</county>
+            <county>Lee County</county>
+
+            <county>Lenoir County</county>
+            <county>Lincoln County</county>
+            <county>Macon County</county>
+            <county>Madison County</county>
+            <county>Martin County</county>
+            <county>McDowell County</county>
+
+            <county>Mecklenburg County</county>
+            <county>Mitchell County</county>
+            <county>Montgomery County</county>
+            <county>Moore County</county>
+            <county>Nash County</county>
+            <county>New Hanover County</county>
+
+            <county>Northampton County</county>
+            <county>Onslow County</county>
+            <county>Orange County</county>
+            <county>Pamlico County</county>
+            <county>Pasquotank County</county>
+            <county>Pender County</county>
+
+            <county>Perquimans County</county>
+            <county>Person County</county>
+            <county>Pitt County</county>
+            <county>Polk County</county>
+            <county>Randolph County</county>
+            <county>Richmond County</county>
+
+            <county>Robeson County</county>
+            <county>Rockingham County</county>
+            <county>Rowan County</county>
+            <county>Rutherford County</county>
+            <county>Sampson County</county>
+            <county>Scotland County</county>
+
+            <county>Stanly County</county>
+            <county>Stokes County</county>
+            <county>Surry County</county>
+            <county>Swain County</county>
+            <county>Transylvania County</county>
+            <county>Tyrrell County</county>
+
+            <county>Union County</county>
+            <county>Vance County</county>
+            <county>Wake County</county>
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Watauga County</county>
+
+            <county>Wayne County</county>
+            <county>Wilkes County</county>
+            <county>Wilson County</county>
+            <county>Yadkin County</county>
+            <county>Yancey County</county>
+        </counties>
+    </state>
+    <state>
+        <name>North Dakota</name>
+        <abv>ND</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Barnes County</county>
+            <county>Benson County</county>
+            <county>Billings County</county>
+            <county>Bottineau County</county>
+
+            <county>Bowman County</county>
+            <county>Burke County</county>
+            <county>Burleigh County</county>
+            <county>Cass County</county>
+            <county>Cavalier County</county>
+            <county>Dickey County</county>
+
+            <county>Divide County</county>
+            <county>Dunn County</county>
+            <county>Eddy County</county>
+            <county>Emmons County</county>
+            <county>Foster County</county>
+            <county>Golden Valley County</county>
+
+            <county>Grand Forks County</county>
+            <county>Grant County</county>
+            <county>Griggs County</county>
+            <county>Hettinger County</county>
+            <county>Kidder County</county>
+            <county>LaMoure County</county>
+
+            <county>Logan County</county>
+            <county>McHenry County</county>
+            <county>McIntosh County</county>
+            <county>McKenzie County</county>
+            <county>McLean County</county>
+            <county>Mercer County</county>
+
+            <county>Morton County</county>
+            <county>Mountrail County</county>
+            <county>Nelson County</county>
+            <county>Oliver County</county>
+            <county>Pembina County</county>
+            <county>Pierce County</county>
+
+            <county>Ramsey County</county>
+            <county>Ransom County</county>
+            <county>Renville County</county>
+            <county>Richland County</county>
+            <county>Rolette County</county>
+            <county>Sargent County</county>
+
+            <county>Sheridan County</county>
+            <county>Sioux County</county>
+            <county>Slope County</county>
+            <county>Stark County</county>
+            <county>Steele County</county>
+            <county>Stutsman County</county>
+
+            <county>Towner County</county>
+            <county>Traill County</county>
+            <county>Walsh County</county>
+            <county>Ward County</county>
+            <county>Wells County</county>
+            <county>Williams County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Ohio</name>
+        <abv>OH</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Allen County</county>
+            <county>Ashland County</county>
+            <county>Ashtabula County</county>
+            <county>Athens County</county>
+
+            <county>Auglaize County</county>
+            <county>Belmont County</county>
+            <county>Brown County</county>
+            <county>Butler County</county>
+            <county>Carroll County</county>
+            <county>Champaign County</county>
+
+            <county>Clark County</county>
+            <county>Clermont County</county>
+            <county>Clinton County</county>
+            <county>Columbiana County</county>
+            <county>Coshocton County</county>
+            <county>Crawford County</county>
+
+            <county>Cuyahoga County</county>
+            <county>Darke County</county>
+            <county>Defiance County</county>
+            <county>Delaware County</county>
+            <county>Erie County</county>
+            <county>Fairfield County</county>
+
+            <county>Fayette County</county>
+            <county>Franklin County</county>
+            <county>Fulton County</county>
+            <county>Gallia County</county>
+            <county>Geauga County</county>
+            <county>Greene County</county>
+
+            <county>Guernsey County</county>
+            <county>Hamilton County</county>
+            <county>Hancock County</county>
+            <county>Hardin County</county>
+            <county>Harrison County</county>
+            <county>Henry County</county>
+
+            <county>Highland County</county>
+            <county>Hocking County</county>
+            <county>Holmes County</county>
+            <county>Huron County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+
+            <county>Knox County</county>
+            <county>Lake County</county>
+            <county>Lawrence County</county>
+            <county>Licking County</county>
+            <county>Logan County</county>
+            <county>Lorain County</county>
+
+            <county>Lucas County</county>
+            <county>Madison County</county>
+            <county>Mahoning County</county>
+            <county>Marion County</county>
+            <county>Medina County</county>
+            <county>Meigs County</county>
+
+            <county>Mercer County</county>
+            <county>Miami County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Morgan County</county>
+            <county>Morrow County</county>
+
+            <county>Muskingum County</county>
+            <county>Noble County</county>
+            <county>Ottawa County</county>
+            <county>Paulding County</county>
+            <county>Perry County</county>
+            <county>Pickaway County</county>
+
+            <county>Pike County</county>
+            <county>Portage County</county>
+            <county>Preble County</county>
+            <county>Putnam County</county>
+            <county>Richland County</county>
+            <county>Ross County</county>
+
+            <county>Sandusky County</county>
+            <county>Scioto County</county>
+            <county>Seneca County</county>
+            <county>Shelby County</county>
+            <county>Stark County</county>
+            <county>Summit County</county>
+
+            <county>Trumbull County</county>
+            <county>Tuscarawas County</county>
+            <county>Union County</county>
+            <county>Van Wert County</county>
+            <county>Vinton County</county>
+            <county>Warren County</county>
+
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Williams County</county>
+            <county>Wood County</county>
+            <county>Wyandot County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Oklahoma</name>
+        <abv>OK</abv>
+        <counties>
+            <county>Adair County</county>
+            <county>Alfalfa County</county>
+            <county>Atoka County</county>
+            <county>Beaver County</county>
+            <county>Beckham County</county>
+
+            <county>Blaine County</county>
+            <county>Bryan County</county>
+            <county>Caddo County</county>
+            <county>Canadian County</county>
+            <county>Carter County</county>
+            <county>Cherokee County</county>
+
+            <county>Choctaw County</county>
+            <county>Cimarron County</county>
+            <county>Cleveland County</county>
+            <county>Coal County</county>
+            <county>Comanche County</county>
+            <county>Cotton County</county>
+
+            <county>Craig County</county>
+            <county>Creek County</county>
+            <county>Custer County</county>
+            <county>Delaware County</county>
+            <county>Dewey County</county>
+            <county>Ellis County</county>
+
+            <county>Garfield County</county>
+            <county>Garvin County</county>
+            <county>Grady County</county>
+            <county>Grant County</county>
+            <county>Greer County</county>
+            <county>Harmon County</county>
+
+            <county>Harper County</county>
+            <county>Haskell County</county>
+            <county>Hughes County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Johnston County</county>
+
+            <county>Kay County</county>
+            <county>Kingfisher County</county>
+            <county>Kiowa County</county>
+            <county>Latimer County</county>
+            <county>Le Flore County</county>
+            <county>Lincoln County</county>
+
+            <county>Logan County</county>
+            <county>Love County</county>
+            <county>Major County</county>
+            <county>Marshall County</county>
+            <county>Mayes County</county>
+            <county>McClain County</county>
+
+            <county>McCurtain County</county>
+            <county>McIntosh County</county>
+            <county>Murray County</county>
+            <county>Muskogee County</county>
+            <county>Noble County</county>
+            <county>Nowata County</county>
+
+            <county>Okfuskee County</county>
+            <county>Oklahoma County</county>
+            <county>Okmulgee County</county>
+            <county>Osage County</county>
+            <county>Ottawa County</county>
+            <county>Pawnee County</county>
+
+            <county>Payne County</county>
+            <county>Pittsburg County</county>
+            <county>Pontotoc County</county>
+            <county>Pottawatomie County</county>
+            <county>Pushmataha County</county>
+            <county>Roger Mills County</county>
+
+            <county>Rogers County</county>
+            <county>Seminole County</county>
+            <county>Sequoyah County</county>
+            <county>Stephens County</county>
+            <county>Texas County</county>
+            <county>Tillman County</county>
+
+            <county>Tulsa County</county>
+            <county>Wagoner County</county>
+            <county>Washington County</county>
+            <county>Washita County</county>
+            <county>Woods County</county>
+            <county>Woodward County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Oregon</name>
+        <abv>OR</abv>
+        <counties>
+            <county>Baker County</county>
+            <county>Benton County</county>
+            <county>Clackamas County</county>
+            <county>Clatsop County</county>
+            <county>Columbia County</county>
+
+            <county>Coos County</county>
+            <county>Crook County</county>
+            <county>Curry County</county>
+            <county>Deschutes County</county>
+            <county>Douglas County</county>
+            <county>Gilliam County</county>
+
+            <county>Grant County</county>
+            <county>Harney County</county>
+            <county>Hood River County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Josephine County</county>
+
+            <county>Klamath County</county>
+            <county>Lake County</county>
+            <county>Lane County</county>
+            <county>Lincoln County</county>
+            <county>Linn County</county>
+            <county>Malheur County</county>
+
+            <county>Marion County</county>
+            <county>Morrow County</county>
+            <county>Multnomah County</county>
+            <county>Polk County</county>
+            <county>Sherman County</county>
+            <county>Tillamook County</county>
+
+            <county>Umatilla County</county>
+            <county>Union County</county>
+            <county>Wallowa County</county>
+            <county>Wasco County</county>
+            <county>Washington County</county>
+            <county>Wheeler County</county>
+
+            <county>Yamhill County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Pennsylvania </name>
+        <abv>PA</abv>
+        <counties>
+            <county>Adams County</county> (ADA) <county>Allegheny County</county> (ALL)
+                <county>Armstrong County</county> (ARM) <county>Beaver County</county> (BEA)
+                <county>Bedford County</county> (BED) <county>Berks County</county> (BER)
+                <county>Blair County</county> (BLA) <county>Bradford County</county> (BRA)
+                <county>Bucks County</county> (BUX) <county>Butler County</county> (BUT)
+                <county>Cambria County</county> (CMB) <county>Cameron County</county> (CRN)
+                <county>Carbon County</county> (CAR) <county>Centre County</county> (CEN)
+                <county>Chester County</county> (CHE) <county>Clarion County</county> (CLA)
+                <county>Clearfield County</county> (CLE) <county>Clinton County</county> (CLI)
+                <county>Columbia County</county> (COL) <county>Crawford County</county> (CRA)
+                <county>Cumberland County</county> (CUM) <county>Dauphin County</county> (DAU)
+                <county>Delaware County</county> (DCO) <county>Elk County</county> (ELK)
+                <county>Erie County</county> (ERI) <county>Fayette County</county> (FAY)
+                <county>Forest County</county> (FOR) <county>Franklin County</county> (FRA)
+                <county>Fulton County</county> (FUL) <county>Greene County</county> (GRE)
+                <county>Huntingdon County</county> (HUN) <county>Indiana County</county> (INN)
+                <county>Jefferson County</county> (JEF) <county>Juniata County</county> (JUN)
+                <county>Lackawanna County</county> (LAC) <county>Lancaster County</county> (LAN)
+                <county>Lawrence County</county> (LAW) <county>Lebanon County</county> (LEB)
+                <county>Lehigh County</county> (LEH) <county>Luzerne County</county> (LUZ)
+                <county>Lycoming County</county> (LYX) <county>McKean County</county> (MCK)
+                <county>Mercer County</county> (MER) <county>Mifflin County</county> (MIF)
+                <county>Monroe County</county> (MOE) <county>Montgomery County</county> (MGY)
+                <county>Montour County</county> (MTR) <county>Northampton County</county> (NHA)
+                <county>Northumberland County</county> (NUM) <county>Perry County</county> (PER)
+                <county>Philadelphia County</county> (PHI) <county>Pike County</county> (PIK)
+                <county>Potter County</county> (POT) <county>Schuylkill County</county> (SCH)
+                <county>Snyder County</county> (SNY) <county>Somerset County</county>(SOM)
+                <county>Sullivan County</county> (SUL) <county>Susquehanna County</county> (SUS)
+                <county>Tioga County</county> (TIO) <county>Union County</county> (UNI)
+                <county>Venango County</county> (VEN) <county>Warren County</county> (WAR)
+                <county>Washington County</county> (WAS) <county>Wayne County</county> (WAY)
+                <county>Westmoreland County</county> (WES) <county>Wyoming County</county> (WYO)
+                <county>York County</county> (YOR) </counties>
+    </state>
+    <state>
+        <name>Rhode Island </name>
+        <abv>RI</abv>
+        <counties>
+            <county>Bristol County</county>
+            <county>Kent County</county>
+            <county>Newport County</county>
+            <county>Providence County</county>
+            <county>Washington County</county>
+        </counties>
+    </state>
+    <state>
+        <name>South Carolina</name>
+        <abv>SC</abv>
+        <counties>
+            <county>Abbeville County</county>
+            <county>Aiken County</county>
+            <county>Allendale County</county>
+            <county>Anderson County</county>
+            <county>Bamberg County</county>
+
+            <county>Barnwell County</county>
+            <county>Beaufort County</county>
+            <county>Berkeley County</county>
+            <county>Calhoun County</county>
+            <county>Charleston County</county>
+            <county>Cherokee County</county>
+
+            <county>Chester County</county>
+            <county>Chesterfield County</county>
+            <county>Clarendon County</county>
+            <county>Colleton County</county>
+            <county>Darlington County</county>
+            <county>Dillon County</county>
+
+            <county>Dorchester County</county>
+            <county>Edgefield County</county>
+            <county>Fairfield County</county>
+            <county>Florence County</county>
+            <county>Georgetown County</county>
+            <county>Greenville County</county>
+
+            <county>Greenwood County</county>
+            <county>Hampton County</county>
+            <county>Horry County</county>
+            <county>Jasper County</county>
+            <county>Kershaw County</county>
+            <county>Lancaster County</county>
+
+            <county>Laurens County</county>
+            <county>Lee County</county>
+            <county>Lexington County</county>
+            <county>Marion County</county>
+            <county>Marlboro County</county>
+            <county>McCormick County</county>
+
+            <county>Newberry County</county>
+            <county>Oconee County</county>
+            <county>Orangeburg County</county>
+            <county>Pickens County</county>
+            <county>Richland County</county>
+            <county>Saluda County</county>
+
+            <county>Spartanburg County</county>
+            <county>Sumter County</county>
+            <county>Union County</county>
+            <county>Williamsburg County</county>
+            <county>York County</county>
+        </counties>
+    </state>
+    <state>
+        <name>South Dakota</name>
+        <abv>SD</abv>
+        <counties>
+            <county>Aurora County</county>
+            <county>Beadle County</county>
+            <county>Bennett County</county>
+            <county>Bon Homme County</county>
+            <county>Brookings County</county>
+
+            <county>Brown County</county>
+            <county>Brule County</county>
+            <county>Buffalo County</county>
+            <county>Butte County</county>
+            <county>Campbell County</county>
+            <county>Charles Mix County</county>
+
+            <county>Clark County</county>
+            <county>Clay County</county>
+            <county>Codington County</county>
+            <county>Corson County</county>
+            <county>Custer County</county>
+            <county>Davison County</county>
+
+            <county>Day County</county>
+            <county>Deuel County</county>
+            <county>Dewey County</county>
+            <county>Douglas County</county>
+            <county>Edmunds County</county>
+            <county>Fall River County</county>
+
+            <county>Faulk County</county>
+            <county>Grant County</county>
+            <county>Gregory County</county>
+            <county>Haakon County</county>
+            <county>Hamlin County</county>
+            <county>Hand County</county>
+
+            <county>Hanson County</county>
+            <county>Harding County</county>
+            <county>Hughes County</county>
+            <county>Hutchinson County</county>
+            <county>Hyde County</county>
+            <county>Jackson County</county>
+
+            <county>Jerauld County</county>
+            <county>Jones County</county>
+            <county>Kingsbury County</county>
+            <county>Lake County</county>
+            <county>Lawrence County</county>
+            <county>Lincoln County</county>
+
+            <county>Lyman County</county>
+            <county>Marshall County</county>
+            <county>McCook County</county>
+            <county>McPherson County</county>
+            <county>Meade County</county>
+            <county>Mellette County</county>
+
+            <county>Miner County</county>
+            <county>Minnehaha County</county>
+            <county>Moody County</county>
+            <county>Pennington County</county>
+            <county>Perkins County</county>
+            <county>Potter County</county>
+
+            <county>Roberts County</county>
+            <county>Sanborn County</county>
+            <county>Shannon County</county>
+            <county>Spink County</county>
+            <county>Stanley County</county>
+            <county>Sully County</county>
+
+            <county>Todd County</county>
+            <county>Tripp County</county>
+            <county>Turner County</county>
+            <county>Union County</county>
+            <county>Walworth County</county>
+            <county>Yankton County</county>
+
+            <county>Ziebach County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Tennessee</name>
+        <abv>TN</abv>
+        <counties>
+            <county>Anderson County</county>
+            <county>Bedford County</county>
+            <county>Benton County</county>
+            <county>Bledsoe County</county>
+            <county>Blount County</county>
+
+            <county>Bradley County</county>
+            <county>Campbell County</county>
+            <county>Cannon County</county>
+            <county>Carroll County</county>
+            <county>Carter County</county>
+            <county>Cheatham County</county>
+
+            <county>Chester County</county>
+            <county>Claiborne County</county>
+            <county>Clay County</county>
+            <county>Cocke County</county>
+            <county>Coffee County</county>
+            <county>Crockett County</county>
+
+            <county>Cumberland County</county>
+            <county>Davidson County</county>
+            <county>Decatur County</county>
+            <county>DeKalb County</county>
+            <county>Dickson County</county>
+            <county>Dyer County</county>
+
+            <county>Fayette County</county>
+            <county>Fentress County</county>
+            <county>Franklin County</county>
+            <county>Gibson County</county>
+            <county>Giles County</county>
+            <county>Grainger County</county>
+
+            <county>Greene County</county>
+            <county>Grundy County</county>
+            <county>Hamblen County</county>
+            <county>Hamilton County</county>
+            <county>Hancock County</county>
+            <county>Hardeman County</county>
+
+            <county>Hardin County</county>
+            <county>Hawkins County</county>
+            <county>Haywood County</county>
+            <county>Henderson County</county>
+            <county>Henry County</county>
+            <county>Hickman County</county>
+
+            <county>Houston County</county>
+            <county>Humphreys County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Johnson County</county>
+            <county>Knox County</county>
+
+            <county>Lake County</county>
+            <county>Lauderdale County</county>
+            <county>Lawrence County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Loudon County</county>
+
+            <county>Macon County</county>
+            <county>Madison County</county>
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Maury County</county>
+            <county>McMinn County</county>
+
+            <county>McNairy County</county>
+            <county>Meigs County</county>
+            <county>Monroe County</county>
+            <county>Montgomery County</county>
+            <county>Moore County</county>
+            <county>Morgan County</county>
+
+            <county>Obion County</county>
+            <county>Overton County</county>
+            <county>Perry County</county>
+            <county>Pickett County</county>
+            <county>Polk County</county>
+            <county>Putnam County</county>
+
+            <county>Rhea County</county>
+            <county>Roane County</county>
+            <county>Robertson County</county>
+            <county>Rutherford County</county>
+            <county>Scott County</county>
+            <county>Sequatchie County</county>
+
+            <county>Sevier County</county>
+            <county>Shelby County</county>
+            <county>Smith County</county>
+            <county>Stewart County</county>
+            <county>Sullivan County</county>
+            <county>Sumner County</county>
+
+            <county>Tipton County</county>
+            <county>Trousdale County</county>
+            <county>Unicoi County</county>
+            <county>Union County</county>
+            <county>Van Buren County</county>
+            <county>Warren County</county>
+
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Weakley County</county>
+            <county>White County</county>
+            <county>Williamson County</county>
+            <county>Wilson County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Texas</name>
+        <abv>TX</abv>
+        <counties>
+            <county>Anderson County</county>
+            <county>Andrews County</county>
+            <county>Angelina County</county>
+            <county>Aransas County</county>
+            <county>Archer County</county>
+
+            <county>Armstrong County</county>
+            <county>Atascosa County</county>
+            <county>Austin County</county>
+            <county>Bailey County</county>
+            <county>Bandera County</county>
+            <county>Bastrop County</county>
+
+            <county>Baylor County</county>
+            <county>Bee County</county>
+            <county>Bell County</county>
+            <county>Bexar County</county>
+            <county>Blanco County</county>
+            <county>Borden County</county>
+
+            <county>Bosque County</county>
+            <county>Bowie County</county>
+            <county>Brazoria County</county>
+            <county>Brazos County</county>
+            <county>Brewster County</county>
+            <county>Briscoe County</county>
+
+            <county>Brooks County</county>
+            <county>Brown County</county>
+            <county>Burleson County</county>
+            <county>Burnet County</county>
+            <county>Caldwell County</county>
+            <county>Calhoun County</county>
+
+            <county>Callahan County</county>
+            <county>Cameron County</county>
+            <county>Camp County</county>
+            <county>Carson County</county>
+            <county>Cass County</county>
+            <county>Castro County</county>
+
+            <county>Chambers County</county>
+            <county>Cherokee County</county>
+            <county>Childress County</county>
+            <county>Clay County</county>
+            <county>Cochran County</county>
+            <county>Coke County</county>
+
+            <county>Coleman County</county>
+            <county>Collin County</county>
+            <county>Collingsworth County</county>
+            <county>Colorado County</county>
+            <county>Comal County</county>
+            <county>Comanche County</county>
+
+            <county>Concho County</county>
+            <county>Cooke County</county>
+            <county>Coryell County</county>
+            <county>Cottle County</county>
+            <county>Crane County</county>
+            <county>Crockett County</county>
+
+            <county>Crosby County</county>
+            <county>Culberson County</county>
+            <county>Dallam County</county>
+            <county>Dallas County</county>
+            <county>Dawson County</county>
+            <county>Deaf Smith County</county>
+
+            <county>Delta County</county>
+            <county>Denton County</county>
+            <county>DeWitt County</county>
+            <county>Dickens County</county>
+            <county>Dimmit County</county>
+            <county>Donley County</county>
+
+            <county>Duval County</county>
+            <county>Eastland County</county>
+            <county>Ector County</county>
+            <county>Edwards County</county>
+            <county>El Paso County</county>
+            <county>Ellis County</county>
+
+            <county>Erath County</county>
+            <county>Falls County</county>
+            <county>Fannin County</county>
+            <county>Fayette County</county>
+            <county>Fisher County</county>
+            <county>Floyd County</county>
+
+            <county>Foard County</county>
+            <county>Fort Bend County</county>
+            <county>Franklin County</county>
+            <county>Freestone County</county>
+            <county>Frio County</county>
+            <county>Gaines County</county>
+
+            <county>Galveston County</county>
+            <county>Garza County</county>
+            <county>Gillespie County</county>
+            <county>Glasscock County</county>
+            <county>Goliad County</county>
+            <county>Gonzales County</county>
+
+            <county>Gray County</county>
+            <county>Grayson County</county>
+            <county>Gregg County</county>
+            <county>Grimes County</county>
+            <county>Guadalupe County</county>
+            <county>Hale County</county>
+
+            <county>Hall County</county>
+            <county>Hamilton County</county>
+            <county>Hansford County</county>
+            <county>Hardeman County</county>
+            <county>Hardin County</county>
+            <county>Harris County</county>
+
+            <county>Harrison County</county>
+            <county>Hartley County</county>
+            <county>Haskell County</county>
+            <county>Hays County</county>
+            <county>Hemphill County</county>
+            <county>Henderson County</county>
+
+            <county>Hidalgo County</county>
+            <county>Hill County</county>
+            <county>Hockley County</county>
+            <county>Hood County</county>
+            <county>Hopkins County</county>
+            <county>Houston County</county>
+
+            <county>Howard County</county>
+            <county>Hudspeth County</county>
+            <county>Hunt County</county>
+            <county>Hutchinson County</county>
+            <county>Irion County</county>
+            <county>Jack County</county>
+
+            <county>Jackson County</county>
+            <county>Jasper County</county>
+            <county>Jeff Davis County</county>
+            <county>Jefferson County</county>
+            <county>Jim Hogg County</county>
+            <county>Jim Wells County</county>
+
+            <county>Johnson County</county>
+            <county>Jones County</county>
+            <county>Karnes County</county>
+            <county>Kaufman County</county>
+            <county>Kendall County</county>
+            <county>Kenedy County</county>
+
+            <county>Kent County</county>
+            <county>Kerr County</county>
+            <county>Kimble County</county>
+            <county>King County</county>
+            <county>Kinney County</county>
+            <county>Kleberg County</county>
+
+            <county>Knox County</county>
+            <county>La Salle County</county>
+            <county>Lamar County</county>
+            <county>Lamb County</county>
+            <county>Lampasas County</county>
+            <county>Lavaca County</county>
+
+            <county>Lee County</county>
+            <county>Leon County</county>
+            <county>Liberty County</county>
+            <county>Limestone County</county>
+            <county>Lipscomb County</county>
+            <county>Live Oak County</county>
+
+            <county>Llano County</county>
+            <county>Loving County</county>
+            <county>Lubbock County</county>
+            <county>Lynn County</county>
+            <county>Madison County</county>
+            <county>Marion County</county>
+
+            <county>Martin County</county>
+            <county>Mason County</county>
+            <county>Matagorda County</county>
+            <county>Maverick County</county>
+            <county>McCulloch County</county>
+            <county>McLennan County</county>
+
+            <county>McMullen County</county>
+            <county>Medina County</county>
+            <county>Menard County</county>
+            <county>Midland County</county>
+            <county>Milam County</county>
+            <county>Mills County</county>
+
+            <county>Mitchell County</county>
+            <county>Montague County</county>
+            <county>Montgomery County</county>
+            <county>Moore County</county>
+            <county>Morris County</county>
+            <county>Motley County</county>
+
+            <county>Nacogdoches County</county>
+            <county>Navarro County</county>
+            <county>Newton County</county>
+            <county>Nolan County</county>
+            <county>Nueces County</county>
+            <county>Ochiltree County</county>
+
+            <county>Oldham County</county>
+            <county>Orange County</county>
+            <county>Palo Pinto County</county>
+            <county>Panola County</county>
+            <county>Parker County</county>
+            <county>Parmer County</county>
+
+            <county>Pecos County</county>
+            <county>Polk County</county>
+            <county>Potter County</county>
+            <county>Presidio County</county>
+            <county>Rains County</county>
+            <county>Randall County</county>
+
+            <county>Reagan County</county>
+            <county>Real County</county>
+            <county>Red River County</county>
+            <county>Reeves County</county>
+            <county>Refugio County</county>
+            <county>Roberts County</county>
+
+            <county>Robertson County</county>
+            <county>Rockwall County</county>
+            <county>Runnels County</county>
+            <county>Rusk County</county>
+            <county>Sabine County</county>
+            <county>San Augustine County</county>
+
+            <county>San Jacinto County</county>
+            <county>San Patricio County</county>
+            <county>San Saba County</county>
+            <county>Schleicher County</county>
+            <county>Scurry County</county>
+            <county>Shackelford County</county>
+
+            <county>Shelby County</county>
+            <county>Sherman County</county>
+            <county>Smith County</county>
+            <county>Somervell County</county>
+            <county>Starr County</county>
+            <county>Stephens County</county>
+
+            <county>Sterling County</county>
+            <county>Stonewall County</county>
+            <county>Sutton County</county>
+            <county>Swisher County</county>
+            <county>Tarrant County</county>
+            <county>Taylor County</county>
+
+            <county>Terrell County</county>
+            <county>Terry County</county>
+            <county>Throckmorton County</county>
+            <county>Titus County</county>
+            <county>Tom Green County</county>
+            <county>Travis County</county>
+
+            <county>Trinity County</county>
+            <county>Tyler County</county>
+            <county>Upshur County</county>
+            <county>Upton County</county>
+            <county>Uvalde County</county>
+            <county>Val Verde County</county>
+
+            <county>Van Zandt County</county>
+            <county>Victoria County</county>
+            <county>Walker County</county>
+            <county>Waller County</county>
+            <county>Ward County</county>
+            <county>Washington County</county>
+
+            <county>Webb County</county>
+            <county>Wharton County</county>
+            <county>Wheeler County</county>
+            <county>Wichita County</county>
+            <county>Wilbarger County</county>
+            <county>Willacy County</county>
+
+            <county>Williamson County</county>
+            <county>Wilson County</county>
+            <county>Winkler County</county>
+            <county>Wise County</county>
+            <county>Wood County</county>
+            <county>Yoakum County</county>
+
+            <county>Young County</county>
+            <county>Zapata County</county>
+            <county>Zavala County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Utah</name>
+        <abv>UT</abv>
+        <counties>
+            <county>Beaver County</county>
+            <county>Box Elder County</county>
+            <county>Cache County</county>
+            <county>Carbon County</county>
+            <county>Daggett County</county>
+
+            <county>Davis County</county>
+            <county>Duchesne County</county>
+            <county>Emery County</county>
+            <county>Garfield County</county>
+            <county>Grand County</county>
+            <county>Iron County</county>
+
+            <county>Juab County</county>
+            <county>Kane County</county>
+            <county>Millard County</county>
+            <county>Morgan County</county>
+            <county>Piute County</county>
+            <county>Rich County</county>
+
+            <county>Salt Lake County</county>
+            <county>San Juan County</county>
+            <county>Sanpete County</county>
+            <county>Sevier County</county>
+            <county>Summit County</county>
+            <county>Tooele County</county>
+
+            <county>Uintah County</county>
+            <county>Utah County</county>
+            <county>Wasatch County</county>
+            <county>Washington County</county>
+            <county>Wayne County</county>
+            <county>Weber County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Vermont</name>
+        <abv>VT</abv>
+        <counties>
+            <county>Addison County</county>
+            <county>Bennington County</county>
+            <county>Caledonia County</county>
+            <county>Chittenden County</county>
+            <county>Essex County</county>
+
+            <county>Franklin County</county>
+            <county>Grand Isle County</county>
+            <county>Lamoille County</county>
+            <county>Orange County</county>
+            <county>Orleans County</county>
+            <county>Rutland County</county>
+
+            <county>Washington County</county>
+            <county>Windham County</county>
+            <county>Windsor County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Virginia</name>
+        <abv>VA</abv>
+        <counties>
+            <county>Accomack County</county>
+            <county>Albemarle County</county>
+            <county>Alleghany County</county>
+            <county>Amelia County</county>
+            <county>Amherst County</county>
+
+            <county>Appomattox County</county>
+            <county>Arlington County</county>
+            <county>Augusta County</county>
+            <county>Bath County</county>
+            <county>Bedford County</county>
+            <county>Bland County</county>
+
+            <county>Botetourt County</county>
+            <county>Brunswick County</county>
+            <county>Buchanan County</county>
+            <county>Buckingham County</county>
+            <county>Campbell County</county>
+            <county>Caroline County</county>
+
+            <county>Carroll County</county>
+            <county>Charles City County</county>
+            <county>Charlotte County</county>
+            <county>Chesterfield County</county>
+            <county>Clarke County</county>
+            <county>Craig County</county>
+
+            <county>Culpeper County</county>
+            <county>Cumberland County</county>
+            <county>Dickenson County</county>
+            <county>Dinwiddie County</county>
+            <county>Essex County</county>
+            <county>Fairfax County</county>
+
+            <county>Fauquier County</county>
+            <county>Floyd County</county>
+            <county>Fluvanna County</county>
+            <county>Franklin County</county>
+            <county>Frederick County</county>
+            <county>Giles County</county>
+
+            <county>Gloucester County</county>
+            <county>Goochland County</county>
+            <county>Grayson County</county>
+            <county>Greene County</county>
+            <county>Greensville County</county>
+            <county>Halifax County</county>
+
+            <county>Hanover County</county>
+            <county>Henrico County</county>
+            <county>Henry County</county>
+            <county>Highland County</county>
+            <county>Isle of Wight County</county>
+            <county>James City County</county>
+
+            <county>King and Queen County</county>
+            <county>King George County</county>
+            <county>King William County</county>
+            <county>Lancaster County</county>
+            <county>Lee County</county>
+            <county>Loudoun County</county>
+
+            <county>Louisa County</county>
+            <county>Lunenburg County</county>
+            <county>Madison County</county>
+            <county>Mathews County</county>
+            <county>Mecklenburg County</county>
+            <county>Middlesex County</county>
+
+            <county>Montgomery County</county>
+            <county>Nelson County</county>
+            <county>New Kent County</county>
+            <county>Northampton County</county>
+            <county>Northumberland County</county>
+            <county>Nottoway County</county>
+
+            <county>Orange County</county>
+            <county>Page County</county>
+            <county>Patrick County</county>
+            <county>Pittsylvania County</county>
+            <county>Powhatan County</county>
+            <county>Prince Edward County</county>
+
+            <county>Prince George County</county>
+            <county>Prince William County</county>
+            <county>Pulaski County</county>
+            <county>Rappahannock County</county>
+            <county>Richmond County</county>
+            <county>Roanoke County</county>
+
+            <county>Rockbridge County</county>
+            <county>Rockingham County</county>
+            <county>Russell County</county>
+            <county>Scott County</county>
+            <county>Shenandoah County</county>
+            <county>Smyth County</county>
+
+            <county>Southampton County</county>
+            <county>Spotsylvania County</county>
+            <county>Stafford County</county>
+            <county>Surry County</county>
+            <county>Sussex County</county>
+            <county>Tazewell County</county>
+
+            <county>Warren County</county>
+            <county>Washington County</county>
+            <county>Westmoreland County</county>
+            <county>Wise County</county>
+            <county>Wythe County</county>
+            <county>York County</county>
+
+        </counties>
+    </state>
+    <state>
+        <name>Washington</name>
+        <abv>WA</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Asotin County</county>
+            <county>Benton County</county>
+            <county>Chelan County</county>
+            <county>Clallam County</county>
+
+            <county>Clark County</county>
+            <county>Columbia County</county>
+            <county>Cowlitz County</county>
+            <county>Douglas County</county>
+            <county>Ferry County</county>
+            <county>Franklin County</county>
+
+            <county>Garfield County</county>
+            <county>Grant County</county>
+            <county>Grays Harbor County</county>
+            <county>Island County</county>
+            <county>Jefferson County</county>
+            <county>King County</county>
+
+            <county>Kitsap County</county>
+            <county>Kittitas County</county>
+            <county>Klickitat County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Mason County</county>
+
+            <county>Okanogan County</county>
+            <county>Pacific County</county>
+            <county>Pend Oreille County</county>
+            <county>Pierce County</county>
+            <county>San Juan County</county>
+            <county>Skagit County</county>
+
+            <county>Skamania County</county>
+            <county>Snohomish County</county>
+            <county>Spokane County</county>
+            <county>Stevens County</county>
+            <county>Thurston County</county>
+            <county>Wahkiakum County</county>
+
+            <county>Walla Walla County</county>
+            <county>Whatcom County</county>
+            <county>Whitman County</county>
+            <county>Yakima County</county>
+        </counties>
+    </state>
+    <state>
+        <name>West Virginia</name>
+        <abv>WV</abv>
+        <counties>
+            <county>Barbour County</county>
+            <county>Berkeley County</county>
+            <county>Boone County</county>
+            <county>Braxton County</county>
+            <county>Brooke County</county>
+
+            <county>Cabell County</county>
+            <county>Calhoun County</county>
+            <county>Clay County</county>
+            <county>Doddridge County</county>
+            <county>Fayette County</county>
+            <county>Gilmer County</county>
+
+            <county>Grant County</county>
+            <county>Greenbrier County</county>
+            <county>Hampshire County</county>
+            <county>Hancock County</county>
+            <county>Hardy County</county>
+            <county>Harrison County</county>
+
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Kanawha County</county>
+            <county>Lewis County</county>
+            <county>Lincoln County</county>
+            <county>Logan County</county>
+
+            <county>Marion County</county>
+            <county>Marshall County</county>
+            <county>Mason County</county>
+            <county>McDowell County</county>
+            <county>Mercer County</county>
+            <county>Mineral County</county>
+
+            <county>Mingo County</county>
+            <county>Monongalia County</county>
+            <county>Monroe County</county>
+            <county>Morgan County</county>
+            <county>Nicholas County</county>
+            <county>Ohio County</county>
+
+            <county>Pendleton County</county>
+            <county>Pleasants County</county>
+            <county>Pocahontas County</county>
+            <county>Preston County</county>
+            <county>Putnam County</county>
+            <county>Raleigh County</county>
+
+            <county>Randolph County</county>
+            <county>Ritchie County</county>
+            <county>Roane County</county>
+            <county>Summers County</county>
+            <county>Taylor County</county>
+            <county>Tucker County</county>
+
+            <county>Tyler County</county>
+            <county>Upshur County</county>
+            <county>Wayne County</county>
+            <county>Webster County</county>
+            <county>Wetzel County</county>
+            <county>Wirt County</county>
+
+            <county>Wood County</county>
+            <county>Wyoming County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Wisconsin</name>
+        <abv>WI</abv>
+        <counties>
+            <county>Adams County</county>
+            <county>Ashland County</county>
+            <county>Barron County</county>
+            <county>Bayfield County</county>
+            <county>Brown County</county>
+
+            <county>Buffalo County</county>
+            <county>Burnett County</county>
+            <county>Calumet County</county>
+            <county>Chippewa County</county>
+            <county>Clark County</county>
+            <county>Columbia County</county>
+
+            <county>Crawford County</county>
+            <county>Dane County</county>
+            <county>Dodge County</county>
+            <county>Door County</county>
+            <county>Douglas County</county>
+            <county>Dunn County</county>
+
+            <county>Eau Claire County</county>
+            <county>Florence County</county>
+            <county>Fond du Lac County</county>
+            <county>Forest County</county>
+            <county>Grant County</county>
+            <county>Green County</county>
+
+            <county>Green Lake County</county>
+            <county>Iowa County</county>
+            <county>Iron County</county>
+            <county>Jackson County</county>
+            <county>Jefferson County</county>
+            <county>Juneau County</county>
+
+            <county>Kenosha County</county>
+            <county>Kewaunee County</county>
+            <county>La Crosse County</county>
+            <county>Lafayette County</county>
+            <county>Langlade County</county>
+            <county>Lincoln County</county>
+
+            <county>Manitowoc County</county>
+            <county>Marathon County</county>
+            <county>Marinette County</county>
+            <county>Marquette County</county>
+            <county>Menominee County</county>
+            <county>Milwaukee County</county>
+
+            <county>Monroe County</county>
+            <county>Oconto County</county>
+            <county>Oneida County</county>
+            <county>Outagamie County</county>
+            <county>Ozaukee County</county>
+            <county>Pepin County</county>
+
+            <county>Pierce County</county>
+            <county>Polk County</county>
+            <county>Portage County</county>
+            <county>Price County</county>
+            <county>Racine County</county>
+            <county>Richland County</county>
+
+            <county>Rock County</county>
+            <county>Rusk County</county>
+            <county>Sauk County</county>
+            <county>Sawyer County</county>
+            <county>Shawano County</county>
+            <county>Sheboygan County</county>
+
+            <county>St. Croix County</county>
+            <county>Taylor County</county>
+            <county>Trempealeau County</county>
+            <county>Vernon County</county>
+            <county>Vilas County</county>
+            <county>Walworth County</county>
+
+            <county>Washburn County</county>
+            <county>Washington County</county>
+            <county>Waukesha County</county>
+            <county>Waupaca County</county>
+            <county>Waushara County</county>
+            <county>Winnebago County</county>
+
+            <county>Wood County</county>
+        </counties>
+    </state>
+    <state>
+        <name>Wyoming</name>
+        <abv>WY</abv>
+        <counties>
+            <county>Albany County</county>
+            <county>Big Horn County</county>
+            <county>Campbell County</county>
+            <county>Carbon County</county>
+            <county>Converse County</county>
+
+            <county>Crook County</county>
+            <county>Fremont County</county>
+            <county>Goshen County</county>
+            <county>Hot Springs County</county>
+            <county>Johnson County</county>
+            <county>Laramie County</county>
+
+            <county>Lincoln County</county>
+            <county>Natrona County</county>
+            <county>Niobrara County</county>
+            <county>Park County</county>
+            <county>Platte County</county>
+            <county>Sheridan County</county>
+
+            <county>Sublette County</county>
+            <county>Sweetwater County</county>
+            <county>Teton County</county>
+            <county>Uinta County</county>
+            <county>Washakie County</county>
+            <county>Weston County</county>
+
+        </counties>
+    </state>
+</states>

@@ -1,0 +1,317 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+/******************
+ * MANAGE LEADS / PROJECTS / ARCHIVE
+ *****************/
+.page_title{
+	font-size: 20px;
+}
+#commercial{
+	display: none;
+}
+#residential{
+	display: none;
+}
+.entities{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.portfolio{
+	border: 1px solid #A7A9AC;
+	padding: 10px;
+}
+.portfolio_name{
+	font-weight: bold;
+	font-size: 16px;
+	color: #0F75BC;
+	display: inline-block;
+}
+.portfolio_nickname{
+	font-weight: bold;
+	font-size: 14px;
+	color: #7b7e83;
+	display: inline-block;
+}
+.right_pad{
+	margin-right: 20px;
+}
+#contacts h3{
+	margin-top: 0px;
+	display: inline-block;
+	font-size: 20px;
+}
+#add_contact_form, #edit_contact_form{
+	display: none;
+}
+#contacts .portfolio_contact{
+	padding-left: 35px;
+	padding-right: 35px;
+}
+#contacts .portfolio_contact_name{
+	font-size: 18px;
+	margin-left: 10px;
+}
+#contacts .portfolio_contact_title{
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 40px;
+}
+#contacts .portfolio_contact_phone{
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 40px;
+}
+#contacts .portfolio_contact_phone .phone{
+	font-weight: normal;
+}
+#contacts .portfolio_contact_email{
+	display: inline-block;
+	margin-left: 40px;
+}
+#contacts .portfolio_edit_contact{
+	position: relative;
+	cursor: pointer;
+	left: 0px;
+}
+#projects h3{
+	margin-top: 0px;
+	display: inline-block;
+	font-size: 20px;
+}
+#projects .portfolio_project{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#proposals h3{
+	margin-top: 0px;
+	display: inline-block;
+	font-size: 20px;
+}
+.project{
+	border: 1px solid #A7A9AC;
+	padding: 10px;
+	margin: 20px;
+}
+.project:hover{
+	background-color: #cbe5a8;
+	cursor: pointer;
+}
+.project_number{
+	font-weight: bold;
+	font-size: 14px;
+	color: #7b7e83;
+	display: inline-block;
+}
+.project_name{
+	font-weight: bold;
+	font-size: 16px;
+	color: #0F75BC;
+	display: inline-block;
+}
+#address_display #edit_project_address{
+	position: relative;
+	cursor: pointer;
+	left: 0px;
+}
+#address_display .proposal_address{
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 10px;
+}
+#address_display .proposal_city,
+#address_display .proposal_state,
+#address_display .proposal_zip{
+	font-size: 14px;
+	font-weight: bold;
+}
+#address_display .proposal_city{
+	display: inline-block;
+	margin-left: 40px;
+}
+#edit_project_address_form{
+	display: none;
+}
+#edit_project_address_form .loader{
+	
+}
+#edit_project_address_form .loader img{
+	height: 40px;
+}
+#county_loader{
+	display: none;
+}
+#project_address_form_part_county{
+	display: none;
+}
+#project_address_form_part_apn{
+	display: none;
+}
+#project_address_form_part_address{
+	display: none;
+}
+/*#project_address_submit_button{
+	display: none;
+}*/
+#meters h3{
+	display: inline-block;
+}
+#meters .fas{
+	font-size: 26px;
+}
+#meters_note{
+	display:block;
+}
+#designs{
+	background-color: #EEEEEE;
+}
+#designs h3{
+	margin-top: 0px;
+}
+.design{
+	border: 1px solid #A7A9AC;
+	padding: 10px;
+	margin: 20px;
+}
+.design:hover{
+	background-color: #cbe5a8;
+	cursor: pointer;
+}
+.design_name{
+	font-weight: bold;
+	font-size: 16px;
+	color: #0F75BC;
+	display: inline-block;
+}
+.design_category{
+	font-weight: bold;
+	font-size: 14px;
+	color: #7b7e83;
+	display: inline-block;
+}
+.design_description{
+	color: #222222;
+}
+#project_properties h5{
+	display: block;
+	font-size: 18px;
+	background-color: #DDDDDD;
+	padding: 5px;
+}
+#project_properties .property_display input{
+	margin-right: 5px;
+}
+
+/***************************
+ * ATTRIBUTES SETTINGS PAGE 
+ **************************/
+#attributes_sections .attributes_section .row{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#attributes_sections .attributes_section{
+	border-bottom: 1px solid #222222;
+}
+#attributes_sections .attributes_section h4{
+	display: block;
+	padding: 5px 8px 5px 8px;
+	background-color: #0F75BC;
+	color: #FFFFFF;
+}
+#attributes_sections .attributes_section h5{
+	display: block;
+	font-size: 18px;
+	background-color: #DDDDDD;
+	padding: 5px;
+}
+#attributes_sections .attribute_display{
+	margin-left: 10px;
+}
+#new_category_res,
+#new_category_com,
+#new_category_util{
+	display: none;
+}
+#attributes_sections .help-block{
+	display: none;
+}
+#attributes_sections .attribute_display .fas{
+	float: right;
+	cursor: pointer;
+}
+/********************
+ * DESIGNS 
+ ******************/
+.design_listing{
+	padding: 20px;
+	background-color: #DDDDDD;
+}
+.design_listing a{
+	font-weight: bold;
+	font-size: 20px;
+	color: #3097D1;
+}
+#design_main_menu{
+	background-color: #DDDDDD;
+}
+#design_main_menu{
+	padding: 8px;
+	list-style-type: none;
+	margin: 0;
+}
+#design_main_menu li{
+	display: block;
+	background-color: #BBBBBB;
+	color: #222222;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 15px 13px;
+	margin-bottom: 10px;
+	transition: font-size 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+	cursor: pointer;
+}
+#design_main_menu li:hover{
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: #0F75BC;
+}
+#design_main_menu li ul{
+	display: none;
+	padding: 5px;
+	list-style-type: none;
+	margin: 0 0 0 10px;
+}
+#design_main_menu li:hover ul{
+	display: block;
+}
+#design_main_menu li ul li{
+	display: block;
+	background-color: #444444;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 8px 10px;
+	margin-bottom: 5px;
+	transition: font-size 0.2s ease-in, background-color 0.2s ease-in, color 0.2s ease-in;
+	cursor: pointer;
+}
+#design_main_menu li ul li:hover{
+	font-size: 16px;
+	color: #222222;
+	background-color: #8CC63F;
+}
+#tools_frame, #utility_frame, #bom_frame,
+#fault_calculator, #vd_calculator, #schedule_builder,
+#res_load_calc{
+	display: none;
+}
+

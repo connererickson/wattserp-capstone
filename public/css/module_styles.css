@@ -1,0 +1,42 @@
+#mashed_potatoes{
+	max-height: 500px !important; 
+}
+.options_menu{
+	display: none;
+	list-style-type: none;
+	position: relative;
+    top: 36px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+    right: -28px;
+    z-index: 1000;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+.options_menu li{
+}
+.options_menu li a{
+	display: block;
+	color: #222222;
+	padding: 5px 10px;
+	font-size: 16px;
+}
+.options_menu li a:hover{
+	text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;	
+}
+.drop_down_options{
+	float: right;
+	cursor: pointer;
+}
+.drop_down_options .fas{
+	font-size: 26px;
+}
+

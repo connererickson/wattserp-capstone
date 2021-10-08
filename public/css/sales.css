@@ -1,0 +1,30 @@
+#channel_partner_profile_form h5{
+	margin-top: 0;
+	color: #FFFFFF;
+	background-image: linear-gradient(to bottom,#0c619d 0,#0e6bac 100%);
+	padding: 10px;
+}
+#channel_partner_profile_form hr{
+	margin: 5px;
+}
+#channel_partner_profile_form label{
+	font-size: 12px;
+}
+#referring_contact_template{
+	display: none;
+}
+#referring_contacts_container{
+	margin-bottom: 15px;
+}
+#referring_contacts_container .referring_contact_inner{
+	margin: 0;
+	padding: 15px;
+	border: 3px solid #0e6bac;
+	margin-bottom: 15px;
+}
+#remove_sales_contact{
+	float: right;
+}
+#remove_sales_contact{
+	display: none;
+}

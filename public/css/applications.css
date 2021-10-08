@@ -1,0 +1,348 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+
+#weather_application .panel-heading{
+	padding: 0px;
+}
+#weather_application .panel-heading p{
+	margin-top: 12px;
+	margin-left: 10px;
+	display: inline-block;
+}
+#weather_application .panel-body{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+#add_location_form_container{
+	display: none;
+}
+#weather_add_location{
+	font-size: 14px;
+	padding: 6px 12px;
+	float: right;
+	margin-top: 4px;
+	margin-right: 10px;
+}
+#weather_add_location:active,
+#weather_add_location:visited{
+	color: #FFFFFF;
+}
+#weather_locations{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#weather_locations li{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	padding-right: 6px;
+	background-color: #DDDDDD;
+	color: #222222;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	border-right: 1px solid #BBBBBB;
+	float: left;
+}
+#weather_locations .weather_edit_location{
+	margin-left: 5px;
+	border-left: 1px solid #999999;
+	height: 25px;
+	display: inline-block;
+	padding-left: 6px;
+}
+#weather_locations .weather_edit_location img{
+	height: 28px;
+}
+#weather_locations li.current{
+	background-color: #0F75BC;
+	color: #FFFFFF;
+}
+#weather_application .weather_data{
+	display: none;
+}
+#submit_new_location,
+#submit_location_update{
+	display: none;
+}
+#weather_container{
+	padding: 15px;
+}
+#weather_container .panel-heading{
+	padding: 4px 8px;
+	font-weight: bold;
+	color: #666666;
+}
+#weather_container .panel-body{
+	text-align: center;
+}
+#weather_container .current_conditions{
+	padding-bottom: 15px;
+}
+#weather_container .current_conditions .location_data{
+	padding: 20px 12px;
+}
+#weather_container .current_conditions .location_data span{
+	font-size: 12px;
+	color: #666666;
+	font-weight: bold;
+	line-height: 12px;
+}
+#weather_container .current_conditions .current_temperature img{
+	height: 115px;
+}
+#weather_container .current_conditions .current_temperature p{
+	color: #222222;
+	margin-bottom: 0px;
+}
+#weather_container .current_conditions .current_temperature div{
+	font-size: 36px;
+	color: #444444;
+}
+#weather_container .current_conditions .current_temperature span{
+
+}
+#weather_container .seven_day{
+	padding: 15px;
+}
+#weather_container .seven_day .col-md-1{
+	width: 14.28571% !important;
+}
+#weather_container .seven_day p{
+	margin-bottom: 0px;
+	color: #222222;
+	font-size: 12px;
+}
+#weather_container .seven_day .weekend p{
+	font-size: 12px;
+}
+#weather_container .seven_day img{
+	height: 100px;
+}
+#weather_container .seven_day span{
+	display: block;
+	color: #666666;
+	font-size: 12px;
+	padding: 10px;
+	height: 65px;
+}
+#weather_container .seven_day .high_temp{
+	font-size: 14px;
+	color: #a61d28;
+	font-weight: bold;
+}
+#weather_container .seven_day .low_temp{
+	font-size: 14px;
+	color: #1482b6;
+	font-weight: bold;
+}
+#weather_container .today .col-md-4{
+	border-right: 1px solid #DDDDDD;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+#weather_container .day_times{
+	padding-bottom: 10px;
+} 
+#weather_container .day_times p{
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #666666;
+	font-weight: bold;
+	font-size: 14px;
+}
+#weather_container .day_times img{
+	height: 100px;
+}
+#weather_container .day_times span{
+	display: block;
+	color: #222222;
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#weather_container .today h4{
+	font-size: 14px;
+	font-weight: bold;
+}
+#weather_container .wind_data ul{
+	list-style-type: none;
+	padding-left: 20px;
+}
+#weather_container .wind_data ul li{
+	padding-left: 50px;
+	line-height: 60px;
+	text-align: left;
+	font-weight: bold;
+	color: #666666;
+	font-size: 13px;
+}
+#weather_container .wind_data ul li span{
+	font-size: 13px;
+	color: #222222;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+#weather_container .wind_data .wind_speed{
+	background-image: url('../images/weather/wind_speed.png');
+	background-position: left center;
+	background-size: 30px 40px;
+	background-repeat: no-repeat;
+}
+#weather_container .wind_data .wind_gust{
+	background-image: url('../images/weather/gust.png');
+	background-position: left center;
+	background-size: 50px 25px;
+	background-repeat: no-repeat
+}
+#weather_container .wind_bearing .bearing_container{
+	position: relative;
+	height: 150px;
+	width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#weather_container .wind_bearing .compass{
+	height: 135px;
+}
+#weather_container .wind_bearing .needle{
+	position: absolute;
+	top: 11%;
+    left: 15%;
+    z-index: 10;
+    height: 100px;
+	transform: rotate(20deg);
+}
+#weather_container .today hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#weather_container .cloud_cover .fas{
+	font-size: 130px;
+	background-image: -webkit-linear-gradient(left, #0F75BC 0%, #FFFFFF 30%); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #0F75BC 0%, #FFFFFF 30%); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #0F75BC 0%, #FFFFFF 30%); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #0F75BC 0%, #FFFFFF 30%); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #0F75BC 0%, #FFFFFF 30%);
+  	-webkit-background-clip: text;
+  	background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	-webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #999999;
+}
+#weather_container .cloud_cover p{
+	font-size: 16px;
+	color: #666666;
+	font-weight: bold;
+}
+#weather_container .humidity ul{
+	list-style-type: none;
+}
+#weather_container .humidity ul li{
+	padding-left: 50px;
+	line-height: 50px;
+	text-align: left;
+	font-weight: bold;
+	color: #666666;
+	font-size: 13px;
+}
+#weather_container .humidity ul li span{
+	font-size: 13px;
+	color: #222222;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+#weather_container .humidity .dew_point{
+	background-image: url('../images/weather/dew_point.png');
+	background-position: left center;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+}
+#weather_container .humidity .humidity{
+	background-image: url('../images/weather/humidity.png');
+	background-position: left center;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+}
+#weather_container .humidity .pressure{
+	background-image: url('../images/weather/pressure.png');
+	background-position: left center;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+}
+#weather_container .environment ul{
+	list-style-type: none;
+}
+#weather_container .environment ul li{
+	padding-left: 50px;
+	line-height: 50px;
+	text-align: left;
+	font-weight: bold;
+	color: #666666;
+	font-size: 13px;
+}
+#weather_container .environment ul li span{
+	font-size: 13px;
+	color: #222222;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+#weather_container .environment .uvindex{
+	background-image: url('../images/weather/uv.png');
+	background-position: left center;
+	background-size: 27px 27px;
+	background-repeat: no-repeat;
+}
+#weather_container .environment .visibility{
+	background-image: url('../images/weather/visibility.png');
+	background-position: left center;
+	background-size: 32px 27px;
+	background-repeat: no-repeat;
+}
+#weather_container .environment .ozone{
+	background-image: url('../images/weather/ozone.png');
+	background-position: left center;
+	background-size: 32px 25px;
+	background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1475px) {
+	#weather_container ul{
+		padding-left: 0px;
+	}
+}
+@media only screen and (max-width: 1300px) {
+	#weather_container .day_times img{
+		height: 75px;
+	}
+	#current_conditions .col-md-4{
+		width: 100%;
+	}
+	#current_conditions .col-md-8{
+		width: 100%;
+	}
+	#weather_container ul{
+		margin-left: auto;
+    	margin-right: auto;
+    	display: inline-block;
+	}
+}
+@media only screen and (max-width: 1090px) {
+	#weather_container .seven_day .col-md-1{
+		width: 33.33333% !important;
+		border-bottom: 1px solid #999999;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+}

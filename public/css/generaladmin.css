@@ -1,0 +1,688 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+body{
+	background-color: #FFFFFF;
+	font-size: 12px;
+}
+h1{
+	font-size: 24px;
+}
+h2{
+	font-size: 22px;
+}
+h3{
+	font-size: 18px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+h6{
+	font-size: 12px;
+}
+#app .container{
+	width: 98%;
+}
+.no_pad{
+	padding: 0;
+}
+.no_pad_left{
+	padding-left: 0;
+}
+.no_pad_right{
+	padding-right: 0;
+}
+.fas_left{
+	margin-right: 5px;
+}
+.fas_right{
+	margin-left: 5px;
+}
+.clear_fix{
+	clear: both;
+}
+.navbar-header img{
+	height: 100px;
+	padding: 15px;
+}
+#login_form{
+	margin-top: 40px;
+}
+#login_form_container{
+	background-color: #EEEEEE;
+}
+#login_form_container .panel-heading{
+	background-color: #2579a9;
+	color: #FFFFFF;
+}
+.page_menu{
+	list-style-type: none;
+	width: 100%;
+	height: 36px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 15px;
+	padding: 0;
+	padding-left: 0px;
+	list-style: none;
+}
+.page_menu li{
+	position: relative;
+    display: inline-block;
+    padding: 0.8em 1.5em 1em;
+    color: inherit;
+    text-decoration: none;
+    margin: 6px 0px;
+    top:-8px;
+}
+.page_menu li:before{
+	content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: .5em;
+    left: 0px;
+    border-bottom: none;
+    background: #DDDDDD;
+    border: .1em solid #aaa;
+}
+.page_menu li a{
+	position:relative;
+	z-index:2;
+	color: #222222;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 0px;
+}
+.page_menu li:hover:before{
+	background-color: #cbe5a8;
+}
+.page_menu li a:hover{
+	text-decoration: none;
+}
+.page_menu .current_tab{
+	position: relative;
+    z-index: 2;
+}
+.page_menu .current_tab a{
+	color: #222222;
+}
+.page_menu .current_tab:before{
+	background-color: #8CC63F;
+}
+table{
+	border-top: 2px solid #DDDDDD;
+}
+form{
+	padding: 15px;
+}
+form .alert{
+	padding: 0;
+}
+form .alert ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+form .alert ul li{
+	color: #ea2f36;
+}
+form .form-group .help-block{
+	color: #FE8970;
+}
+form .form-group .float_select{
+	display: inline-block;
+	width: 200px;
+}
+form .form-group .short_text{
+	width: 50%;
+	display: inline-block;
+}
+form .erp_textarea{
+	resize: none;
+}
+form .crm_checkbox{
+	height: 20px;
+}
+#modal_dialog_update_background{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #222222;
+	z-index:5000;
+	opacity: .4;
+	display: none;
+}
+#modal_dialog_update_box{
+	position: absolute;
+	height: 250px;
+	width: 500px;
+	background-color: #FFFFFF;
+	font-size: 16px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 5001;
+	text-align: center;
+	padding: 20px;
+	display: none;
+}
+.hidden{
+	visibility: hidden;
+}
+.crm_btn{
+	background-image: linear-gradient(to bottom,#0c619d 0,#0e6bac 100%);
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 14px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-decoration: none !important;
+	display: inline-block;
+	border: 0;
+	outline: none;
+}
+.crm_btn:hover{
+	background-image: linear-gradient(to bottom,#0e6bac 0,#1289db 100%);
+	color: #FFFFFF;
+}
+.crm_btn a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.crm_btn2{
+	background-image: linear-gradient(to bottom,#ffffff 0,#e0e0e0 100%);
+	color: #444444;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 14px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-decoration: none !important;
+	display: inline-block;
+	border: 1px solid #999999;
+	outline: none;
+}
+.crm_btn2:hover{
+	background-image: linear-gradient(to bottom,#f7f7f7 0,#ddd 100%);
+}
+.crm_btn3{
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 8px;
+}
+.crm_btn_red{
+	background-image: linear-gradient(to bottom,#bb140e 0,#8b0f0b 100%);
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 6px 14px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-decoration: none !important;
+	display: inline-block;
+	border: 0;
+	outline: none;
+	margin-top: 20px;
+}
+.crm_btn_red:hover{
+	color: #FFFFFF;
+	background-image: linear-gradient(to bottom,#ca1610 0,#ab130d 100%);
+}
+.crm_btn_red:visited{
+	color: #FFFFFF;
+}
+.messi .btn-danger, .messi .btn-success, .messi .btn-info, .messi .btn-warning{
+	font-size: 16px !important;
+	padding: 5px 15px 5px 15px !important;
+}
+.crm_checkbox{
+	width: 50px;
+	display: inline-block;
+	height: 18px;
+	vertical-align: middle;
+	box-shadow: none !important;
+}
+.bg_fail{
+	background-color: #E75B70;
+	padding-left:20px;
+}
+.bg_success{
+	background-color: #BBE9AB;
+	padding-left:20px;
+}
+.right_side{
+	float: right;
+}
+.padding-20{
+	margin-left: 20px;
+}
+.margined{
+	margin: 15px;
+}
+.little_margined{
+	margin-top: 15px;
+	margin-left: 5px;
+}
+.padded{
+	padding: 15px;
+}
+.action_icon{
+	height: 25px;
+}
+.delete_icon{
+	cursor: pointer;
+}
+#create_employee_row{
+	display: none;
+}
+.ajax_success{
+	display: none;
+	background-color: #BBE9AB;
+	padding-left:20px;
+}
+.functions_list{
+	background-color: #EEEEEE;
+	padding: 10px;
+	list-style-type: none;
+}
+.sidebar_function{
+	
+}
+.sidebar_function a{
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	background-color: #0F75BC;
+	padding: 15px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.sidebar_function a:hover{
+	padding-top: 15px;
+	padding-bottom: 25px;
+	transition: font-size 0.2s ease-in,
+				padding 0.2s ease-in;
+	
+}
+/***********************
+ * MAIN NAV BAR 
+ **********************/
+#erp_main_nav .dropdown-menu a{
+	font-size: 13px;
+}
+/***********************
+ * DASHBOARD INDEX 
+ **********************/
+#modules_select_container{
+	float: right;
+}
+#select_dmodules{
+	padding: 7px 10px 7px 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+#dashboard_grid .grid-item{
+	max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.grid-item {
+	width: 50%;
+	background-color: #EEEEEE;
+	padding: 10px;
+	border: 3px solid #222222;
+	color: #222222;
+}
+.grid-item h3{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	float:left;
+}
+.module_body{
+	clear: both;
+}
+.packery-drop-placeholder {
+  outline: 3px dashed #444;
+  outline-offset: -6px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+          transition: transform 0.2s;
+}
+.erp_update span{
+	font-size: 14px;
+}
+.erp_update .erp_update_date{
+	font-size: 12px;
+	font-weight: bold;
+	float: right;
+}
+/***********************
+ * USERS EDIT 
+ ***********************/
+#roles_form .crm_checkbox{
+	display: inline-block;
+	width: 5%;
+}
+/***********************
+ * PERMISSIONS INDEX 
+ **********************/
+#permissions_index, #modules_index{
+	padding: 20px;
+}
+#permissions_index th, #modules_index th{
+	font-size: 12px;
+	padding: 10px;
+}
+#permissions_index .permission_name{
+	font-size: 12px;
+}
+#permissions_index td, #modules_index td{
+	text-align: center;
+}
+#permissions_index .right, #modules_index .right{
+	text-align: right;
+}
+#permissions_index .permission_name, #modules_index .module_name{
+	font-weight: bold;
+}
+#permissions_index .permission_description, #modules_index .module_description{
+	font-size: 12px;
+}
+#permissions_index .permissions_heading, #modules_index .modules_heading{
+	font-weight: bold;
+	font-size: 18px;
+}
+#permissions_index .permissions_heading hr, #modules_index .modules_heading hr{
+	margin: 10px;
+}
+
+/**********************
+ * SAFETY INDEX 
+ *********************/
+#safety_topics a{
+	text-decoration: none;
+	color: #636b6f;
+}
+#safety_topics .safety_topic{
+	text-align: center;
+	padding: 20px;
+	transition: padding 0.25s ease-out;
+	color: #444444;
+}
+#safety_topics .padded{
+	transition: padding 0.25s ease-out;
+}
+#safety_topics .padded:hover{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+#safety_topics .padded:hover .safety_topic{
+	padding-bottom: 25px;
+	color: #FFFFFF;
+}
+#safety_topics .safety_topic h4{
+	font-size: 20px;
+	font-weight: bold;
+}
+#safety_topics #training{
+	background-color: #c0eabb;
+}
+#safety_topics #audits{
+	background-color: #d1bfb6;
+}
+#safety_topics #jhas{
+	background-color: #f7d0b6;
+}
+#safety_topics #incidents{
+	background-color: #f29c93;
+}
+/*********************
+ * TRAINING COURSE DROPDOWS 
+ ********************/
+#schedule_training_form{
+	padding: 12px;
+}
+#training_training_courses{
+	width: 275px;
+	float: left;
+	margin-left: 20px;
+	height: 40px;
+	font-size: 12px;
+}
+#training_employees{
+	width: 275px;
+	float: left;
+	height: 40px;
+	font-size: 12px;
+}
+/*********************
+ * AUDIT INDEX 
+ ********************/
+#audit_index_content{
+	padding-top: 30px;
+}
+#audit_index_content p{
+	font-size: 18px;
+}
+#audits_table{
+	padding-top: 0px;
+    clear: both;
+}
+/*********************
+ * TRAINING FORM 
+ ********************/
+#create_training_form textarea, #edit_training_form textarea{
+	resize: none;
+}
+#slides_heading{
+	display: inline-block;
+}
+#add_slide_button{
+	margin-bottom: 20px;
+	cursor: pointer;
+	float: right;
+}
+.slide h5{
+	font-weight: bold;
+	color: #0F75BC;
+	cursor: pointer;
+}
+.slide h4:hover{
+	text-decoration: underline;
+}
+.slide_inner{
+	display: none;
+}
+.slide_inner img{
+	width: 500px;
+}
+/**********************
+ * INVENTORY INDEX 
+ *********************/
+#inventory_topics a, #repository_topics a{
+	text-decoration: none;
+	color: #636b6f;
+}
+#inventory_topics .inventory_topic, #repository_topics .repository_topic{
+	text-align: center;
+	padding: 20px;
+	transition: padding 0.25s ease-out;
+	color: #444444;
+}
+#inventory_topics .padded, #repository_topics .padded{
+	transition: padding 0.25s ease-out;
+}
+#inventory_topics .padded:hover, #repository_topics .padded:hover{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+#inventory_topics .padded:hover .inventory_topic,
+#repository_topics .padded:hover .repository_topic{
+	padding-bottom: 25px;
+	color: #FFFFFF;
+}
+#inventory_topics .inventory_topic h4,
+#repository_topics .repository_topic h4{
+	font-size: 20px;
+	font-weight: bold;
+}
+#inventory_topics #manage_parts,
+#repository_topics #manage_parts{
+	background-color: #c0eabb;
+}
+#inventory_topics #pull_parts,
+#repository_topics #administrate_parts{
+	background-color: #d1bfb6;
+}
+#inventory_topics #receive_parts{
+	background-color: #f7d0b6;
+}
+#inventory_topics #order{
+	background-color: #f29c93;
+}
+#inventory_topics #print{
+	background-color: #8fd8f9;
+}
+/**********************
+ * INVENTORY FORMS 
+ *********************/
+#generate_sku{
+	margin-top: 5px;
+}
+/**********************
+ * CREATE UTILITY RATE FORM 
+ *********************/
+#create_rate_form .input-icon{
+	position: relative;
+}
+#create_rate_form .input-icon > i {
+  position: absolute;
+  display: block;
+  transform: translate(0, -50%);
+  top: 42px;
+  pointer-events: none;
+  width: 25px;
+  text-align: center;
+  font-style: normal;
+  font-size: 16px;
+}
+#create_rate_form .input-icon .form-control {
+  padding-left: 25px;
+  padding-right: 0;
+}
+#create_rate_form .rate_description{
+	height: 110px;
+}
+#create_rate_form #fixed_charge_container,
+#create_rate_form #daily_charge_container,
+#create_rate_form #flat_rate_container,
+#create_rate_form #tou_rate_container,
+#create_rate_form #tiered_rate_container{
+	display: none;
+}
+#year_container{
+	border-bottom: 1px solid #CCCCCC;
+}
+#demand_add_period{
+	display: none;
+}
+#demand_period_row{
+	margin-top: 8px;
+}
+.demand_period_row, .kwh_period_row{
+	margin-top: 8px;
+}
+.demand_limit, .kwh_limit{
+	display: none;
+}
+.delete_demand_period, .delete_usage_period{
+	display: inline-block;
+	margin-top: 28px;
+}
+.demand_period_row .demand_interval_start,
+.kwh_period_row .kwh_interval_start
+{
+	display: inline !important;
+	padding: 6px 40px 6px 12px;
+}
+.demand_period_row .demand_interval_stop,
+.kwh_period_row .kwh_interval_stop
+{
+	display: inline;
+	padding: 6px 40px 6px 12px;
+}
+.demand_period_row .input-group-addon,
+.kwh_period_row .input-group-addon
+{
+	padding: 8px 3px 8px 3px;
+	vertical-align: inherit;
+    width: 25px;
+    position: absolute;
+    right: 15px;
+    margin-top: 0px;
+    top: 25px;
+}
+.adjust_amount_group{
+	display: none;
+}
+
+
+#tiers .tier_label{
+	margin-top: 30px;
+    display: inline-block;
+}
+#tiers .remove_tier {
+    margin-top: 25px;
+    display: inline-block;
+}
+#tiered_rate_container span,
+#tou_rate_container span{
+	display: inline;
+    margin-top: 30px;
+    font-weight: bold;
+}
+#tiered_rate_container .tiered_row,
+#tou_rate_container .interval_row{
+	margin-bottom: 20px;
+}
+#rate_form_templates{
+	display: none;
+}
+#rate_interval_start{
+	display: inline;
+	padding: 6px 40px 6px 12px;
+}
+#rate_interval_end{
+	display: inline;
+	padding: 6px 40px 6px 12px;
+}
+
+#intervals .remove_interval{
+	margin-top: 25px;
+    display: inline-block;
+}
+#tou_graphic{
+	height: 250px;
+}

@@ -1,0 +1,370 @@
+/****************
+ * COLORS
+ * BLUE 		#0F75BC
+ * GREEN 		#8CC63F
+ * GREY			#A7A9AC
+ * LIGHT GREEN  #BBE9AB
+ * LIGHT RED	#FE8970
+ * Error Red	#D42601
+ */
+
+/******************
+ * MANAGE INVENTORY/REPOSITORY 
+ *****************/
+#image_cropper_modal{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	background-image: url('../images/trans_bg2.png');
+	height: 100%;
+	width: 100%;
+}
+#cropContainerEyecandy{
+	height: 400px;
+	width: 400px;
+	position: relative;
+}
+#repository_tools_container label{
+	font-size: 12px;
+}
+#repository_list .repository_thumbnail{
+	width: 80px;
+}
+#repository_list td{
+	font-size: 13px;
+}
+#repository_list .page-navigation a{
+	font-size: 14px;
+	display: inline-block;
+	color: #FFFFFF;
+	background-color: #0F75BC;
+	border-radius: 3px;
+	padding: 2px 5px;
+	margin-right: 5px;
+}
+#repository_list .dataTables_length{
+	display: inline-block;
+	margin-top: 30px;
+}
+#repository_list .dataTables_paginate {
+	float: right;
+}
+#repository_list .sorting{
+	font-weight: bold;
+}
+#repository_preview_pane{
+	border: 1px solid #999999;
+	margin-top: 30px;
+	padding: 30px;
+	position:absolute;
+	transition: all 0.3s ease-in-out;
+	min-width: 500px;
+}
+#repository_preview_pane .part_heading{
+	color: #0F75BC;
+	padding-right: 12px;
+	text-align: right;
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+#repository_preview_pane td.part_heading_big{
+	color: #0F75BC;
+	padding-right: 12px;
+	text-align: right;
+	font-size: 20px;
+}
+#repository_preview_pane .part_data{
+	font-size: 12px;
+}
+#repository_preview_pane td.part_data_big{
+	font-size: 20px;
+}
+#repository_preview_pane p.part_heading{
+	color: #0F75BC;
+	margin-top: 20px;
+}
+#repository_preview_pane #part_image_container{
+	text-align: center;	
+}
+#repository_preview_pane #part_image{
+	width: 150px;
+}
+#repository_preview_pane #part_tags_container .repo_tag_a{
+	font-size: 10px;
+}
+#repository_preview_pane hr{
+	margin: 5px 0 5px 0;
+}
+#repository_preview_pane #part_barcode_image{
+	text-align: center;
+	height: 100px;
+}
+#repository_preview_pane #barcode_print_button{
+	display: none;
+}
+#repository_preview_pane #edit_part_button_container{
+	text-align: right;
+}
+#repository_preview_pane .part_color_cube{
+	height: 12px;
+	width: 80px;
+	border: 1px solid #222222;
+}
+#repository_preview_pane #edit_part_button,
+#repository_preview_pane #add_vendor_button{
+	display: none;
+}
+#repository_preview_pane #add_vendor_button{
+	margin-top: 26px;
+	font-size: 12px;
+	padding: 4px 10px;
+}
+#repository_preview_pane #vendor_select{
+	font-size: 12px;
+}
+#repository_preview_pane #vendor_price{
+	width: 80px;
+	font-size: 12px;
+}
+#repository_preview_pane #new_vendor_table td{
+	padding: 5px;
+}
+#repository_preview_pane #new_vendor_table label{
+	font-size: 10px;
+}
+#repository_preview_pane .part_hidden_data{
+	display: none;
+}
+#repository_preview_pane #vendors_table td{
+	padding-left: 15px;
+}
+#repository_preview_pane #loader_frame{
+	display: none;
+	min-height: 50px;
+}
+#repository_preview_pane #loader_frame img{
+	height: 40px;	
+}
+#repository_index #repository_preview_pane #part_image_modal{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-image: url('../images/trans_bg2.png');
+	left: 0;
+	top: 0;
+}
+#repository_preview_pane #edit_part_image{
+	height: 40px;
+	width: 40px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+#repository_preview_pane #edit_part_image img{
+	height: 40px;
+	width: 40px;
+}
+#update_stock{
+	width: 130px;
+	display: inline-block;
+}
+#update_stock_button{
+	display: none;
+}
+#croppicModal .loader{
+	height: 60px;
+}
+#create_repository_part_form .warning{
+	color: #D42601;
+	font-size: 12px;
+	padding-left: 15px;
+}
+#create_repository_part_form #description{
+	border: 1px solid #CCD0D2;
+	border-radius: 4px;
+    outline: 0;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#create_repository_part_form #description:focus{
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(152,203,232,0.6);
+	border-color: #98cbe8;
+}
+#create_repository_part_form #barcode_image_text, #create_repository_part_form #org_id_text{
+	display: none;
+}
+#organizations, #kitting, #types_tags, #units_colors{
+	display: none;
+}
+#administrate_repository .administrate_function_container .type_name{
+	display: inline-block;
+	width: 200px;
+}
+#administrate_repository .administrate_function_container .type_container{
+	padding: 10px;
+}
+#administrate_repository .administrate_function_container h3{
+	font-weight: bold;
+}
+#administrate_repository td{
+	font-size: 12px;
+}
+#new_type_error{
+	color: #D42601;
+}
+#part_documentation p{
+	display: inline-block;
+}
+#part_documentation #fileinfo{
+	float:right;
+}
+#part_documentation .file_input::-webkit-file-upload-button {
+	visibility: hidden;
+}
+#part_documentation .file_input{
+	display: inline-block;
+  	width: 175px;
+  	font-size: 10px;
+}
+#part_documentation .file_input::before {
+  	content: url('../images/upload_sm.png');
+  	display: inline-block;
+  	height: 28px;
+  	background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  	border: 1px solid #999;
+  	border-radius: 3px;
+  	padding: 2px 5px;
+  	outline: none;
+  	white-space: nowrap;
+  	-webkit-user-select: none;
+  	cursor: pointer;
+  	text-shadow: 1px 1px #fff;
+  	font-weight: 700;
+  	font-size: 10pt;
+}
+#part_documentation .file_input:hover::before {
+  	border-color: black;
+}
+#part_documentation .file_input:active::before {
+  	background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+#part_documentation .file_upload_go{
+	height: 30px;
+	padding: 3px 8px;
+	font-size: 12px;
+}
+#tags h3{
+	display: inline-block;
+}
+#tags .repo_tag, #part_tags_container .repo_tag{
+	border-radius: 12px;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+#tags .repo_tag a, #part_tags_container .repo_tag a{
+	display: inline-block;
+	color: #FFFFFF;
+	background-color: #777777;
+	cursor: pointer;
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 12px;
+}
+#part_tags_container .selected a{
+	background-color: #0F75BC;
+}
+#tags .tagtype_container h4{
+	margin-bottom: 0;
+	display: inline-block;
+	margin: 20px 0 10px 0;
+}
+#tags #action_menu{
+	background-color: #FFFFFF;
+	border: 1px solid #222222;
+	position:absolute;
+}
+#tags #action_menu ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+#tags #action_menu li{
+	padding: 10px 20px 10px 20px;
+}
+#tags #action_menu li:hover{
+	background-color: #0F75BC;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#tags .remove_tag_from_type{
+	display: none;
+	cursor: pointer;
+	margin-left: 20px;
+}
+#tags #delete_selected_tags{
+	display: none;
+	cursor: pointer;
+	margin-left: 20px;
+}
+#tags .crm_btn_red{
+	font-size: 14px;
+}
+#tags .target{
+	background-color: transparent;
+	vertical-align: middle;
+}
+#colors .color_box{
+	display: block;
+	height: 25px;
+	width: 25px;
+	border: .5px solid #999999;
+}
+#create_color_form .pickr .pcr-button{
+	border: 1px dashed #444444;
+}
+#vendors_table .delete_vendor_from_part img{
+	height: 20px;
+}
+#print_inventory_table th{
+	width: 200px;
+}
+#import_parts_headings .col-md-2{
+	height: 140px;
+	padding-top: 20px;
+	border-bottom: 1px solid #DDDDDD;
+}
+#import_parts_headings .heading_field_error{
+	color: #D42601;
+	font-size: 12px;
+	margin-left: 0px !important;
+}
+#import_parts_headings .heading_title{
+	font-weight: bold;
+}
+#import_parts_headings .heading_title span{
+	color: #D42601;
+}
+#part_import_loading_bar{
+	display: none;
+}
+#part_import_loading_bar img{
+	height: 50px;
+	margin-left: 20px;
+}
+#define_columns td{
+	width: 130px;
+	text-align: center;
+}
+#define_columns p{
+	margin-left: 15px;
+}
+#import_result_container{
+	padding: 0px 20px;
+}
+#import_result_container .failure{
+	padding: 5px;
+	margin-bottom: 10px;
+}
