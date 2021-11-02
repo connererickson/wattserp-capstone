@@ -1,3 +1,3 @@
-var project_domain = "wattserp.com";
-var app_domain = "wattserp.com/";
-var public_domain = "wattserp.com/";
+var project_domain = "localhost/wattserp-capstone/public/index.php";
+var app_domain = "localhost/wattserp-capstone";
+var public_domain = "localhost/wattserp-capstone/public";
