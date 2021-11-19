@@ -15,7 +15,7 @@
 }
 @font-face {
     font-family: 'helvetica';
-    src: url('../fonts/Helvetica.woff') format('woff'),
+    src: url('../fonts/Helvetica.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

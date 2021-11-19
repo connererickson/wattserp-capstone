@@ -20,6 +20,10 @@
 	    <link href="{{ URL::asset('css/generaladmin.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/module_styles.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/form_builder.css ') }}" rel="stylesheet">
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+		<!-- <script src="/js/jquery.min.js"></script>
+    	<script src="/js/bootstrap.min.js"></script> -->
 	</head>
 	<body>
 		<div id='modal_dialog_update_background'></div>
@@ -28,17 +32,21 @@
 			<input type='button' id='close_modal_dialog' class='crm_btn' value='OK' />
 		</div>
 	    <div id="app">
-	        <nav class="navbar navbar-default navbar-static-top" id="erp_main_nav">
+	        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="erp_main_nav">
+	        <!-- <nav class="navbar navbar-default navbar-static-top" id="erp_main_nav"> -->
 	            <div class="container">
 	                <div class="navbar-header">
-	
-	                    <!-- Collapsed Hamburger -->
+
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#app-navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                		<span class="navbar-toggler-icon"></span>
+           			</button>
+	                    <!-- Collapsed Hamburger
 	                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
 	                        <span class="sr-only">Toggle Navigation</span>
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
 	                        <span class="icon-bar"></span>
-	                    </button>
+	                    </button> -->
 	
 	                    <!-- Branding Image -->
 	                    <!--<a class="navbar-brand" href="{{ url('/') }}">-->
@@ -48,86 +56,87 @@
 	
 	                <div class="collapse navbar-collapse" id="app-navbar-collapse">
 	                    <!-- Left Side Of Navbar -->
-	                    <ul class="nav navbar-nav">
-	                        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+	                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	                        <li class="nav-item"><a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a></li>
 	                        @if (Auth::user()->authorizeRoles(array('Sales')))
-	                           <li><a href="{{ route('resources') }}">Resources</a></li>
-	                           <li><a href="{{ route('profile') }}">My Profile</a></li>
+	                           <li class="nav-item"><a href="{{ route('resources') }}">Resources</a></li>
+	                           <li class="nav-item"><a href="{{ route('profile') }}">My Profile</a></li>
 	                        @endif
 	                        @if (Auth::user()->authorizeRoles(array('Internal')))
-	                        <li class="dropdown">
-	                        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-	                            	Human Resources <span class="caret"></span>
+	                        <li class="nav-item dropdown">
+	                        	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+	                            	Human Resources
+									<!-- <span class="caret"></span> -->
 	                            </a>
 	                            <ul class="dropdown-menu" role="menu">
 	                                <li>
-	                                	<a href="{{ route('employees') }}">Employees</a>
+	                                	<a href="{{ route('employees') }}" class="dropdown-item">Employees</a>
 	                                </li>
 	                                @if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Field Coordinator', 'Human Resources', 'Safety')))
 	                                <li>
-	                                	<a href="{{ route('safety') }}">Safety</a>
+	                                	<a href="{{ route('safety') }}" class="dropdown-item">Safety</a>
 	                                </li>
 	                                @endif
 	                                @if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Sales Manager', 'Human Resources', 'Contracts')))
 	                                <li>
-	                                	<a href="{{ route('channel_partners') }}">Channel Partners</a>
+	                                	<a href="{{ route('channel_partners') }}" class="dropdown-item">Channel Partners</a>
 	                                </li>
 	                                @endif
 	                        	</ul>
 	                        </li>
 	                        @endif
 	                        @if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Contracts', 'Field Lead', 'Field Coordinator', 'Project Manager', 'Field Crew')))
-	                        <li class="dropdown">
-	                        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                        <li class="nav-item dropdown">
+	                        	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 	                            	Project <span class="caret"></span>
 	                            </a>
 	                            <ul class="dropdown-menu" role="menu">
 	                            	@if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Contracts', 'Project Manager')))
-	                                <li>
-	                                	<a href="{{ route('leads') }}">Leads</a>
+	                                <li class="nav-item">
+	                                	<a href="{{ route('leads') }}" class="nav-link">Leads</a>
 	                                </li>
 	                                @endif
-	                                <li>
-	                                	<a href="{{ route('projects') }}">Projects</a>
+	                                <li class="nav-item">
+	                                	<a href="{{ route('projects') }}" class="nav-link">Projects</a>
 	                                </li>
-	                                <li>
-	                                	<a href="{{ route('archive') }}">Archive</a>
+	                                <li class="nav-item">
+	                                	<a href="{{ route('archive') }}" class="nav-link">Archive</a>
 	                                </li>
 	                        	</ul>
 	                    	</li>
 	                    	@endif
 	                    	@if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Contracts', 'Field Lead', 'Field Coordinator', 'Project Manager', 'Inventories', 'Safety')))
-	                    	<li class="dropdown">
-	                        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                    	<li class="nav-item dropdown">
+	                        	<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 	                            	Inventory <span class="caret"></span>
 	                            </a>
 	                            <ul class="dropdown-menu" role="menu">
 	                            	
-	                            	<li>
-	                                	<a href="{{ route('inventory') }}">Inventory</a>
+	                            	<li class="nav-item">
+	                                	<a href="{{ route('inventory') }}" class="nav-link">Inventory</a>
 	                                </li>
 	                                @if (Auth::user()->authorizeRoles(array('Administrator', 'Executive', 'Contracts', 'Project Manager', 'Inventories', 'Safety')))
-	                                <li>
-	                                	<a href="{{ route('repository') }}">Repository</a>
+	                                <li class="nav-item">
+	                                	<a href="{{ route('repository') }}" class="nav-link">Repository</a>
 	                                </li>
 	                                @endif
 	                        	</ul>
 	                    	</li>
 	                    	@endif
 	                    	@if (Auth::user()->authorizeRoles(array('Internal', 'Sales')))
-	                    		<li>
-	                    			<a href="{{ route('directory') }}">Directory</a>
+	                    		<li class="nav-item">
+	                    			<a href="{{ route('directory') }}" class="nav-link">Directory</a>
 	                    		</li>
 	                    	@endif
 	                    	@if (Auth::user()->authorizeRoles(array('Internal')))
-	                    	<li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                    	<li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                                     Applications <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     
-                                    <li>
-                                        <a href="{{ route('weather') }}">Weather Station</a>
+                                    <li class="nav-item">
+                                        <a href="{{ route('weather') }}" class="nav-link">Weather Station</a>
                                     </li>
                                 </ul>
                             </li>
@@ -138,39 +147,39 @@
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <!-- Authentication Links -->
 	                        @if (Auth::guest())
-	                            <li><a href="{{ route('login') }}">Login</a></li>
+	                            <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
 	                            <!--<li><a href="{{ route('register') }}">Register</a></li>-->
 	                        @else
 	                        	@if (Auth::user()->authorizeRoles(array('Super Admin')))
-	                        	<li class="dropdown">
-	                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                        	<li class="nav-item dropdown">
+	                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 	                                    Switch Organization <span class="caret"></span>
 	                                </a>
 	                                <ul class="dropdown-menu" role="menu">
 	                                	@foreach ($all_orgs as $organization)
-	                                		<li><a href="{{ route('dashboard', ['org_id' => $organization->id]) }}">{{ $organization->name }}</a></li>
+	                                		<li><a href="{{ route('dashboard', ['org_id' => $organization->id]) }}" class="nav-link">{{ $organization->name }}</a></li>
 	                                	@endforeach
 	                                </ul>
 	                            </li>
 	                            @endif
-	                            <li class="dropdown">
-	                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	                            <li class="nav-item dropdown">
+	                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
 	                                    {{ Auth::user()->name }} <span class="caret"></span>
 	                                </a>
 	
 	                                <ul class="dropdown-menu" role="menu">
 	                                	@if (Auth::user()->authorizeRoles('Administrator'))
-		                            		<li>
-		                                    	<a href="{{ route('admin') }}">Admin</a>
+		                            		<li class="nav-item">
+		                                    	<a href="{{ route('admin') }}" class="nav-link">Admin</a>
 		                                	</li>
 		                                @endif
-		                                <li>
-		                                	<a href="{{ route('settings') }}">My Settings</a>
+		                                <li class="nav-item">
+		                                	<a href="{{ route('settings') }}" class="nav-link">My Settings</a>
 		                                </li>
-	                                    <li>
+	                                    <li class="nav-item">
 	                                        <a href="{{ route('logout') }}"
 	                                            onclick="event.preventDefault();
-	                                                     document.getElementById('logout-form').submit();">
+	                                                     document.getElementById('logout-form').submit();" class="nav-link">
 	                                            Logout
 	                                        </a>
 	

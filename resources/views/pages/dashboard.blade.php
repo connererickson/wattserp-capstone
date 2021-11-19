@@ -6,31 +6,29 @@
 		
 	</style>
     <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                	Dashboard
-                	<div id='modules_select_container'>
-                		<!-- List Available Dashboard Modules -->
-                		<h4>Install Dashboard Module</h4>
-                		<?php
+        <div class="border py-2 px-2 col-md-12 text-center">
+            <div class="mt-2">
+				<h2>Dashboard</h2>
+				<div class="text-right">
+					<h3>Install Dashboard Modules</h3>
+					<?php
             			if ($available_modules){ ?>
-            				<select id='select_dmodules'><?php
+            				<select id='select_dmodules' class="form-select my-2"><?php
                 				foreach($available_modules as $available_module){ ?>
                     				<option value='<?php echo $available_module['id'] ?>'><?php echo $available_module['name'] ?></option><?php
                     			}?>
 							 </select>
-							 <button id='install_dmodule' class='crm_btn'>Install</button><?php
-                    	}
+							 <button id='install_dmodule' class='btn btn-success my-2'>Install</button><?php
+                    	 	}
+							 //crm_btn
                     	else{
                     		?><p>No modules available</p><?php
                     	}?>
-                		
-                	</div>
-                	<br class='clear_fix' />
-                </div>
+						<br class='clear_fix' />
+				</div>
 
-                <div class="panel-body">
+				
+                <div class="panel-body mt-2">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
