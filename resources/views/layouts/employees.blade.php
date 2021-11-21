@@ -27,8 +27,8 @@
 			<div id='modal_dialog_content'></div>
 			<input type='button' id='close_modal_dialog' class='crm_btn' value='OK' />
 		</div>
-
-	    <div id="app">
+		@include('layouts.navbar');
+	    {{-- <div id="app">
 	        <nav class="navbar navbar-default navbar-static-top" id="erp_main_nav">
 	            <div class="container">
 	                <div class="navbar-header">
@@ -181,7 +181,7 @@
 	                    </ul>
 	                </div>
 	            </div>
-	        </nav>
+	        </nav> --}}
 	
 	        @yield('content')
 	    </div>
