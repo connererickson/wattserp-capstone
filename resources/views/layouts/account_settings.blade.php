@@ -21,9 +21,10 @@
 	    <link href="{{ URL::asset('css/account_settings.css') }}" rel="stylesheet">
 	</head>
 	<body>
-		@include('layouts.navbar');
-	    @yield('content');
-	
+		<div id="app">
+			@include('layouts.navbar')
+			@yield('content')
+		</div>
 	    <!-- Scripts -->
 	    <script src="{{ URL::asset('/js/messi.js') }}"></script>
 	    <script src="{{ URL::asset('/js/fontawesome.min.js') }}"></script>

@@ -22,9 +22,10 @@
 	    <link href="{{ URL::asset('css/training_course.css') }}" rel="stylesheet">
 	</head>
 	<body>
-		@include('layouts.navbar');
-	    @yield('content')
-	
+		<div id="app">
+			@include('layouts.navbar')
+			@yield('content')
+		</div>
 	    <!-- Scripts  (maybe don't need) -->
 	    <script src="{{ URL::asset('/js/messi.js') }}"></script>
 	    <script src="{{ URL::asset('/js/fontawesome.min.js') }}"></script>

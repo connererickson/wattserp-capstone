@@ -176,9 +176,9 @@
 	    <!-- Scripts -->
 	    <script src="{{ URL::asset('/js/messi.js') }}"></script>
 	    <script src="{{ URL::asset('/js/fontawesome.min.js') }}"></script>
-	    <script src="{{ URL::asset('/js/draggabilly.js') }}"></script>
+	    {{-- <script src="{{ URL::asset('/js/draggabilly.js') }}"></script> --}}
 	    <script src="{{ URL::asset('/js/packery.js') }}"></script>
-	    <script src="{{ URL::asset('/js/draggie.js' ) }}"></script>
+	    {{-- <script src="{{ URL::asset('/js/draggie.js' ) }}"></script> --}}
 	    <script src="{{ URL::asset('/js/config.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/custom.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/modules.js' ) }}"></script>

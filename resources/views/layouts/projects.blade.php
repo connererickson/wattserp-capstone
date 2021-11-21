@@ -21,8 +21,9 @@
 	    <link href="{{ URL::asset('css/projects.css') }}" rel="stylesheet">
 	</head>
 	<body>
-		@include('layouts.navbar');
-	    @yield('content');
+		<div id="app">
+			@include('layouts.navbar');
+			@yield('content');
 	    </div>
 	
 	    <!-- Scripts -->
