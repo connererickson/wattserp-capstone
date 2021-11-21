@@ -149,9 +149,17 @@ class InventoryController extends Controller
     }
 	public function printout (Request $request)
 	{
-		$org_id = Auth::user()->org_id;
+		if (Auth::user()->authorizeRoles(array('Super Admin'))){
+			$org_id = $request->session()->get('curr_org_id');
+    	}
+		else{
+			$org_id = Auth::user()->org_id;
+		}
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
 		
     	$auth_result = $request->user()->hasPermission('view_inventory');
 		if($auth_result){
@@ -159,11 +167,11 @@ class InventoryController extends Controller
 			$repository = DB::table('repository_parts AS rps')
 			->join('repository_units AS u', 'rps.stocking_unit', '=', 'u.id')
 			->join('repository_units AS u2', 'rps.pricing_unit', '=', 'u2.id')
-			//->join('repository_parts_vendors AS rpv', 'rpv.repository_part_id', '=', 'rps.id')
-			//->join('companies AS c', 'rpv.company_id', '=', 'c.id')
+			->join('repository_parts_vendors AS rpv', 'rpv.repository_part_id', '=', 'rps.id')
+			->join('companies AS c', 'rpv.company_id', '=', 'c.id')
 			->select('rps.*', 'c.company_name AS vendor', 'u.unit AS stock_unit', 'u2.unit AS price_unit')->get()->toArray();
 			
-    		$view = View::make('pages/inventory/print/index', array('title' => 'Print'))->with(compact('org_dir', 'repository'));
+    		$view = View::make('pages/inventory/print/index', array('title' => 'Print'))->with(compact('org_dir', 'repository', 'all_orgs'));
 			return $view;
     	}
 		else{
