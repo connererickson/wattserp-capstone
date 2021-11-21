@@ -1,6 +1,43 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
+//animate carets
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg); 
+}
+/*for animation*/ 
+.dropdown-toggle:after { 
+    transition: 0.7s; 
+}
+
+//Make width and height responsive
+$utilities: (
+  "width": (
+    property: width,
+    responsive: true,
+    class: w,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "height": (
+    property: height,
+    responsive: true,
+    class: h,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+);
+
 // Body
 $body-bg: #f5f8fa;
 

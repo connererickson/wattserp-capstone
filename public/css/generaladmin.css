@@ -12,7 +12,7 @@ body{
 	background-color: #FFFFFF;
 	/* font-size: 12px; */
 }
-h1{
+/* h1{
 	font-size: 24px;
 }
 h2{
@@ -29,10 +29,10 @@ h5{
 }
 h6{
 	font-size: 12px;
-}
-#app .container{
+} */
+/* #app .container{
 	width: 98%;
-}
+} */
 .no_pad{
 	padding: 0;
 }
@@ -324,20 +324,20 @@ form .crm_checkbox{
 /***********************
  * MAIN NAV BAR 
  **********************/
-#erp_main_nav .dropdown-menu a{
+/* #erp_main_nav .dropdown-menu a{
 	font-size: 13px;
-}
+} */
 /***********************
  * DASHBOARD INDEX 
  **********************/
 #modules_select_container{
 	float: right;
 }
-#select_dmodules{
+/* #select_dmodules{
 	padding: 7px 10px 7px 10px;
 	font-size: 13px;
 	font-weight: bold;
-}
+} */
 #dashboard_grid .grid-item{
 	max-height: 350px;
     overflow-y: scroll;
