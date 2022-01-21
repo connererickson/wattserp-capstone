@@ -21,7 +21,7 @@
                     	</div>
                     </div>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-8">
 							<div id='repository_tools_container'>
 									<div class="row">
 										<div class="col-md-4">
@@ -64,7 +64,7 @@
 								<div id='loader'><img src="{{ URL::asset( 'images/loading.gif') }}" alt='' /></div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div id="repository_preview_pane">
 								<div class="row">
 									<div class="col-md-4" id="part_image_container">

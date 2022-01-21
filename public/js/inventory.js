@@ -33,12 +33,12 @@ $(document).ready(function(){
 	$(window).scroll(function() {
     	if ($(window).scrollTop() > 150){
     		$("#repository_preview_pane").css({
-    			"top": ($(window).scrollTop()-240) + "px"
+    			"top": ($(window).scrollTop()-0) + "px"
   			});
   		}
   		if ($(window).scrollTop() == 0){
     		$("#repository_preview_pane").css({
-    			"top": 0 + "px"
+    			"top": 150 + "px"
   			});
   		}
 	});
