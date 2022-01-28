@@ -30,7 +30,7 @@
 			<input type='button' id='close_modal_dialog' class='crm_btn' value='OK' />
 		</div>
 	    <div id="app">
-	        <nav class="navbar navbar-expand-xl navbar-light bg-light" id="erp_main_nav">
+	        <nav class="navbar navbar-expand-xl navbar-light" id="erp_main_nav">
 	            <div class="container-fluid">
 					<img src="{{ URL::asset( 'storage/' . $org_dir . '/logo.png' ) }}" alt="" width="225" height="85" class="d-inline-block align-text-top">
 					{{-- <img src="{{ URL::asset( 'storage/' . $org_dir . '/logo.png' ) }}" alt='' class="img-fluid" style="max-width: 30%"/> --}}

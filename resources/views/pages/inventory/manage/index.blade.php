@@ -4,10 +4,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Manage Inventory</div>
+            <div class="card mt-3">
+                <div class="card-header">Manage Inventory</div>
 
-                <div class="panel-body" id='inventory_index'>
+                <div class="card-body" id='inventory_index'>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -22,12 +22,13 @@
                     </div>
 					<div class="row">
 						<div class="col-md-8">
-							<div id='repository_tools_container'>
+							<!--id = 'repository_tools_container'-->
+							<div id=''>
 									<div class="row">
 										<div class="col-md-4">
-											<label for='filter'>Filter:</label>
+											<label class="form-label" for='filter'>Filter:</label>
 											<br />
-											<select name='filter'>
+											<select class="form-control" name='filter'>
 												<option value='0'>All</option>
 												@foreach ($filters as $filter)
 													@if ($filter->is_filter)
@@ -37,9 +38,9 @@
 											</select>
 										</div>
 										<div class="col-md-4">
-											<label for='sort'>Sort By:</label>
+											<label class="form-label" for='sort'>Sort By:</label>
 											<br />
-											<select name='sort'>
+											<select class="form-control" name='sort'>
 												<option value="">None</option>
 												<option value='type'>Type</option>
 												<option value='color'>Color</option>
@@ -53,9 +54,9 @@
 											</select>
 										</div>
 										<div class="col-md-4">
-											<label for='search'>Search:</label>
+											<label class="form-label" for='search'>Search:</label>
 											<br />
-											<input type='text' name='search_repo' />
+											<input class="form-control" type='text' name='search_repo' />
 										</div>
 									</div>
 								

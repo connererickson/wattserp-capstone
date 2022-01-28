@@ -1,11 +1,11 @@
 @extends('layouts.directory')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card my-2 mx-2">
+                <div class="card-header">
                     Company Directory
                     @if (Auth::user()->hasPermission('create_company'))
                         <a class='crm_btn2 right_side' href="{{ route('directory.create' )}}">Create New Company</a>
@@ -13,7 +13,7 @@
                     @endif
                 </div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

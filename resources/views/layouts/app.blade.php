@@ -30,7 +30,7 @@
 			<input type='button' id='close_modal_dialog' class='crm_btn' value='OK' />
 		</div>
 	    <div id="app">
-	        <nav class="navbar navbar-expand-xl navbar-light bg-light" id="erp_main_nav">
+			<nav class="navbar navbar-expand-xl navbar-light" id="erp_main_nav">
 	            <div class="container-fluid">
 					<img src="{{ URL::asset( 'storage/' . $org_dir . '/logo.png' ) }}" alt="" width="225" height="85" class="d-inline-block align-text-top">
 					{{-- <img src="{{ URL::asset( 'storage/' . $org_dir . '/logo.png' ) }}" alt='' class="img-fluid" style="max-width: 30%"/> --}}
@@ -171,23 +171,22 @@
 					</ul>
 	            </div>
 	        </nav>
-			
 	        @yield('content')
 	    </div>
 	
 	    <!-- Scripts -->
 	    <script src="{{ URL::asset('/js/messi.js') }}"></script>
 	    <script src="{{ URL::asset('/js/fontawesome.min.js') }}"></script>
-	    <script src="{{ URL::asset('/js/draggabilly.js') }}"></script>
+	    {{-- <script src="{{ URL::asset('/js/draggabilly.js') }}"></script> --}}
 	    <script src="{{ URL::asset('/js/packery.js') }}"></script>
-	    <script src="{{ URL::asset('/js/draggie.js' ) }}"></script>
+	    {{-- <script src="{{ URL::asset('/js/draggie.js' ) }}"></script> --}}
 	    <script src="{{ URL::asset('/js/config.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/custom.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/modules.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/ajax_functions.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/form_builder.js' ) }}"></script>
-		<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="{{ URL::asset('../node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+		<script src="{{ URL::asset('../node_modules/jquery/dist/jquery.min.js')}}"></script>
 	    <script type='text/javascript'>
 	    	$('.phone').text(function(i, text) {
 			    return text.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');

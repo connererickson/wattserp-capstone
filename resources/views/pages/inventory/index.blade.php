@@ -1,13 +1,13 @@
 @extends('layouts.inventory')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Inventory</div>
+            <div class="card mt-3">
+                <div class="card-header">Inventory</div>
 
-                <div class="panel-body" id='inventory_index'>
+                <div class="card-body" id='inventory_index'>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
