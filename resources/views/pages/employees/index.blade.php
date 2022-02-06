@@ -1,13 +1,13 @@
 @extends('layouts.employees')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Employees</div>
+            <div class="card mt-3">
+                <div class="card-header">Employees</div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -15,17 +15,21 @@
                     @endif
 					
 					@if (Auth::user()->hasPermission('create_employee'))
-            			<a class='crm_btn2 right_side' href="{{ route('employees.create' )}}">Create New Employee</a>
+						<!-- originally had class 'crm_btn2 and no inner button' -->
+            			<a class='right_side' href="{{ route('employees.create' )}}"><button class="btn btn-primary text-light">Create New Employee</button></a>
             		@endif
 	                		
                     <div class="row">
 	                	<div class="col-md-12">
-	                		<ul class='page_menu'>
+							<!-- originally had 'page_menu' class --->
+	                		<ul class='mb-3' style="list-style-type: none; padding: 0; margin: 0;">
 	                			<li 
 	                				<?php if ($tab == 'employees'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('employees') }}">Employees</a>
+								>
+								<!-- originally did not contain the inner button -->
+								<a href="{{ route('employees') }}"><button class="btn btn-success">Employees</button></a>
 	                			</li>
 	                		</ul>
 	                	</div>

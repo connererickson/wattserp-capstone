@@ -1,13 +1,13 @@
 @extends('layouts.projects')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
-                <div class="panel-heading">Projects</div>
+            <div class="card mt-3">
+                <div class="card-header">Projects</div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

@@ -1,11 +1,11 @@
 @extends('layouts.projects')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card mt-3">
+                <div class="card-header">
                 	<span class='page_title'>Portfolios</span>
                 	@if (Auth::user()->hasPermission('create_project_leads'))
 	        			<a class='crm_btn2 right_side' href="{{ route('leads.settings.index' )}}"><i class="fas fa-cogs"></i></a>
@@ -16,7 +16,7 @@
 	        		<br class='clear_fix'/>
                 </div>
 
-                <div class="panel-body">
+                <div class="card-body">
                 	
                     @if (session('status'))
                         <div class="alert alert-success">

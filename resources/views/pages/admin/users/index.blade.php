@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Users for {{ $organization->name }} </div>
+            <div class="card mt-3">
+                <div class="card-header">Users for {{ $organization->name }} </div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -15,7 +15,7 @@
                     @endif
                 	<a class='crm_btn2 right_side' href="{{ route('admin.users.create' )}}">Create New User</a>
 	                
-	                <div class="row">
+	                <div class="row mb-4">
 	                	<div class="col-md-12">
 	                		<ul class='page_menu'>
 	                			<li 

@@ -1,13 +1,13 @@
 @extends('layouts.incidents')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Incidents</div>
+            <div class="card mt-3">
+                <div class="card-header">Incidents</div>
 
-                <div class="panel-body" id='safety_index'>
+                <div class="card-body" id='safety_index'>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

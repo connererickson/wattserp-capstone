@@ -1,13 +1,13 @@
 @extends('layouts.inventory')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Manage Repository</div>
+            <div class="card mt-3">
+                <div class="card-header">Manage Repository</div>
 
-                <div class="panel-body" id='repository_index'>
+                <div class="card-body" id='repository_index'>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -23,13 +23,14 @@
                     	</div>
                     </div>
 					<div class="row">
-						<div class="col-md-6">
-							<div id='repository_tools_container'>
+						<div class="col-md-8">
+							<!--id = 'repository_tools_container'-->
+							<div id=''>
 								<div class="row">
 									<div class="col-md-4">
-										<label for='filter'>Filter:</label>
+										<label class="form-label" for='filter'>Filter:</label>
 										<br />
-										<select name='filter'>
+										<select class="form-control" name='filter'>
 											<option value='0'>All</option>
 											@foreach ($filters as $filter)
 												@if ($filter->is_filter)
@@ -39,9 +40,9 @@
 										</select>
 									</div>
 									<div class="col-md-4">
-										<label for='sort'>Sort By:</label>
+										<label class="form-label" for='sort'>Sort By:</label>
 										<br />
-										<select name='sort'>
+										<select class="form-control" name='sort'>
 											<option value="">None</option>
 											<option value='type'>Type</option>
 											<option value='color'>Color</option>
@@ -55,9 +56,9 @@
 										</select>
 									</div>
 									<div class="col-md-4">
-										<label for='search'>Search:</label>
+										<label class="form-label" for='search'>Search:</label>
 										<br />
-										<input type='text' name='search_repo' />
+										<input class="form-control" type='text' name='search_repo' />
 									</div>
 								</div>
 							</div>
@@ -65,7 +66,7 @@
 								<div id='loader'><img src="{{ URL::asset( 'images/loading.gif') }}" alt='' /></div>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<div id="repository_preview_pane">
 								<div class="row">
 									<div class="col-md-4" id="part_image_container">

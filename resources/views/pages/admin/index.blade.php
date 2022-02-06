@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{ $organization->name }} Admin</div>
+            <div class="card mt-3">
+                <div class="card-header">{{ $organization->name }} Admin</div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
                 
-	                <div class="row">
+	                <div class="row mb-4">
 	                	<div class="col-md-12">
 	                		<ul class='page_menu'>
 	                			<li><a href="{{ route('admin.users.index') }}">Users</a></li>

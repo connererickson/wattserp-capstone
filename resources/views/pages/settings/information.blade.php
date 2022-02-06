@@ -1,13 +1,13 @@
 @extends('layouts.account_settings')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Account Settings</div>
+            <div class="card mt-3">
+                <div class="card-header">Account Settings</div>
 
-                <div class="panel-body" id='administrate_account_settings'>
+                <div class="card-body" id='administrate_account_settings'>
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}

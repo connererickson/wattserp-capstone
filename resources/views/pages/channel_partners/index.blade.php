@@ -1,13 +1,13 @@
 @extends('layouts.employees')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Channel Partners</div>
+            <div class="card mt-3">
+                <div class="card-header">Channel Partners</div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -15,12 +15,15 @@
                     @endif	
                     <div class="row">
 	                	<div class="col-md-9">
-	                		<ul class='page_menu'>
+	                		<!-- originally had 'page_menu' class --->
+	                		<ul class='mb-3' style="list-style-type: none; padding: 0; margin: 0;">
 	                			<li 
 	                				<?php if ($tab == 'channel_partners'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('channel_partners') }}">Channel Partners</a>
+									>
+									<!-- originally did not contain the inner button -->
+	                				<a href="{{ route('channel_partners') }}"><button class="btn btn-success text-light">Channel Partners</button></a>
 	                			</li>
 	                		</ul>
 	                	</div>
