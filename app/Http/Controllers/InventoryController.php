@@ -167,9 +167,7 @@ class InventoryController extends Controller
 			$repository = DB::table('repository_parts AS rps')
 			->join('repository_units AS u', 'rps.stocking_unit', '=', 'u.id')
 			->join('repository_units AS u2', 'rps.pricing_unit', '=', 'u2.id')
-			->join('repository_parts_vendors AS rpv', 'rpv.repository_part_id', '=', 'rps.id')
-			->join('companies AS c', 'rpv.company_id', '=', 'c.id')
-			->select('rps.*', 'c.company_name AS vendor', 'u.unit AS stock_unit', 'u2.unit AS price_unit')->get()->toArray();
+			->select('rps.*', 'u.unit AS stock_unit', 'u2.unit AS price_unit')->get()->toArray();
 			
     		$view = View::make('pages/inventory/print/index', array('title' => 'Print'))->with(compact('org_dir', 'repository', 'all_orgs'));
 			return $view;
