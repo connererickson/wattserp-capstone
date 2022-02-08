@@ -424,6 +424,9 @@ class RepositoryController extends Controller
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
 		$auth_result = $request->user()->hasPermission('create_repository');
     	if($auth_result){
     		$manufacturers = Company::where('type', '=', 'Manufacturer')->get();
@@ -431,7 +434,7 @@ class RepositoryController extends Controller
 			$types = DB::table('repository_types')->where('active', 1)->select('*')->get();
 			$units = DB::table('repository_units')->select('*')->get();
 			$colors = DB::table('repository_colors')->select('*')->get();
-    		$view = View::make('pages/repository/manage/create_part', array('title' => 'Add Part'))->with(compact('org_id', 'org_dir', 'manufacturers', 'suppliers', 'types', 'units', 'colors'));
+    		$view = View::make('pages/repository/manage/create_part', array('title' => 'Add Part'))->with(compact('all_orgs','org_id', 'org_dir', 'manufacturers', 'suppliers', 'types', 'units', 'colors'));
 			return $view;
     	}
 		else{
