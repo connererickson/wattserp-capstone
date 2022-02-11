@@ -820,11 +820,25 @@ class RepositoryController extends Controller
         $clean = preg_replace('/\s+/', "-", $clean);
         $clean = ($anal) ? preg_replace("/[^a-zA-Z0-9]/", "", $clean) : $clean ;
 
-        return ($force_lowercase) ?
-            (function_exists('mb_strtolower')) ?
-                mb_strtolower($clean, 'UTF-8') :
-                strtolower($clean) :
-            $clean;
+
+		if($force_lowercase) {
+			if(function_exists('mb_strtolower')) {
+				return mb_strtolower($clean, 'UTF-8');
+			}
+			else {
+				return strtolower($clean);
+			}
+		}
+		else {
+			return $clean;
+		}
+
+		// Outdated previous code
+        // return ($force_lowercase) ?
+        //     (function_exists('mb_strtolower')) ?
+        //         mb_strtolower($clean, 'UTF-8') :
+        //         strtolower($clean) :
+        //     $clean;
     }
 
 
