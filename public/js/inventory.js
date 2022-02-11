@@ -3,6 +3,40 @@ var cropperBox;
 $(document).ready(function(){
 	
 	var context;
+	//The vendorsCopy array will contain only the unique vendors with the most recent purchase date of stock
+	function removeDuplicateVendors(vendors) {
+		let vendorsCopy = [];
+		let vendorsCopyNames = [];
+		//In the case of multiple ventors with the same id, only append the one with the most recent date
+		for(var i = 0; i < vendors.length; i++) {
+			if(!vendorsCopyNames.includes(vendors[i]['company_name'])) {
+				var mostRecentDate = vendors[i];
+				var mostRecentName = vendors[i]['company_name'];
+				for(var j = 0; j < vendors.length; j++) {
+					if(i != j && vendors[i]['id'] == vendors[j]['id']) {
+						var idateArray = vendors[i]['purchase_date'].split('-');
+						var iDate = new Date();
+						iDate.setFullYear(idateArray[0]);
+						iDate.setMonth(idateArray[1]);
+						iDate.setDate(idateArray[2]);
+						var jdateArray = vendors[i]['purchase_date'].split('-');
+						var jDate = new Date();
+						jDate.setFullYear(jdateArray[0]);
+						jDate.setMonth(jdateArray[1]);
+						jDate.setDate(jdateArray[2]);
+						
+						if(jDate < iDate) {
+							mostRecentDate = vendors[j];
+							mostRecentName = vendors[j]['company_name'];
+						}
+					}
+				}
+				vendorsCopy.push(mostRecentDate);
+				vendorsCopyNames.push(mostRecentName);
+			}
+		}
+		return vendorsCopy;
+	}
 	
 	//show/hide administrate repository panes
 	$('#administrate_functions_list .sidebar_function a').on('click', function(){
@@ -120,6 +154,7 @@ $(document).ready(function(){
 	
 	//CLICK SKU BRINGS UP PART IN PART PREVIEW PANE
 	$(document).on('click', '.sku_btn', function(e){
+		
 		e.preventDefault();
 		var sku = $(this).attr('id');
 		var parameters = {'sku' : sku};
@@ -144,6 +179,10 @@ $(document).ready(function(){
 				$('#part_stocking_unit').html(capitalizeFirstLetter(part[0]['stocking_unit']));
 				$('#part_stocking_alternate_display').html(capitalizeFirstLetter(part[0]['alternate_stocking']));
 				$('#edit_part_button').attr('href', 'http://' + public_domain + '/index.php/pages/repository/manage/edit_part/' + part[0]['id']);
+
+				//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
+				vendorsCopy = removeDuplicateVendors(vendors);
+
 				
 				if(part[0]['image'] != null && part[0]['image'] != ""){
 					
@@ -239,30 +278,22 @@ $(document).ready(function(){
 					}
 				}
 				$('#vendors_table_inventory').html("");
-				for(var i = 0; i < vendors.length; i++){
-					$('#vendors_table_inventory').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
+				for(var i = 0; i < vendorsCopy.length; i++){
+					$('#vendors_table_inventory').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
 					//add button here
 					"<td><button class='btn btn-primary btn-xs'>Edit Price</button></td>" + "<td><button class='btn btn-primary btn-xs mx-1'>Purchase Stock</button></td></tr>"
 					);
 				}
 				$('#vendors_table').html("");
-				//let vendorsCopy;
-				//In the case of multiple ventors with the same id, only append the one with the most recent date
-				// for(var i = 0; i < vendors.length; i++) {
-				// 	for(var j = 0; j < vendors.length; j++) {
-				// 		if(i != j && vendors[i]['id'] == vendors[j]['id']) {
-				// 			if(vendors[i]['date'])
-				// 		}
-				// 	}
-				// }
-				for(var i = 0; i < vendors.length; i++) {
 
 
-					$('#vendors_table').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
+				for(var i = 0; i < vendorsCopy.length; i++) {
+					$('#vendors_table').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
 					if ($('#inventory_index').length == 0){
-						$('#vendors_table #' + vendors[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
+						$('#vendors_table #' + vendorsCopy[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
 					}
 				}
+				
 				$('#stock_table').html("");
 				for(var i = 0; i < vendors.length; i++) {
 					$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
