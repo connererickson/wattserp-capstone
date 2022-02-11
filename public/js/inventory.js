@@ -241,7 +241,10 @@ $(document).ready(function(){
 				}
 				$('#vendors_table').html("");
 				for(var i = 0; i < vendors.length; i++){
-					$('#vendors_table').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td></tr>");
+					$('#vendors_table').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
+					//add button here
+					"<td><button class='btn btn-primary btn-xs'>Edit Price</button></td>" + "<td><button class='btn btn-primary btn-xs mx-1'>Purchase Stock</button></td></tr>"
+					);
 					if ($('#inventory_index').length == 0){
 						$('#vendors_table #' + vendors[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
 					}

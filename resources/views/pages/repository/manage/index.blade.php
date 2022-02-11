@@ -166,7 +166,7 @@
 									   <p class="part_heading">Documents:</p>
 									   <form id="fileinfo" enctype="multipart/form-data" method="post">
                                            <input type="file" name="part_document" class='file_input' required />
-                                           <input type="button" style="float:right;" class='crm_btn file_upload_go' id='document_upload' value="Go"></input>
+                                           <input type="button" style="float:right;" class='crm_btn file_upload_go' id='document_upload' value="Go"/>
                                        </form>
 									   <div id='document_list'>No Documents</div>
 									   <hr />

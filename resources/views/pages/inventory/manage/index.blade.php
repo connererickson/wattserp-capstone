@@ -181,7 +181,7 @@
 											<br />
 					                		{!! Form::text('update_stock', null, ['class'=>'form-control', 'id'=>'update_stock']) !!}
 					                		<br /><br />
-											{!! Form::submit('Update Stock', ['class'=>'crm_btn', 'id'=>'update_stock_button']) !!}
+											{!! Form::submit('Update Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'update_stock_button']) !!}
 										@else
 											&nbsp;
 										@endif

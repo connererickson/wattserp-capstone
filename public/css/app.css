@@ -8839,5 +8839,13 @@ textarea.form-control-lg {
 
   .d-print-none {
     display: none !important; } }
+.btn-xs, .btn-group-xs > .btn {
+  padding: 0.15rem 0.3rem !important;
+  font-size: 0.6rem !important;
+  border-radius: 0.1rem !important; }
+
+.btn-xs + .dropdown-toggle-split, .btn-group-xs > .btn + .dropdown-toggle-split {
+  padding-right: 0.2rem !important;
+  padding-left: 0.2rem !important; }
 
 /*# sourceMappingURL=app.css.map */
