@@ -159,7 +159,7 @@
 										<hr />
 										<p class="part_heading">Vendors:</p>
 										<div id='vendors_container'>
-											<table id='vendors_table'>
+											<table id='vendors_table_inventory'>
 												
 											</table>
 										</div>
@@ -167,16 +167,7 @@
 								</div>
 								<hr />
 								<div class="row">
-									<div class="col-md-6">
-										<table>
-											<tr>
-												<td class="part_heading_big">Stock:</td>
-												<td class="part_data_big" id="part_stock"></td>
-											</tr>
-										</table>
-									</div>
-									<div class="col-md-6">
-										@if (Auth::user()->hasPermission('edit_inventory'))
+									@if (Auth::user()->hasPermission('edit_inventory'))
 											{!! Form::label('update_stock', 'Update Stock') !!}
 											<br />
 					                		{!! Form::text('update_stock', null, ['class'=>'form-control', 'id'=>'update_stock']) !!}
@@ -185,7 +176,29 @@
 										@else
 											&nbsp;
 										@endif
-									</div>
+								</div>
+								<div class="row">
+									<table>
+										<tr>
+											<td class="part_heading_big">Stock:</td>
+											<td class="part_data_big" id="part_stock"></td>
+										</tr>
+									</table>
+
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th scope="col">Vendor</th>
+												<th scope="col">Price</th>
+												<th scope="col">Quantity</th>
+												<th scope="col">Date</th>
+											</tr>
+										</thead>
+										<tbody id="stock_table">
+											
+										</tbody>
+										
+									</table>
 								</div>
 							</div>
 						</div>

@@ -151,9 +151,12 @@ class RepositoryController extends Controller
 			->join('repository_tags AS rtag', 'rtag.id', '=', 'rtt.tag_id')
 			->where('rtt.type_id', '=', $parent_type)->get()->toArray();
 			
-			$vendors = DB::table('companies AS c')->select('c.*', 'rpv.price AS vendor_price') 
+			$vendors = DB::table('companies AS c')->select('c.*', 'rpv.price AS vendor_price', 'rpv.date AS purchase_date', 'rpv.quantity AS quantity') 
 			->join('repository_parts_vendors AS rpv', 'c.id', '=', 'rpv.company_id')
-			->where('rpv.repository_part_id', '=', $part_id)->get()->toArray();
+			->where('rpv.repository_part_id', '=', $part_id)
+			->orderBy('rpv.date')
+			->orderBy('c.company_name')
+			->get()->toArray();
 			
 			$parts_tags = array('part' => $part, 'tags' => $tags, 'vendors' => $vendors);
 			return $parts_tags;

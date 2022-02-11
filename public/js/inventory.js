@@ -1,6 +1,5 @@
 var curr_part_id;
 var cropperBox;
-
 $(document).ready(function(){
 	
 	var context;
@@ -239,16 +238,40 @@ $(document).ready(function(){
 						}
 					}
 				}
-				$('#vendors_table').html("");
+				$('#vendors_table_inventory').html("");
 				for(var i = 0; i < vendors.length; i++){
-					$('#vendors_table').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
+					$('#vendors_table_inventory').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
 					//add button here
 					"<td><button class='btn btn-primary btn-xs'>Edit Price</button></td>" + "<td><button class='btn btn-primary btn-xs mx-1'>Purchase Stock</button></td></tr>"
 					);
+				}
+				$('#vendors_table').html("");
+				//let vendorsCopy;
+				//In the case of multiple ventors with the same id, only append the one with the most recent date
+				// for(var i = 0; i < vendors.length; i++) {
+				// 	for(var j = 0; j < vendors.length; j++) {
+				// 		if(i != j && vendors[i]['id'] == vendors[j]['id']) {
+				// 			if(vendors[i]['date'])
+				// 		}
+				// 	}
+				// }
+				for(var i = 0; i < vendors.length; i++) {
+
+
+					$('#vendors_table').append("<tr id='" + vendors[i]['id'] + "'><td class='vendor_name'>" + vendors[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendors[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
 					if ($('#inventory_index').length == 0){
 						$('#vendors_table #' + vendors[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
 					}
 				}
+				$('#stock_table').html("");
+				for(var i = 0; i < vendors.length; i++) {
+					$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
+					"<td>" + vendors[i]['vendor_price'] + "</td>" +
+					"<td>" + vendors[i]['quantity'] + "</td>" +
+					"<td>" + vendors[i]['purchase_date'] + "</td>" +
+					"</tr>");
+				}
+
 				
 				if ($('#inventory_index').length == 0){
 					//Attach image cropper to image cropping div
