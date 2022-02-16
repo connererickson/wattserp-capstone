@@ -17,15 +17,16 @@ $(document).ready(function(){
 						var idateArray = vendors[i]['purchase_date'].split('-');
 						var iDate = new Date();
 						iDate.setFullYear(idateArray[0]);
-						iDate.setMonth(idateArray[1]);
+						iDate.setMonth(idateArray[1] - 1);
 						iDate.setDate(idateArray[2]);
-						var jdateArray = vendors[i]['purchase_date'].split('-');
+						var jdateArray = vendors[j]['purchase_date'].split('-');
 						var jDate = new Date();
 						jDate.setFullYear(jdateArray[0]);
-						jDate.setMonth(jdateArray[1]);
+						jDate.setMonth(jdateArray[1] - 1);
 						jDate.setDate(jdateArray[2]);
-						
-						if(jDate < iDate) {
+						console.log(jDate + ", " + iDate);
+						if(jDate > iDate) {
+							console.log("picking" + jDate);
 							mostRecentDate = vendors[j];
 							mostRecentName = vendors[j]['company_name'];
 						}
@@ -62,19 +63,19 @@ $(document).ready(function(){
 		}
 	});
 	
-	//Move preview pane with scrolling
-	$(window).scroll(function() {
-    	if ($(window).scrollTop() > 150){
-    		$("#repository_preview_pane").css({
-    			"top": ($(window).scrollTop()-0) + "px"
-  			});
-  		}
-  		if ($(window).scrollTop() == 0){
-    		$("#repository_preview_pane").css({
-    			"top": 150 + "px"
-  			});
-  		}
-	});
+	// //Move preview pane with scrolling
+	// $(window).scroll(function() {
+    // 	if ($(window).scrollTop() > 150){
+    // 		$("#repository_preview_pane").css({
+    // 			"top": ($(window).scrollTop()-0) + "px"
+  	// 		});
+  	// 	}
+  	// 	if ($(window).scrollTop() == 0){
+    // 		$("#repository_preview_pane").css({
+    // 			"top": 150 + "px"
+  	// 		});
+  	// 	}
+	// });
 	
 	//Show the edit part image button on image hover
 	$('#part_image_container').on('mouseover', function(){
@@ -293,7 +294,7 @@ $(document).ready(function(){
 						$('#vendors_table #' + vendorsCopy[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
 					}
 				}
-				
+
 				$('#stock_table').html("");
 				for(var i = 0; i < vendors.length; i++) {
 					$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
