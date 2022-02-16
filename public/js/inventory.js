@@ -280,14 +280,65 @@ $(document).ready(function(){
 				}
 				$('#vendors_table_inventory').html("");
 				for(var i = 0; i < vendorsCopy.length; i++){
-					$('#vendors_table_inventory').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>" + 
-					//add button here
-					"<td><button class='btn btn-primary btn-xs'>Edit Price</button></td>" + "<td><button class='btn btn-primary btn-xs mx-1'>Purchase Stock</button></td></tr>"
-					);
+
+					//Create Table Row Element
+					var VendorTable = document.createElement("tr");
+					VendorTable.setAttribute("id", vendorsCopy[i]['id']);
+
+					//Create Column for Vendor Name
+					var VendorNameColumn = document.createElement("td");
+					VendorNameColumn.setAttribute("class", "vendor_name");
+					VendorNameColumn.innerHTML = vendorsCopy[i]['company_name'];
+
+					//Create Column for Vendor Price
+					var VendorPriceColumn = document.createElement("td");
+					VendorPriceColumn.setAttribute("class", "vendor_price");
+					VendorPriceColumn.innerHTML = vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'];
+
+					//Create Column for the Edit Price Button
+					var EditPriceColumn = document.createElement("td");
+					var EditPriceButton = document.createElement("button");
+					EditPriceButton.setAttribute("class", "btn btn-primary btn-xs");
+					EditPriceButton.innerHTML = "Edit Price";
+					EditPriceButton.setAttribute("data-bs-toggle", "modal");
+					EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
+					EditPriceButton.setAttribute("type", "button");
+					EditPriceButton.setAttribute("name", vendorsCopy[i]['company_name']);
+					var companyName = vendorsCopy[i]['company_name'];
+					//Event Handler for the Edit Price Button
+					EditPriceButton.addEventListener('click', () => {
+						$("#EditPriceModalTitle").html("Edit Price for " + companyName);
+						$('#edit_price_button').attr('name', companyName);
+					});
+					EditPriceColumn.append(EditPriceButton);
+
+					//Create Column for the Purchase Stock Button
+					var PurchaseStockColumn = document.createElement("td");
+					var PurchaseStockButton = document.createElement("button");
+					PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
+					PurchaseStockButton.innerHTML = "Purchase Stock";
+					//Event Handler for the Purchase Stock Button
+					PurchaseStockButton.addEventListener('click', () => {
+						console.log('Clicked Purchase Stock Button');
+					});
+					PurchaseStockColumn.append(PurchaseStockButton);
+
+					//Append columns to the row
+					VendorTable.append(VendorNameColumn, VendorPriceColumn, EditPriceColumn, PurchaseStockColumn);
+
+					//Append the table row to the table
+					$('#vendors_table_inventory').append(VendorTable);
 				}
+
+
+				$('#edit_price_button').on('click', () => {
+					var companyName = document.getElementById('edit_price_button').getAttribute('name');
+					var newPrice = document.getElementById('edit_price_input').value;
+					console.log(newPrice);
+
+				});
+
 				$('#vendors_table').html("");
-
-
 				for(var i = 0; i < vendorsCopy.length; i++) {
 					$('#vendors_table').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
 					if ($('#inventory_index').length == 0){

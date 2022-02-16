@@ -11,10 +11,8 @@
 	    <title>CRM - Inventory</title>
 	
 	    <!-- Styles -->
-	    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/messi.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/fonts.css') }}" rel="stylesheet">
-	    <script src="{{ URL::asset('js/app.js') }}"></script>
 	    <link href="{{ URL::asset('css/fontawesome.min.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/all.min.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/draggie.css') }}" rel="stylesheet">
@@ -24,6 +22,10 @@
 	    <link href="{{ URL::asset('css/datatables.min.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/generaladmin.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/inventory.css') }}" rel="stylesheet">
+		<link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+
+		<!--Script-->
+		<script src="{{ URL::asset('js/app.js') }}"></script>
 	    
 	</head>
 	<body>

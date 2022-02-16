@@ -210,6 +210,23 @@
             </div>
         </div>
     </div>
+	<!-- Modal -->
+	<div class="modal fade" id="EditPriceModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="EditPriceModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="EditPriceModalTitle">Edit Price</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center">
+					<input id="edit_price_input" type="number" class="form-control"/>
+				</div>
+				<div class="modal-footer">
+					<button id="edit_price_button" type="button" class="btn btn-success">Change Price</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 @endsection
 
