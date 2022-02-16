@@ -190,6 +190,7 @@ Route::group(['prefix' => 'pages/inventory/manage'], function () {
 	Route::get('/', 'InventoryController@manage')->name('inventory.manage');
 	Route::get('/parts_index', 'InventoryController@parts_index')->name('inventory.manage.parts_index');
 	Route::post('/update_stock', 'InventoryController@update_stock')->name('inventory.manage.update_stock');
+	Route::post('/edit_vendor_price', 'InventoryController@edit_vendor_price')->name('inventory.manage.edit_vendor_price');
 });
 Route::group(['prefix' => 'pages/inventory/pull'], function () {
 	Route::get('/', 'InventoryController@pull')->name('inventory.pull');
@@ -240,6 +241,7 @@ Route::group(['prefix' => 'pages/repository/manage'], function () {
 	Route::post('/update_tags', 'RepositoryController@update_tags')->name('repository.manage.update_tags');
 	Route::post('/upload_part_image', 'RepositoryController@upload_part_image')->name('repository.manage.upload_part_image');
 	Route::post('/crop_part_image', 'RepositoryController@crop_part_image')->name('repository.manage.crop_part_image');
+
 });
 Route::group(['prefix' => 'pages/repository/administrate'], function () {
 	Route::get('/', 'RepositoryController@administrate')->name('repository.administrate');

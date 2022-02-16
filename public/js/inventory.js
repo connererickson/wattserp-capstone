@@ -303,12 +303,11 @@ $(document).ready(function(){
 					EditPriceButton.setAttribute("data-bs-toggle", "modal");
 					EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
 					EditPriceButton.setAttribute("type", "button");
-					EditPriceButton.setAttribute("name", vendorsCopy[i]['company_name']);
-					var companyName = vendorsCopy[i]['company_name'];
+					EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
+					var companyId = vendorsCopy[i]['id'];
 					//Event Handler for the Edit Price Button
 					EditPriceButton.addEventListener('click', () => {
-						$("#EditPriceModalTitle").html("Edit Price for " + companyName);
-						$('#edit_price_button').attr('name', companyName);
+						$('#edit_price_button').attr('name', companyId);
 					});
 					EditPriceColumn.append(EditPriceButton);
 
@@ -332,10 +331,35 @@ $(document).ready(function(){
 
 
 				$('#edit_price_button').on('click', () => {
-					var companyName = document.getElementById('edit_price_button').getAttribute('name');
+					var companyId = document.getElementById('edit_price_button').getAttribute('name');
 					var newPrice = document.getElementById('edit_price_input').value;
-					console.log(newPrice);
 
+					//Get today's date
+					var currentTime = new Date();
+					var today = new Date();
+					var dd = String(today.getDate()).padStart(2, '0');
+					var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+					var yyyy = today.getFullYear();
+					today = mm + '/' + dd + '/' + yyyy;
+
+					//Update the price in the database
+					var parameters = {'companyName' : companyId, 'newPrice' : newPrice, 'repository_part_id' : curr_part_id, 'date' : today};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_price', 0);
+					setTimeout(function(){
+						if (rtn){
+							var dialog_phrase = "Price has been updated";
+							var dialog = new Messi(
+								dialog_phrase,
+								{
+									title: 'Edit Vendor Price',
+									titleClass: 'anim success',
+									buttons: [
+										{id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
+									]
+								}
+							);
+						}
+					},500);
 				});
 
 				$('#vendors_table').html("");

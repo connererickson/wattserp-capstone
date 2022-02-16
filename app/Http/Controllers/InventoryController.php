@@ -88,6 +88,14 @@ class InventoryController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
     }
+
+	public function edit_vendor_price(Request $request) {
+		$companyName = $request['companyName'];
+		$newPrice = $request['newPrice'];
+		$repository_part_id = $request['repository_part_id'];
+		$today = $request['date'];
+		$edit_vendor_result = DB::table('repository_parts_vendors')->insert(array('company_id' => $company_id, 'repository_part_id' => $repository_part_id, 'price' => $newPrice, 'date' => $today, 'quantity' => 0));
+	}
 	
 	public function update_stock(Request $request){
 		$org_id = Auth::user()->org_id;
