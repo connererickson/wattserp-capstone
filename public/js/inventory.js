@@ -151,11 +151,16 @@ $(document).ready(function(){
 		newwin.document.close();
 	});
 	
+	//document.querySelector('sku_btn').addEventListener('click', loadSku);
+
 	//CLICK SKU BRINGS UP PART IN PART PREVIEW PANE
 	$(document).on('click', '.sku_btn', function(e){
-		
 		e.preventDefault();
 		var sku = $(this).attr('id');
+		return loadSku(sku);
+	});
+
+	function loadSku(sku) {
 		var parameters = {'sku' : sku};
 		go_ajax2(parameters, 'http://' + project_domain + '/pages/repository/manage/get_part', 0);
 		setTimeout(function(){
@@ -357,7 +362,11 @@ $(document).ready(function(){
 									]
 								}
 							);
+							//Reload the SKU
+							loadSku(sku);
 
+							//Close the modal
+							$('#EditPriceModal').modal('toggle');
 						}
 					},500);
 				});
@@ -418,8 +427,9 @@ $(document).ready(function(){
 				
 			}
 		},500);
+
 		return false;
-	});
+	}
 	
 	//Upload Documents for Part
 	$('#document_upload').on('click', function(e){
