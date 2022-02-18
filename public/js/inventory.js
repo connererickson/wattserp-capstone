@@ -360,8 +360,6 @@ $(document).ready(function(){
 
 						}
 					},500);
-
-					refresh_vendor_prices(vendors);
 				});
 
 				$('#vendors_table').html("");
@@ -422,79 +420,6 @@ $(document).ready(function(){
 		},500);
 		return false;
 	});
-
-	function refresh_vendor_prices(vendors) {
-		//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
-		vendorsCopy = removeDuplicateVendors(vendors);
-
-		$('#vendors_table_inventory').html("");
-		for(var i = 0; i < vendorsCopy.length; i++){
-
-			//Create Table Row Element
-			var VendorTable = document.createElement("tr");
-			VendorTable.setAttribute("id", vendorsCopy[i]['id']);
-
-			//Create Column for Vendor Name
-			var VendorNameColumn = document.createElement("td");
-			VendorNameColumn.setAttribute("class", "vendor_name");
-			VendorNameColumn.innerHTML = vendorsCopy[i]['company_name'];
-
-			//Create Column for Vendor Price
-			var VendorPriceColumn = document.createElement("td");
-			VendorPriceColumn.setAttribute("class", "vendor_price");
-			VendorPriceColumn.innerHTML = vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'];
-
-			//Create Column for the Edit Price Button
-			var EditPriceColumn = document.createElement("td");
-			var EditPriceButton = document.createElement("button");
-			EditPriceButton.setAttribute("class", "btn btn-primary btn-xs");
-			EditPriceButton.innerHTML = "Edit Price";
-			EditPriceButton.setAttribute("data-bs-toggle", "modal");
-			EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
-			EditPriceButton.setAttribute("type", "button");
-			EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
-			var companyId = vendorsCopy[i]['id'];
-			//Event Handler for the Edit Price Button
-			EditPriceButton.addEventListener('click', () => {
-				$('#edit_price_button').attr('name', companyId);
-			});
-			EditPriceColumn.append(EditPriceButton);
-
-			//Create Column for the Purchase Stock Button
-			var PurchaseStockColumn = document.createElement("td");
-			var PurchaseStockButton = document.createElement("button");
-			PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
-			PurchaseStockButton.innerHTML = "Purchase Stock";
-			//Event Handler for the Purchase Stock Button
-			PurchaseStockButton.addEventListener('click', () => {
-				console.log('Clicked Purchase Stock Button');
-			});
-			PurchaseStockColumn.append(PurchaseStockButton);
-
-			//Append columns to the row
-			VendorTable.append(VendorNameColumn, VendorPriceColumn, EditPriceColumn, PurchaseStockColumn);
-
-			//Append the table row to the table
-			$('#vendors_table_inventory').append(VendorTable);
-		}
-
-		$('#vendors_table').html("");
-		for(var i = 0; i < vendorsCopy.length; i++) {
-			$('#vendors_table').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
-			if ($('#inventory_index').length == 0){
-				$('#vendors_table #' + vendorsCopy[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
-			}
-		}
-
-		$('#stock_table').html("");
-		for(var i = 0; i < vendors.length; i++) {
-			$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
-			"<td>" + vendors[i]['vendor_price'] + "</td>" +
-			"<td>" + vendors[i]['quantity'] + "</td>" +
-			"<td>" + vendors[i]['purchase_date'] + "</td>" +
-			"</tr>");
-		}
-	}
 	
 	//Upload Documents for Part
 	$('#document_upload').on('click', function(e){
