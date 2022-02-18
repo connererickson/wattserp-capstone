@@ -236,6 +236,7 @@ Route::group(['prefix' => 'pages/repository/manage'], function () {
 	Route::post('/generate_sku', 'RepositoryController@generate_sku')->name('repository.manage.generate_sku');
 	Route::post('/parts_list', 'RepositoryController@parts_list')->name('repository.manage.parts_list');
 	Route::post('/get_part', 'RepositoryController@get_part')->name('repository.manage.get_part');
+	// Route::post('/edit_vendor_price', 'RepositoryController@edit_vendor_price')->name('repository.manage.edit_vendor_price');
 	Route::post('/add_vendor', 'RepositoryController@add_vendor')->name('repository.manage.add_vendor');
 	Route::post('/remove_vendor', 'RepositoryController@remove_vendor')->name('repository.manage.remove_vendor');
 	Route::post('/update_tags', 'RepositoryController@update_tags')->name('repository.manage.update_tags');

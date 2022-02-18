@@ -165,6 +165,18 @@ class RepositoryController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+	// public function edit_vendor_price(Request $request) {
+	// 	$companyId = $request['companyId'];
+	// 	$newPrice = $request['newPrice'];
+	// 	$repository_part_id = $request['repository_part_id'];
+	// 	$today = $request['date'];
+	// 	$edit_vendor_result = DB::table('repository_parts_vendors')->insert(array('id' => 100, 'company_id' => $company_id, 'repository_part_id' => $repository_part_id, 'price' => $newPrice, 'date' => $today, 'quantity' => 0));
+
+	// 	// $vendor_id = DB::getPdo()->lastInsertId();
+	// 	// Event::dispatch(new crmEvent($request->user(), "Edited vendor price."));
+	// 	// $result = array(1, $vendor_id);
+	// 	// echo json_encode($result);
+	// }
 
 	public function parts_list(Request $request)
 	{

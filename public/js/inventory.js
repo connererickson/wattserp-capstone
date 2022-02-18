@@ -24,9 +24,7 @@ $(document).ready(function(){
 						jDate.setFullYear(jdateArray[0]);
 						jDate.setMonth(jdateArray[1] - 1);
 						jDate.setDate(jdateArray[2]);
-						console.log(jDate + ", " + iDate);
 						if(jDate > iDate) {
-							console.log("picking" + jDate);
 							mostRecentDate = vendors[j];
 							mostRecentName = vendors[j]['company_name'];
 						}
@@ -331,8 +329,8 @@ $(document).ready(function(){
 
 
 				$('#edit_price_button').on('click', () => {
-					var companyId = document.getElementById('edit_price_button').getAttribute('name');
-					var newPrice = document.getElementById('edit_price_input').value;
+					var company_id = document.getElementById('edit_price_button').getAttribute('name');
+					var price = document.getElementById('edit_price_input').value;
 
 					//Get today's date
 					var currentTime = new Date();
@@ -340,10 +338,11 @@ $(document).ready(function(){
 					var dd = String(today.getDate()).padStart(2, '0');
 					var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 					var yyyy = today.getFullYear();
-					today = mm + '/' + dd + '/' + yyyy;
+					today = yyyy + '-' + mm + "-" + dd;
 
 					//Update the price in the database
-					var parameters = {'companyName' : companyId, 'newPrice' : newPrice, 'repository_part_id' : curr_part_id, 'date' : today};
+					var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date' : today};
+					// go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_price', 0);
 					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_price', 0);
 					setTimeout(function(){
 						if (rtn){
@@ -358,8 +357,11 @@ $(document).ready(function(){
 									]
 								}
 							);
+
 						}
 					},500);
+
+					refresh_vendor_prices(vendors);
 				});
 
 				$('#vendors_table').html("");
@@ -420,6 +422,79 @@ $(document).ready(function(){
 		},500);
 		return false;
 	});
+
+	function refresh_vendor_prices(vendors) {
+		//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
+		vendorsCopy = removeDuplicateVendors(vendors);
+
+		$('#vendors_table_inventory').html("");
+		for(var i = 0; i < vendorsCopy.length; i++){
+
+			//Create Table Row Element
+			var VendorTable = document.createElement("tr");
+			VendorTable.setAttribute("id", vendorsCopy[i]['id']);
+
+			//Create Column for Vendor Name
+			var VendorNameColumn = document.createElement("td");
+			VendorNameColumn.setAttribute("class", "vendor_name");
+			VendorNameColumn.innerHTML = vendorsCopy[i]['company_name'];
+
+			//Create Column for Vendor Price
+			var VendorPriceColumn = document.createElement("td");
+			VendorPriceColumn.setAttribute("class", "vendor_price");
+			VendorPriceColumn.innerHTML = vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'];
+
+			//Create Column for the Edit Price Button
+			var EditPriceColumn = document.createElement("td");
+			var EditPriceButton = document.createElement("button");
+			EditPriceButton.setAttribute("class", "btn btn-primary btn-xs");
+			EditPriceButton.innerHTML = "Edit Price";
+			EditPriceButton.setAttribute("data-bs-toggle", "modal");
+			EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
+			EditPriceButton.setAttribute("type", "button");
+			EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
+			var companyId = vendorsCopy[i]['id'];
+			//Event Handler for the Edit Price Button
+			EditPriceButton.addEventListener('click', () => {
+				$('#edit_price_button').attr('name', companyId);
+			});
+			EditPriceColumn.append(EditPriceButton);
+
+			//Create Column for the Purchase Stock Button
+			var PurchaseStockColumn = document.createElement("td");
+			var PurchaseStockButton = document.createElement("button");
+			PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
+			PurchaseStockButton.innerHTML = "Purchase Stock";
+			//Event Handler for the Purchase Stock Button
+			PurchaseStockButton.addEventListener('click', () => {
+				console.log('Clicked Purchase Stock Button');
+			});
+			PurchaseStockColumn.append(PurchaseStockButton);
+
+			//Append columns to the row
+			VendorTable.append(VendorNameColumn, VendorPriceColumn, EditPriceColumn, PurchaseStockColumn);
+
+			//Append the table row to the table
+			$('#vendors_table_inventory').append(VendorTable);
+		}
+
+		$('#vendors_table').html("");
+		for(var i = 0; i < vendorsCopy.length; i++) {
+			$('#vendors_table').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
+			if ($('#inventory_index').length == 0){
+				$('#vendors_table #' + vendorsCopy[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
+			}
+		}
+
+		$('#stock_table').html("");
+		for(var i = 0; i < vendors.length; i++) {
+			$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
+			"<td>" + vendors[i]['vendor_price'] + "</td>" +
+			"<td>" + vendors[i]['quantity'] + "</td>" +
+			"<td>" + vendors[i]['purchase_date'] + "</td>" +
+			"</tr>");
+		}
+	}
 	
 	//Upload Documents for Part
 	$('#document_upload').on('click', function(e){
@@ -490,7 +565,6 @@ $(document).ready(function(){
 				if ($(this).hasClass('selected')){
 					var this_id = $(this).attr('id');
 					var this_tagname = $(this).find('.repo_tag_a').html();
-					//console.log(this_id + " " + this_tagname);
 					on_tags[this_id] = this_tagname;
 				}
 			});
