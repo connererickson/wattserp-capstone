@@ -390,12 +390,12 @@ class RepositoryController extends Controller
     	$auth_result = $request->user()->hasPermission('edit_repository');
 		if($auth_result){
 
-
 			$part = RepositoryPart::findOrFail($request['part_id']);
 			$vendor_id = $request['vendor_id'];
 			$vendor_price = $request['vendor_price'];
+
 			if (!$part->companies->contains($vendor_id)){
-				$part->companies()->attach($vendor_id, array('price' => $vendor_price));
+				$part->companies()->attach($vendor_id, array('price' => $vendor_price, 'date' => $request['date'], 'quantity' => 0));
 				Event::dispatch(new crmEvent($request->user(), " added a vendor with id " . $vendor_id . " for part with id " . $part->id));
 				$result = 1;
 			}

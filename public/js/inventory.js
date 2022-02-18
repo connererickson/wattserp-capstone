@@ -583,7 +583,15 @@ $(document).ready(function(){
 		if ( vendor_id != 0 ){
 			if ( vendor_price != "" ){
 				if ( validateDecimal(vendor_price) ){
-					var parameters = {'vendor_id' : vendor_id, 'part_id' : part_id, 'vendor_price' : vendor_price};
+					
+					var today = new Date();
+					var dd = String(today.getDate()).padStart(2, '0');
+					var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+					var yyyy = today.getFullYear();
+					today = yyyy + '-' + mm + "-" + dd;
+
+					var parameters = {'vendor_id' : vendor_id, 'part_id' : part_id, 'vendor_price' : vendor_price, "date" : today};
+
 					go_ajax2(parameters, 'http://' + project_domain + '/pages/repository/manage/add_vendor', 0);
 					setTimeout(function(){
 						if (rtn){
