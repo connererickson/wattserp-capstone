@@ -1,5 +1,7 @@
 var curr_part_id;
 var cropperBox;
+var curr_company_id;
+
 $(document).ready(function(){
 	
 	var context;
@@ -185,6 +187,7 @@ $(document).ready(function(){
 				$('#edit_part_button').attr('href', 'http://' + public_domain + '/index.php/pages/repository/manage/edit_part/' + part[0]['id']);
 
 				//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
+				console.log(vendors);
 				vendorsCopy = removeDuplicateVendors(vendors);
 
 				
@@ -309,10 +312,14 @@ $(document).ready(function(){
 					EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
 					var companyId = vendorsCopy[i]['id'];
                     //Event Handler for the Edit Price Button
-                    EditPriceButton.addEventListener('click', () => {
-                        $('#change_price_button_modal').attr('name', companyId);
-                    }); 
+                    EditPriceButton.addEventListener('click',editPriceButtonListenerFunction); 
 					EditPriceColumn.append(EditPriceButton);
+
+					function editPriceButtonListenerFunction()
+					{
+						companyId = this.getAttribute("name");
+						$('#change_price_button_modal').attr('name', companyId);
+					}
 
 					//Create Column for the Purchase Stock Button
 					var PurchaseStockColumn = document.createElement("td");
@@ -325,10 +332,14 @@ $(document).ready(function(){
 					PurchaseStockButton.setAttribute("name", vendorsCopy[i]['id']);
 					var companyId = vendorsCopy[i]['id'];
                     //Event Handler for the Edit Price Button
-                    PurchaseStockButton.addEventListener('click', () => {
-                        $('#purchase_button_modal').attr('name', companyId);
-                    }); 
+                    PurchaseStockButton.addEventListener('click',PurchaseStockButtonListenerFunction); 
 					PurchaseStockColumn.append(PurchaseStockButton);
+
+					function PurchaseStockButtonListenerFunction()
+					{
+						companyId = this.getAttribute("name");
+						$('#change_price_button_modal').attr('name', companyId);
+					}
 
 					//Append columns to the row
 					VendorTable.append(VendorNameColumn, VendorPriceColumn, EditPriceColumn, PurchaseStockColumn);
@@ -341,6 +352,8 @@ $(document).ready(function(){
 				$('#change_price_button_modal').on('click', () => {
 					var company_id = document.getElementById('change_price_button_modal').getAttribute('name');
 					var price = document.getElementById('edit_price_input').value;
+
+					console.log(companyId);
 
 					//Get today's date
 					var currentTime = new Date();

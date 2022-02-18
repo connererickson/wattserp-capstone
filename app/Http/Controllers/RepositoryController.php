@@ -389,6 +389,8 @@ class RepositoryController extends Controller
 		
     	$auth_result = $request->user()->hasPermission('edit_repository');
 		if($auth_result){
+
+
 			$part = RepositoryPart::findOrFail($request['part_id']);
 			$vendor_id = $request['vendor_id'];
 			$vendor_price = $request['vendor_price'];
