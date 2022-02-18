@@ -191,6 +191,7 @@ Route::group(['prefix' => 'pages/inventory/manage'], function () {
 	Route::get('/parts_index', 'InventoryController@parts_index')->name('inventory.manage.parts_index');
 	Route::post('/update_stock', 'InventoryController@update_stock')->name('inventory.manage.update_stock');
 	Route::post('/edit_vendor_price', 'InventoryController@edit_vendor_price')->name('inventory.manage.edit_vendor_price');
+	Route::post('/edit_vendor_quantity', 'InventoryController@edit_vendor_quantity')->name('inventory.manage.edit_vendor_quantity');
 });
 Route::group(['prefix' => 'pages/inventory/pull'], function () {
 	Route::get('/', 'InventoryController@pull')->name('inventory.pull');

@@ -151,11 +151,16 @@ $(document).ready(function(){
 		newwin.document.close();
 	});
 	
+	//document.querySelector('sku_btn').addEventListener('click', loadSku);
+
 	//CLICK SKU BRINGS UP PART IN PART PREVIEW PANE
 	$(document).on('click', '.sku_btn', function(e){
-		
 		e.preventDefault();
 		var sku = $(this).attr('id');
+		return loadSku(sku);
+	});
+
+	function loadSku(sku) {
 		var parameters = {'sku' : sku};
 		go_ajax2(parameters, 'http://' + project_domain + '/pages/repository/manage/get_part', 0);
 		setTimeout(function(){
@@ -303,10 +308,10 @@ $(document).ready(function(){
 					EditPriceButton.setAttribute("type", "button");
 					EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
 					var companyId = vendorsCopy[i]['id'];
-					//Event Handler for the Edit Price Button
-					EditPriceButton.addEventListener('click', () => {
-						$('#edit_price_button').attr('name', companyId);
-					});
+                    //Event Handler for the Edit Price Button
+                    EditPriceButton.addEventListener('click', () => {
+                        $('#change_price_button_modal').attr('name', companyId);
+                    }); 
 					EditPriceColumn.append(EditPriceButton);
 
 					//Create Column for the Purchase Stock Button
@@ -314,10 +319,15 @@ $(document).ready(function(){
 					var PurchaseStockButton = document.createElement("button");
 					PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
 					PurchaseStockButton.innerHTML = "Purchase Stock";
-					//Event Handler for the Purchase Stock Button
-					PurchaseStockButton.addEventListener('click', () => {
-						console.log('Clicked Purchase Stock Button');
-					});
+					PurchaseStockButton.setAttribute("data-bs-toggle", "modal");
+					PurchaseStockButton.setAttribute("data-bs-target", "#PurchaseStockModal");
+					PurchaseStockButton.setAttribute("type", "button");
+					PurchaseStockButton.setAttribute("name", vendorsCopy[i]['id']);
+					var companyId = vendorsCopy[i]['id'];
+                    //Event Handler for the Edit Price Button
+                    PurchaseStockButton.addEventListener('click', () => {
+                        $('#purchase_button_modal').attr('name', companyId);
+                    }); 
 					PurchaseStockColumn.append(PurchaseStockButton);
 
 					//Append columns to the row
@@ -328,8 +338,8 @@ $(document).ready(function(){
 				}
 
 
-				$('#edit_price_button').on('click', () => {
-					var company_id = document.getElementById('edit_price_button').getAttribute('name');
+				$('#change_price_button_modal').on('click', () => {
+					var company_id = document.getElementById('change_price_button_modal').getAttribute('name');
 					var price = document.getElementById('edit_price_input').value;
 
 					//Get today's date
@@ -357,11 +367,47 @@ $(document).ready(function(){
 									]
 								}
 							);
+							//Reload the SKU
+							loadSku(sku);
 
+							//Close the modal
+							$('#EditPriceModal').modal('toggle');
 						}
 					},500);
+				});
 
-					refresh_vendor_prices(vendors);
+				$('#purchase_button_modal').on('click', () => {
+
+					var vendorToChange = vendorsCopy[vendorsCopy.length - 1];
+
+					var company_id = vendorToChange['id'];
+					var price = vendorToChange['vendor_price'];
+					var date = vendorToChange['purchase_date'];
+					var newQuantity = parseInt(vendorToChange['quantity']) + parseInt(document.getElementById('purchase_stock_input').value);
+
+					//Update the quantity in the database
+					var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date': date, 'newQuantity': newQuantity};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
+					setTimeout(function(){
+						if (rtn){
+							var dialog_phrase = "Stock purchased.";
+							var dialog = new Messi(
+								dialog_phrase,
+								{
+									title: 'Edit Vendor Quantity',
+									titleClass: 'anim success',
+									buttons: [
+										{id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
+									]
+								}
+							);
+							//Reload the SKU
+							loadSku(sku);
+
+							//Close the modal
+							$('#PurchaseStockModal').modal('toggle');
+						}
+					},500);
 				});
 
 				$('#vendors_table').html("");
@@ -420,80 +466,8 @@ $(document).ready(function(){
 				
 			}
 		},500);
+
 		return false;
-	});
-
-	function refresh_vendor_prices(vendors) {
-		//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
-		vendorsCopy = removeDuplicateVendors(vendors);
-
-		$('#vendors_table_inventory').html("");
-		for(var i = 0; i < vendorsCopy.length; i++){
-
-			//Create Table Row Element
-			var VendorTable = document.createElement("tr");
-			VendorTable.setAttribute("id", vendorsCopy[i]['id']);
-
-			//Create Column for Vendor Name
-			var VendorNameColumn = document.createElement("td");
-			VendorNameColumn.setAttribute("class", "vendor_name");
-			VendorNameColumn.innerHTML = vendorsCopy[i]['company_name'];
-
-			//Create Column for Vendor Price
-			var VendorPriceColumn = document.createElement("td");
-			VendorPriceColumn.setAttribute("class", "vendor_price");
-			VendorPriceColumn.innerHTML = vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'];
-
-			//Create Column for the Edit Price Button
-			var EditPriceColumn = document.createElement("td");
-			var EditPriceButton = document.createElement("button");
-			EditPriceButton.setAttribute("class", "btn btn-primary btn-xs");
-			EditPriceButton.innerHTML = "Edit Price";
-			EditPriceButton.setAttribute("data-bs-toggle", "modal");
-			EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
-			EditPriceButton.setAttribute("type", "button");
-			EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
-			var companyId = vendorsCopy[i]['id'];
-			//Event Handler for the Edit Price Button
-			EditPriceButton.addEventListener('click', () => {
-				$('#edit_price_button').attr('name', companyId);
-			});
-			EditPriceColumn.append(EditPriceButton);
-
-			//Create Column for the Purchase Stock Button
-			var PurchaseStockColumn = document.createElement("td");
-			var PurchaseStockButton = document.createElement("button");
-			PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
-			PurchaseStockButton.innerHTML = "Purchase Stock";
-			//Event Handler for the Purchase Stock Button
-			PurchaseStockButton.addEventListener('click', () => {
-				console.log('Clicked Purchase Stock Button');
-			});
-			PurchaseStockColumn.append(PurchaseStockButton);
-
-			//Append columns to the row
-			VendorTable.append(VendorNameColumn, VendorPriceColumn, EditPriceColumn, PurchaseStockColumn);
-
-			//Append the table row to the table
-			$('#vendors_table_inventory').append(VendorTable);
-		}
-
-		$('#vendors_table').html("");
-		for(var i = 0; i < vendorsCopy.length; i++) {
-			$('#vendors_table').append("<tr id='" + vendorsCopy[i]['id'] + "'><td class='vendor_name'>" + vendorsCopy[i]['company_name'] + "</td><td class='vendor_price'>$ " + vendorsCopy[i]['vendor_price'] + " " + part[0]['alternate_pricing'] + "</td>");
-			if ($('#inventory_index').length == 0){
-				$('#vendors_table #' + vendorsCopy[i]['id']).append("<td><a href='' class='delete_icon delete_vendor_from_part'><img src='http://" + public_domain + "/images/delete.png'/></a></td>");
-			}
-		}
-
-		$('#stock_table').html("");
-		for(var i = 0; i < vendors.length; i++) {
-			$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
-			"<td>" + vendors[i]['vendor_price'] + "</td>" +
-			"<td>" + vendors[i]['quantity'] + "</td>" +
-			"<td>" + vendors[i]['purchase_date'] + "</td>" +
-			"</tr>");
-		}
 	}
 	
 	//Upload Documents for Part
