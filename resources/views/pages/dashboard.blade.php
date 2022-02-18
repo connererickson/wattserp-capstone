@@ -1,12 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" id="timeclock">
+	<div class="offcanvas-header">
+    	<h1 class="offcanvas-title">Clock In/Out</h1>
+    	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+	</div>
+	<div class="offcanvas-body">
+    	<!--<p>Some text lorem ipsum.</p>
+    	<p>Some text lorem ipsum.</p>
+    	<button class="btn btn-secondary" type="button">A Button</button>-->
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="border border-primary border-2 rounded p-4 col-md-12 text-center">
 		<div class="mt-2">
 			<h2>Dashboard</h2>
 			<div>
 				<h5 class="text-muted">Install Dashboard Modules</h5>
+				<!-- Offcanvas trigger -->
+				<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#timeclock">
+					Clock In/Out
+				</button>
 				<div class="d-flex justify-content-center flex-column flex-sm-row">
 					<?php
 					if ($available_modules){ ?>
