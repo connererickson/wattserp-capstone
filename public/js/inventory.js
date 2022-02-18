@@ -308,10 +308,10 @@ $(document).ready(function(){
 					EditPriceButton.setAttribute("type", "button");
 					EditPriceButton.setAttribute("name", vendorsCopy[i]['id']);
 					var companyId = vendorsCopy[i]['id'];
-					//Event Handler for the Edit Price Button
-					EditPriceButton.addEventListener('click', () => {
-						$('#edit_price_button').attr('name', companyId);
-					});
+                    //Event Handler for the Edit Price Button
+                    EditPriceButton.addEventListener('click', () => {
+                        $('#change_price_button_modal').attr('name', companyId);
+                    }); 
 					EditPriceColumn.append(EditPriceButton);
 
 					//Create Column for the Purchase Stock Button
@@ -319,10 +319,15 @@ $(document).ready(function(){
 					var PurchaseStockButton = document.createElement("button");
 					PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
 					PurchaseStockButton.innerHTML = "Purchase Stock";
-					//Event Handler for the Purchase Stock Button
-					PurchaseStockButton.addEventListener('click', () => {
-						console.log('Clicked Purchase Stock Button');
-					});
+					PurchaseStockButton.setAttribute("data-bs-toggle", "modal");
+					PurchaseStockButton.setAttribute("data-bs-target", "#PurchaseStockModal");
+					PurchaseStockButton.setAttribute("type", "button");
+					PurchaseStockButton.setAttribute("name", vendorsCopy[i]['id']);
+					var companyId = vendorsCopy[i]['id'];
+                    //Event Handler for the Edit Price Button
+                    PurchaseStockButton.addEventListener('click', () => {
+                        $('#purchase_button_modal').attr('name', companyId);
+                    }); 
 					PurchaseStockColumn.append(PurchaseStockButton);
 
 					//Append columns to the row
@@ -333,8 +338,8 @@ $(document).ready(function(){
 				}
 
 
-				$('#edit_price_button').on('click', () => {
-					var company_id = document.getElementById('edit_price_button').getAttribute('name');
+				$('#change_price_button_modal').on('click', () => {
+					var company_id = document.getElementById('change_price_button_modal').getAttribute('name');
 					var price = document.getElementById('edit_price_input').value;
 
 					//Get today's date
@@ -367,6 +372,40 @@ $(document).ready(function(){
 
 							//Close the modal
 							$('#EditPriceModal').modal('toggle');
+						}
+					},500);
+				});
+
+				$('#purchase_button_modal').on('click', () => {
+
+					var vendorToChange = vendorsCopy[vendorsCopy.length - 1];
+
+					var company_id = vendorToChange['id'];
+					var price = vendorToChange['vendor_price'];
+					var date = vendorToChange['purchase_date'];
+					var newQuantity = parseInt(vendorToChange['quantity']) + parseInt(document.getElementById('purchase_stock_input').value);
+
+					//Update the quantity in the database
+					var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date': date, 'newQuantity': newQuantity};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
+					setTimeout(function(){
+						if (rtn){
+							var dialog_phrase = "Stock purchased.";
+							var dialog = new Messi(
+								dialog_phrase,
+								{
+									title: 'Edit Vendor Quantity',
+									titleClass: 'anim success',
+									buttons: [
+										{id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
+									]
+								}
+							);
+							//Reload the SKU
+							loadSku(sku);
+
+							//Close the modal
+							$('#PurchaseStockModal').modal('toggle');
 						}
 					},500);
 				});

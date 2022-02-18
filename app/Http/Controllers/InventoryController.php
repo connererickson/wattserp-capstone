@@ -95,6 +95,24 @@ class InventoryController extends Controller
 		$repository_part_id = $request['repository_part_id'];
 		$date = $request['date'];
 		$edit_vendor_result = DB::table('repository_parts_vendors')->insert(array('company_id' => $company_id, 'repository_part_id' => $repository_part_id, 'price' => $price, 'date' => $date, 'quantity' => 0));
+
+		return 1;
+	}
+
+	public function edit_vendor_quantity(Request $request) {
+
+		$company_id = $request['company_id'];
+		$price = $request['price'];
+		$repository_part_id = $request['repository_part_id'];
+		$date = $request['date'];
+		$newQuantity = $request['newQuantity'];
+
+		$purchase_stock_result = DB::table('repository_parts_vendors')->
+		where('repository_part_id', $repository_part_id)->
+		where('company_id', $company_id)->
+		where('price', $price)->
+		where('date', $date)->update(array('quantity' => $newQuantity)); 
+
 		return 1;
 	}
 	

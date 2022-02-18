@@ -210,7 +210,7 @@
             </div>
         </div>
     </div>
-	<!-- Modal -->
+	<!-- Edit Price Modal -->
 	<div class="modal fade" id="EditPriceModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="EditPriceModalTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
@@ -222,7 +222,24 @@
 					<input id="edit_price_input" type="number" class="form-control"/>
 				</div>
 				<div class="modal-footer">
-					<button id="edit_price_button" type="button" class="btn btn-success">Change Price</button>
+					<button id="change_price_button_modal" type="button" class="btn btn-success">Change Price</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Purchase Stock Modal -->
+	<div class="modal fade" id="PurchaseStockModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="PurchaseStockModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="PurchaseStockModalTitle">Purchase Stock</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center">
+					<input id="purchase_stock_input" type="number" class="form-control"/>
+				</div>
+				<div class="modal-footer">
+					<button id="purchase_button_modal" type="button" class="btn btn-success">Purchase</button>
 				</div>
 			</div>
 		</div>
