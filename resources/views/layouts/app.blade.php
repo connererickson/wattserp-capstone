@@ -20,6 +20,9 @@
 	    <link href="{{ URL::asset('css/module_styles.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/form_builder.css ') }}" rel="stylesheet">
 
+			<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/d9fddfb3f3.js" crossorigin="anonymous"></script>
+
 		{{-- script --}}
 		<script src="{{ URL::asset('js/app.js') }}"></script>
 	</head>

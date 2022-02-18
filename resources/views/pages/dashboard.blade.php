@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <!-- Offcanvas Sidebar -->
 <div class="offcanvas offcanvas-start" id="timeclock">
 	<div class="offcanvas-header">
@@ -13,6 +14,11 @@
     	<button class="btn btn-secondary" type="button">A Button</button>-->
 	</div>
 </div>
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#timeclock" style="position: fixed; top: 50%;">
+	<i class="fas fa-clock fa-3x py-5" style="color: #fff"></i>
+</button>
+
 <div class="container-fluid">
 	<div class="border border-primary border-2 rounded p-4 col-md-12 text-center">
 		<div class="mt-2">
@@ -20,9 +26,6 @@
 			<div>
 				<h5 class="text-muted">Install Dashboard Modules</h5>
 				<!-- Offcanvas trigger -->
-				<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#timeclock">
-					Clock In/Out
-				</button>
 				<div class="d-flex justify-content-center flex-column flex-sm-row">
 					<?php
 					if ($available_modules){ ?>
