@@ -17,16 +17,9 @@ $(document).ready(function(){
 				var mostRecentName = vendors[i]['company_name'];
 				for(var j = 0; j < vendors.length; j++) {
 					if(i != j && vendors[i]['id'] == vendors[j]['id']) {
-						var idateArray = vendors[i]['purchase_date'].split('-');
-						var iDate = new Date();
-						iDate.setFullYear(idateArray[0]);
-						iDate.setMonth(idateArray[1] - 1);
-						iDate.setDate(idateArray[2]);
-						var jdateArray = vendors[j]['purchase_date'].split('-');
-						var jDate = new Date();
-						jDate.setFullYear(jdateArray[0]);
-						jDate.setMonth(jdateArray[1] - 1);
-						jDate.setDate(jdateArray[2]);
+						var iDate = new Date(vendors[i]['purchase_date']);
+						var jDate = new Date(vendors[j]['purchase_date']);
+
 						if(jDate > iDate) {
 							mostRecentDate = vendors[j];
 							mostRecentName = vendors[j]['company_name'];
