@@ -672,8 +672,10 @@ $(document).ready(function(){
 		}
 	});
 
-	//Add Supplier Button
+	//Remove stock button
 	$('#remove_stock_button').on('click', function(e){
+
+		e.preventDefault();
 
 		//get the total stock
 		var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
@@ -682,7 +684,6 @@ $(document).ready(function(){
 		var part_id = $('#part_id').html();
 		var quantity_removed = parseInt($('#remove_stock').val());
 
-		e.preventDefault();
 		if (validateWholeNumber(quantity_removed)) {
 
 			var vendorsCopy2 = vendors;
