@@ -2,13 +2,14 @@ var curr_part_id;
 var cropperBox;
 var curr_company_id;
 var sku;
+var vendorsCopy;
 
 $(document).ready(function(){
 	
 	var context;
 	//The vendorsCopy array will contain only the unique vendors with the most recent purchase date of stock
 	function removeDuplicateVendors(vendors) {
-		let vendorsCopy = [];
+		vendorsCopy = [];
 		let vendorsCopyNames = [];
 		//In the case of multiple ventors with the same id, only append the one with the most recent date
 		for(var i = 0; i < vendors.length; i++) {
@@ -327,7 +328,7 @@ $(document).ready(function(){
                     PurchaseStockButton.addEventListener('click',PurchaseStockButtonListenerFunction); 
 					function PurchaseStockButtonListenerFunction()
 					{
-						$('#change_price_button_modal').attr('name', this.getAttribute("name"));
+						$('#purchase_button_modal').attr('name', this.getAttribute("name"));
 					}
 
 					PurchaseStockColumn.append(PurchaseStockButton);
@@ -388,7 +389,7 @@ $(document).ready(function(){
 					$('#barcode_print_button').show();
 				}
 				else{
-					$('#update_stock_button').show();
+					$('#remove_stock_button').show();
 				}
 				$('#document_list').html("No Documents");
 				load_part_documentation(curr_part_id);
@@ -441,13 +442,19 @@ $(document).ready(function(){
 	});
 
 	$('#purchase_button_modal').on('click', () => {
+		var company_id = document.getElementById('purchase_button_modal').getAttribute('name');
+		var quantityAdded = parseInt(document.getElementById('purchase_stock_input').value);
 
-		var vendorToChange = vendorsCopy[vendorsCopy.length - 1];
+		for(var i = vendorsCopy.length - 1; i >= 0; i--) {
+			if(vendorsCopy[i]['id'] == company_id) {
+				vendorToChange = vendorsCopy[i];
+				break;
+			}
+		}
 
-		var company_id = vendorToChange['id'];
 		var price = vendorToChange['vendor_price'];
 		var date = vendorToChange['purchase_date'];
-		var newQuantity = parseInt(vendorToChange['quantity']) + parseInt(document.getElementById('purchase_stock_input').value);
+		var newQuantity = parseInt(vendorToChange['quantity']) + quantityAdded;
 
 		//Update the quantity in the database
 		var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date': date, 'newQuantity': newQuantity};
@@ -575,11 +582,16 @@ $(document).ready(function(){
 			if ( vendor_price != "" ){
 				if ( validateDecimal(vendor_price) ){
 					
+					//Get today's date
+					var currentTime = new Date();
 					var today = new Date();
-					var dd = String(today.getDate()).padStart(2, '0');
-					var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-					var yyyy = today.getFullYear();
-					today = yyyy + '-' + mm + "-" + dd;
+					var DD = String(today.getDate()).padStart(2, '0');
+					var MM = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+					var YYYY = today.getFullYear();
+					var hh = today.getHours();
+					var mm = today.getMinutes();
+					var ss = today.getSeconds();
+					today = YYYY + '-' + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 
 					var parameters = {'vendor_id' : vendor_id, 'part_id' : part_id, 'vendor_price' : vendor_price, "date" : today};
 
@@ -648,7 +660,7 @@ $(document).ready(function(){
 	});
 
 	//Add Supplier Button
-	$('#update_stock_button').on('click', function(e){
+	$('#remove_stock_button').on('click', function(e){
 		e.preventDefault();
 		var part_id = $('#part_id').html();
 		var new_stock = $('#update_stock').val();

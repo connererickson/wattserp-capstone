@@ -174,7 +174,7 @@
 												{!! Form::text('update_stock', null, ['class'=>'form-control', 'id'=>'update_stock']) !!}
 												<br />
 												{{-- This needs to be fixed --}}
-												{!! Form::submit('Remove Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'update_stock_button']) !!}
+												{!! Form::submit('Remove Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'remove_stock_button']) !!}
 											@else
 												&nbsp;
 											@endif
