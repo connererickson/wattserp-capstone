@@ -413,10 +413,13 @@ $(document).ready(function(){
 		//Get today's date
 		var currentTime = new Date();
 		var today = new Date();
-		var dd = String(today.getDate()).padStart(2, '0');
-		var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-		var yyyy = today.getFullYear();
-		today = yyyy + '-' + mm + "-" + dd;
+		var DD = String(today.getDate()).padStart(2, '0');
+		var MM = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+		var YYYY = today.getFullYear();
+		var hh = today.getHours();
+		var mm = today.getMinutes();
+		var ss = today.getSeconds();
+		today = YYYY + '-' + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 
 		//Update the price in the database
 		var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date' : today};
