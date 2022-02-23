@@ -115,6 +115,22 @@ class InventoryController extends Controller
 
 		return 1;
 	}
+
+	public function delete_vendor_row(Request $request) {
+
+        $company_id = $request['company_id'];
+        $price = $request['price'];
+        $repository_part_id = $request['repository_part_id'];
+        $date = $request['date'];
+
+        $delete_vendor_row_result = DB::table('repository_parts_vendors')->
+        where('repository_part_id', $repository_part_id)->
+        where('company_id', $company_id)->
+        where('price', $price)->
+        where('date', $date)->delete(); 
+
+        return 1;
+    }
 	
 	public function update_stock(Request $request){
 		$org_id = Auth::user()->org_id;
@@ -123,7 +139,7 @@ class InventoryController extends Controller
 		
     	$auth_result = $request->user()->hasPermission('edit_inventory');
 		if($auth_result){
-			Event::dispatch(new crmEvent($request->user(), " updated stock for part with id " . $request['part_id']));
+			Event::dispatch(new crmEvent($request->user(), " removed stock for part with id " . $request['part_id']));
 			$update_stock_result = DB::table('repository_parts')->where('id', $request['part_id'])->update(array('stock' => $request['new_stock']));
 			return $update_stock_result;
 		}

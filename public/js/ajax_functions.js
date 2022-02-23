@@ -232,6 +232,7 @@ function go_ajax(parameters, e){
 };
 
 function go_ajax2(parameters, url, e){
+	
 	if(e){
 		e.preventDefault();
 	}

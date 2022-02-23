@@ -3,6 +3,7 @@ var cropperBox;
 var curr_company_id;
 var sku;
 var vendorsCopy;
+var vendors;
 
 $(document).ready(function(){
 	
@@ -167,7 +168,7 @@ $(document).ready(function(){
 				}
 				var part = rtn['part'];
 				var tags = rtn['tags'];
-				var vendors = rtn['vendors'];
+				vendors = rtn['vendors'];
 				$('#part_number').html(part[0]['part_no']);
 				$('#part_sku').html(part[0]['sku']);
 				$('#part_id').html(part[0]['id']);
@@ -257,7 +258,7 @@ $(document).ready(function(){
 						$('#part_stock').html(part[0]['stock'] + " " + part[0]['stocking_unit']);
 					}
 					else{
-						$('#part_stock').html("N/A");
+						$('#part_stock').html("0");
 					}
 				}
 				$('#part_tags_container').html("");
@@ -442,6 +443,10 @@ $(document).ready(function(){
 	});
 
 	$('#purchase_button_modal').on('click', () => {
+		//get the total stock
+		var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
+		var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
+
 		var company_id = document.getElementById('purchase_button_modal').getAttribute('name');
 		var quantityAdded = parseInt(document.getElementById('purchase_stock_input').value);
 
@@ -456,9 +461,17 @@ $(document).ready(function(){
 		var date = vendorToChange['purchase_date'];
 		var newQuantity = parseInt(vendorToChange['quantity']) + quantityAdded;
 
-		//Update the quantity in the database
+		//Update the quantity in repository_parts_vendors
 		var parameters = {'company_id' : company_id, 'price' : price, 'repository_part_id' : curr_part_id, 'date': date, 'newQuantity': newQuantity};
 		go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
+
+		var part_id = $('#part_id').html();
+
+		//update the quantity in repository_parts
+		var new_stock = totalStock + quantityAdded;
+		var parameters2 = {'part_id' : part_id, 'new_stock' : new_stock};
+		go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
+
 		setTimeout(function(){
 			if (rtn){
 				var dialog_phrase = "Stock purchased.";
@@ -661,16 +674,56 @@ $(document).ready(function(){
 
 	//Add Supplier Button
 	$('#remove_stock_button').on('click', function(e){
-		e.preventDefault();
+
+		//get the total stock
+		var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
+		var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
+
 		var part_id = $('#part_id').html();
-		var new_stock = $('#update_stock').val();
-		if (validateWholeNumber(new_stock)){
-			var parameters = {'part_id' : part_id, 'new_stock' : new_stock};
+		var quantity_removed = parseInt($('#remove_stock').val());
+
+		e.preventDefault();
+		if (validateWholeNumber(quantity_removed)) {
+
+			var vendorsCopy2 = vendors;
+
+			for(var i = 0; i < vendorsCopy2.length; i++) {
+				var currentVendor = vendorsCopy2[i];
+				if(quantity_removed < currentVendor['quantity']) {
+					currentVendor['quantity'] = currentVendor['quantity'] - quantity_removed;
+
+					//update repository_parts
+					var parameters = {'part_id' : part_id, 'new_stock' : totalStock - quantity_removed};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
+
+					//update repository_parts_vendors
+					var parameters2 = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['date'], 'newQuantity': currentVendor['quantity']};
+					go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
+
+					break;
+				}
+				else {
+					
+					//remove it from vendorsCopy
+					vendorsCopy2.shift();
+
+					//delete from repository_parts_vendors
+					var parameters = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['date']};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/delete_vendor_row', 0);
+
+					//calculate how much is left to remove
+					quantity_removed = quantity_removed - currentVendor['quantity'];
+
+					i--;
+				}
+			}
+
+			var parameters = {'part_id' : part_id, 'new_stock' : quantity_removed};
 			go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
 			setTimeout(function(){
 				if (rtn == 1){
 					var dialog = new Messi(
-					    "Stock has been updated",
+					    "Stock has been removed",
 					    {
 					        title: 'Update Stock',
 					        titleClass: 'anim success',
@@ -679,8 +732,8 @@ $(document).ready(function(){
 					        ]
 					    }
 					);
-					$('#part_stock').html(new_stock + " " + $('#part_pricing_unit').html());
-					$('#update_stock').val("");
+					$('#part_stock').html(quantity_removed + " " + $('#part_pricing_unit').html());
+					$('#remove_stock').val("");
 				}
 				if (rtn == 0){
 					var dialog = new Messi(
@@ -693,7 +746,7 @@ $(document).ready(function(){
 					        ]
 					    }
 					);
-					$('#update_stock').val("");
+					$('#remove_stock').val("");
 				}
 				
 			},500);
@@ -702,7 +755,7 @@ $(document).ready(function(){
 			var dialog = new Messi(
 			    'Stock must be a whole number.',
 			    {
-			        title: 'Update Stock',
+			        title: 'Remove Stock',
 			        titleClass: 'anim alert',
 			        buttons: [
 			            {id: 1, label: 'Ok', val: 'O', class: 'btn-alert'}

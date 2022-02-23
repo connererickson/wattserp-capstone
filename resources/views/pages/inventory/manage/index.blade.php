@@ -169,9 +169,9 @@
 								<div class="row">
 									<div class="text-center">
 										@if (Auth::user()->hasPermission('edit_inventory'))
-												{!! Form::label('update_stock', 'Enter quantity:') !!}
+												{!! Form::label('remove_stock', 'Enter quantity:') !!}
 												<br />
-												{!! Form::text('update_stock', null, ['class'=>'form-control', 'id'=>'update_stock']) !!}
+												{!! Form::text('remove_stock', null, ['class'=>'form-control', 'id'=>'remove_stock']) !!}
 												<br />
 												{{-- This needs to be fixed --}}
 												{!! Form::submit('Remove Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'remove_stock_button']) !!}
