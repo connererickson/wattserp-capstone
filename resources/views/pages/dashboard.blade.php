@@ -5,13 +5,36 @@
 <!-- Offcanvas Sidebar -->
 <div class="offcanvas offcanvas-start" id="timeclock">
 	<div class="offcanvas-header">
-    	<h1 class="offcanvas-title">Clock In/Out</h1>
+    	<h1 class="offcanvas-title">Time Clock</h1>
     	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
 	</div>
 	<div class="offcanvas-body">
     	<!--<p>Some text lorem ipsum.</p>
     	<p>Some text lorem ipsum.</p>
     	<button class="btn btn-secondary" type="button">A Button</button>-->
+		<div id='time'></div>
+		<br />
+		<div id="video-container">
+			<canvas id="canvas" width="265" height="220"></canvas>
+			<video id="video" width="265" height="220" autoplay playsinline></video>
+			<input type="text" id="image-url-input" disabled>
+		</div>
+		<div id='id_entry'>
+			<form id='clock_form' action='' method='post'>
+				<span>ID: </span><input type='text' class='text_input' name='emp_id' />
+				<br />
+				<span>Job: </span>
+				<select name='job' class='select_input'>
+					<option value='Test'>Test</option>
+				</select>
+				<br />
+				<span>Note: </span><input type='text' class='text_input' name='note' />
+				<br />
+				<input id='clock_in' type='button' class='button' value='Clock In' />
+				<input id='clock_out' type='button' class='button' value='Clock Out' />
+				<input id='status' type='button' class='button' value='Status' />
+			</form>
+		</div>
 	</div>
 </div>
 
