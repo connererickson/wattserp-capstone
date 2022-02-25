@@ -4,6 +4,7 @@ var curr_company_id;
 var sku;
 var vendorsCopy;
 var vendors;
+var totalStock;
 
 $(document).ready(function(){
 	
@@ -255,10 +256,8 @@ $(document).ready(function(){
 				}
 				if ($('#inventory_index').length){
 					if(part[0]['stock'] != null && part[0]['stock'] != ""){
-						$('#part_stock').html(part[0]['stock'] + " " + part[0]['stocking_unit']);
-					}
-					else{
-						$('#part_stock').html("0");
+						totalStock = part[0]['stock'];
+						$('#part_stock').html("Total stock: " + part[0]['stock'] + " " + part[0]['stocking_unit']);
 					}
 				}
 				$('#part_tags_container').html("");
@@ -349,9 +348,9 @@ $(document).ready(function(){
 					}
 				}
 
-				$('#stock_table').html("");
+				$('.stock_table').html("");
 				for(var i = 0; i < vendors.length; i++) {
-					$('#stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
+					$('.stock_table').append("<tr><td>" + vendors[i]['company_name'] + "</td>" +
 					"<td>" + vendors[i]['vendor_price'] + "</td>" +
 					"<td>" + vendors[i]['quantity'] + "</td>" +
 					"<td>" + vendors[i]['purchase_date'] + "</td>" +
@@ -437,15 +436,15 @@ $(document).ready(function(){
 				loadSku(sku);
 
 				//Close the modal
-				$('#EditPriceModal').modal('toggle');
+				//$('#EditPriceModal').modal('toggle');
 			}
 		},500);
 	});
 
 	$('#purchase_button_modal').on('click', () => {
 		//get the total stock
-		var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
-		var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
+		// var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
+		// var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
 
 		var company_id = document.getElementById('purchase_button_modal').getAttribute('name');
 		var quantityAdded = parseInt(document.getElementById('purchase_stock_input').value);
@@ -489,9 +488,105 @@ $(document).ready(function(){
 				loadSku(sku);
 
 				//Close the modal
-				$('#PurchaseStockModal').modal('toggle');
+				//$('#PurchaseStockModal').modal('toggle');
 			}
 		},500);
+	});
+
+	//Remove stock button
+	$('#remove_button_modal').on('click', function(e){
+
+		e.preventDefault();
+
+		//get the total stock
+		// var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
+		// var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
+
+		var part_id = $('#part_id').html();
+		var quantity_removed = parseInt($('#remove_stock_input').val());
+
+		if (validateWholeNumber(quantity_removed)) {
+
+			var vendorsCopy2 = vendors;
+
+			for(var i = 0; i < vendorsCopy2.length; i++) {
+
+				var currentVendor = vendorsCopy2[i];
+				if(quantity_removed < currentVendor['quantity']) {
+					currentVendor['quantity'] = currentVendor['quantity'] - quantity_removed;
+
+					var updated_stock = totalStock - quantity_removed;
+
+					//update repository_parts
+					var parameters = {'part_id' : part_id, 'new_stock' : updated_stock};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
+
+
+					//update repository_parts_vendors
+					var parameters2 = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['purchase_date'], 'newQuantity': currentVendor['quantity']};
+					go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
+
+					break;
+				}
+				else {
+					
+					var updated_stock = totalStock - currentVendor['quantity'];
+
+					//remove it from vendorsCopy
+					vendorsCopy2.shift();
+					
+					//update repository_parts
+					var parameters = {'part_id' : part_id, 'new_stock' : updated_stock};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
+
+					//delete from repository_parts_vendors
+					var parameters = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['purchase_date']};
+					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/delete_vendor_row', 0);
+
+					//calculate how much is left to remove
+					quantity_removed = quantity_removed - currentVendor['quantity'];
+
+					//reset totalStock
+					totalStock = updated_stock;
+
+					i--;
+				}
+			}
+
+			setTimeout(function(){
+				if (rtn){
+					var dialog_phrase = "Stock removed.";
+					var dialog = new Messi(
+						dialog_phrase,
+						{
+							title: 'Remove stock',
+							titleClass: 'anim success',
+							buttons: [
+								{id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
+							]
+						}
+					);
+					//Reload the SKU
+					loadSku(sku);
+
+					//Close the modal
+					//$('#RemoveStockModal').modal('toggle');
+				}
+			},500);
+		}
+		else{
+			var dialog = new Messi(
+			    'Stock must be a whole number.',
+			    {
+			        title: 'Remove Stock',
+			        titleClass: 'anim alert',
+			        buttons: [
+			            {id: 1, label: 'Ok', val: 'O', class: 'btn-alert'}
+			        ]
+			    }
+			);
+		}
+		return false;
 	});
 	
 	//Upload Documents for Part
@@ -670,101 +765,6 @@ $(document).ready(function(){
 			    }
 			);
 		}
-	});
-
-	//Remove stock button
-	$('#remove_stock_button').on('click', function(e){
-
-		e.preventDefault();
-
-		//get the total stock
-		var totalStockWithUnit = document.getElementById('part_stock').innerHTML;
-		var totalStock = parseInt(totalStockWithUnit.split(' ')[0]);
-
-		var part_id = $('#part_id').html();
-		var quantity_removed = parseInt($('#remove_stock').val());
-
-		if (validateWholeNumber(quantity_removed)) {
-
-			var vendorsCopy2 = vendors;
-
-			for(var i = 0; i < vendorsCopy2.length; i++) {
-				var currentVendor = vendorsCopy2[i];
-				if(quantity_removed < currentVendor['quantity']) {
-					currentVendor['quantity'] = currentVendor['quantity'] - quantity_removed;
-
-					//update repository_parts
-					var parameters = {'part_id' : part_id, 'new_stock' : totalStock - quantity_removed};
-					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
-
-					//update repository_parts_vendors
-					var parameters2 = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['date'], 'newQuantity': currentVendor['quantity']};
-					go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_quantity', 0);
-
-					break;
-				}
-				else {
-					
-					//remove it from vendorsCopy
-					vendorsCopy2.shift();
-
-					//delete from repository_parts_vendors
-					var parameters = {'company_id' : currentVendor['id'], 'price' : currentVendor['vendor_price'], 'repository_part_id' : curr_part_id, 'date': currentVendor['date']};
-					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/delete_vendor_row', 0);
-
-					//calculate how much is left to remove
-					quantity_removed = quantity_removed - currentVendor['quantity'];
-
-					i--;
-				}
-			}
-
-			var parameters = {'part_id' : part_id, 'new_stock' : quantity_removed};
-			go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
-			setTimeout(function(){
-				if (rtn == 1){
-					var dialog = new Messi(
-					    "Stock has been removed",
-					    {
-					        title: 'Update Stock',
-					        titleClass: 'anim success',
-					        buttons: [
-					            {id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
-					        ]
-					    }
-					);
-					$('#part_stock').html(quantity_removed + " " + $('#part_pricing_unit').html());
-					$('#remove_stock').val("");
-				}
-				if (rtn == 0){
-					var dialog = new Messi(
-					    "Stock was not changed",
-					    {
-					        title: 'Update Stock',
-					        titleClass: 'anim info',
-					        buttons: [
-					            {id: 1, label: 'Ok', val: 'O', class: 'btn-info'}
-					        ]
-					    }
-					);
-					$('#remove_stock').val("");
-				}
-				
-			},500);
-		}
-		else{
-			var dialog = new Messi(
-			    'Stock must be a whole number.',
-			    {
-			        title: 'Remove Stock',
-			        titleClass: 'anim alert',
-			        buttons: [
-			            {id: 1, label: 'Ok', val: 'O', class: 'btn-alert'}
-			        ]
-			    }
-			);
-		}
-		return false;
 	});
 	
 	//Do not allow the custom input of sku when creating a new part

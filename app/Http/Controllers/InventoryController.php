@@ -96,7 +96,7 @@ class InventoryController extends Controller
 		$date = $request['date'];
 		$edit_vendor_result = DB::table('repository_parts_vendors')->insert(array('company_id' => $company_id, 'repository_part_id' => $repository_part_id, 'price' => $price, 'date' => $date, 'quantity' => 0));
 
-		return 1;
+		return $edit_vendor_result;
 	}
 
 	public function edit_vendor_quantity(Request $request) {
@@ -113,7 +113,7 @@ class InventoryController extends Controller
 		where('price', $price)->
 		where('date', $date)->update(array('quantity' => $newQuantity)); 
 
-		return 1;
+		return $purchase_stock_result;
 	}
 
 	public function delete_vendor_row(Request $request) {
@@ -129,7 +129,7 @@ class InventoryController extends Controller
         where('price', $price)->
         where('date', $date)->delete(); 
 
-        return 1;
+        return $delete_vendor_row_result;
     }
 	
 	public function update_stock(Request $request){

@@ -1,6 +1,14 @@
 @extends('layouts.inventory')
 
 @section('content')
+<style>
+	thead th {
+		font-size: 1rem;
+	}
+	.no-border-top {
+		border-top: none;
+	}
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -167,42 +175,26 @@
 								</div>
 								<hr />
 								<div class="row">
+									<div class="col d-flex justify-content-end">
+										<p class="" id="part_stock" style="margin: auto 0;"></p>
+									</div>
+									<div class="col d-flex justify-content-start">
+										<button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RemoveStockModal">Remove Stock</button>
+									</div>
+								</div>
+								{{-- <div class="row">
 									<div class="text-center">
 										@if (Auth::user()->hasPermission('edit_inventory'))
 												{!! Form::label('remove_stock', 'Enter quantity:') !!}
 												<br />
 												{!! Form::text('remove_stock', null, ['class'=>'form-control', 'id'=>'remove_stock']) !!}
 												<br />
-												{{-- This needs to be fixed --}}
 												{!! Form::submit('Remove Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'remove_stock_button']) !!}
 											@else
 												&nbsp;
 											@endif
-										</div>
-								</div>
-								<div class="row">
-									<table>
-										<tr>
-											<td class="part_heading_big">Stock:</td>
-											<td class="part_data_big" id="part_stock"></td>
-										</tr>
-									</table>
-
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th scope="col">Vendor</th>
-												<th scope="col">Price</th>
-												<th scope="col">Quantity</th>
-												<th scope="col">Date</th>
-											</tr>
-										</thead>
-										<tbody id="stock_table">
-											
-										</tbody>
-										
-									</table>
-								</div>
+									</div>
+								</div> --}}
 							</div>
 						</div>
 					</div>
@@ -219,7 +211,22 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body text-center">
-					<input id="edit_price_input" type="number" class="form-control"/>
+					<table class="table table-striped no-border-top" style="border-top: none;">
+						<thead>
+							<tr>
+								<th scope="col">Vendor</th>
+								<th scope="col">Price</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Date</th>
+							</tr>
+						</thead>
+						<tbody class="stock_table no-border-top">
+							
+						</tbody>
+						
+					</table>
+					<label for="edit_price_input" class="form-label">Enter the new price here:</label>
+					<input id="edit_price_input" type="number" class="form-control text-center"/>
 				</div>
 				<div class="modal-footer">
 					<button id="change_price_button_modal" type="button" class="btn btn-success">Change Price</button>
@@ -236,10 +243,58 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body text-center">
-					<input id="purchase_stock_input" type="number" class="form-control"/>
+					<table class="table table-striped no-border-top">
+						<thead>
+							<tr>
+								<th scope="col">Vendor</th>
+								<th scope="col">Price</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Date</th>
+							</tr>
+						</thead>
+						<tbody class="stock_table no-border-top">
+							
+						</tbody>
+						
+					</table>
+					<label for="edit_price_input" class="form-label">Enter the quantity to be purchased:</label>
+					<input id="purchase_stock_input" type="number" class="form-control text-center"/>
 				</div>
 				<div class="modal-footer">
 					<button id="purchase_button_modal" type="button" class="btn btn-success">Purchase</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Remove Stock Modal -->
+	<div class="modal fade" id="RemoveStockModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="RemoveStockModalTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="RemoveStockModalTitle">Remove Stock</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center">
+					<table class="table table-striped no-border-top">
+						<thead>
+							<tr>
+								<th scope="col">Vendor</th>
+								<th scope="col">Price</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Date</th>
+							</tr>
+						</thead>
+						<tbody class="stock_table no-border-top">
+							
+						</tbody>
+						
+					</table>
+					<label for="edit_price_input" class="form-label">Enter the quantity to be removed: </label>
+					<input id="remove_stock_input" type="number" class="form-control text-center"/>
+					<div class="form-text text-muted">Stock will be removed starting with the oldest purchase date.</div>
+				</div>
+				<div class="modal-footer">
+					<button id="remove_button_modal" type="button" class="btn btn-success">Remove</button>
 				</div>
 			</div>
 		</div>
