@@ -521,13 +521,16 @@ class RepositoryController extends Controller
         else{
             $org_id = Auth::user()->org_id;
         }
-        $organization = Organization::find($org_id);
+        
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+		$organization = Organization::find($org_id);
         $org_dir = $organization->directory;
         
         $auth_result = $request->user()->hasPermission('create_repository');
         
         if($auth_result){
-            $view = View::make('pages/repository/manage/import_file_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir'));
+            $view = View::make('pages/repository/manage/import_file_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'all_orgs'));
             return $view;
         }
         else{
@@ -542,6 +545,8 @@ class RepositoryController extends Controller
         else{
             $org_id = Auth::user()->org_id;
         }
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
         $organization = Organization::find($org_id);
         $org_dir = $organization->directory;
         
@@ -561,7 +566,7 @@ class RepositoryController extends Controller
             }
             else{
                 Session::flash('import_file_error', 'Import File Could Not Be Processed');
-                $view = View::make('pages/repository/manage/import_file_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir'));
+                $view = View::make('pages/repository/manage/import_file_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'all_orgs'));
                 return $view;
             }
         }
@@ -577,6 +582,8 @@ class RepositoryController extends Controller
         else{
             $org_id = Auth::user()->org_id;
         }
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
         $organization = Organization::find($org_id);
         $org_dir = $organization->directory;
         
@@ -588,11 +595,11 @@ class RepositoryController extends Controller
             if ($request->session()->has('headings')) {
                 $headings = session('headings');
             }
-            $view = View::make('pages/repository/manage/import_headings_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'headings', 'name'));
+            $view = View::make('pages/repository/manage/import_headings_form', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'headings', 'name', 'all_orgs'));
             return $view;
         }
         else{
-            return redirect()->route('dashboard')->with(compact('auth_result'));
+            return redirect()->route('dashboard')->with(compact('auth_result', 'all_orgs'));
         }
     }
     
@@ -603,6 +610,8 @@ class RepositoryController extends Controller
         else{
             $org_id = Auth::user()->org_id;
         }
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
         $organization = Organization::find($org_id);
         $org_dir = $organization->directory;
         
@@ -621,11 +630,11 @@ class RepositoryController extends Controller
             if ($failures == 1){
                 $failures = $import->failures();
             }
-            $view = View::make('pages/repository/manage/import_parts', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'failures', 'row_count'));
+            $view = View::make('pages/repository/manage/import_parts', array('title' => 'Import Parts'))->with(compact('org_id', 'org_dir', 'failures', 'row_count', 'all_orgs'));
             return $view;
         }
         else{
-            return redirect()->route('dashboard')->with(compact('auth_result'));
+            return redirect()->route('dashboard')->with(compact('auth_result', 'all_orgs'));
         }
     }
     
