@@ -179,26 +179,13 @@
 										<p class="" id="part_stock" style="margin: auto 0;"></p>
 									</div>
 									<div class="col d-flex justify-content-start">
-										<button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RemoveStockModal">Remove Stock</button>
+										<button id="remove_stock_button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RemoveStockModal" hidden>Remove Stock</button>
 									</div>
 								</div>
-								<div class="form-check mt-1">
+								<div id="low_stock_notification_div" class="form-check mt-1" hidden>
 									<input class="form-check-input" type="checkbox" id="low_stock_notification">
 									<label for="low_stock_notifications" class="form-check-label">Enable low-stock notification for this part</label>
 								</div>
-								{{-- <div class="row">
-									<div class="text-center">
-										@if (Auth::user()->hasPermission('edit_inventory'))
-												{!! Form::label('remove_stock', 'Enter quantity:') !!}
-												<br />
-												{!! Form::text('remove_stock', null, ['class'=>'form-control', 'id'=>'remove_stock']) !!}
-												<br />
-												{!! Form::submit('Remove Stock', ['class'=>'btn btn-primary btn-sm', 'id'=>'remove_stock_button']) !!}
-											@else
-												&nbsp;
-											@endif
-									</div>
-								</div> --}}
 							</div>
 						</div>
 					</div>

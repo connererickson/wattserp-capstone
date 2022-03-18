@@ -184,7 +184,17 @@ $(document).ready(function(){
 
 				//Put into vendorsCopy the array of vendors with no duplicates. The unique vendor is the one with the most recent purchase date of stock.
 				vendorsCopy = removeDuplicateVendors(vendors);
+				
+				//Show the remove stock button
+				$('#remove_stock_button').removeAttr('hidden');
 
+				//Show the low-stock notifications checkbox
+				$('#low_stock_notification_div').removeAttr('hidden');
+				if(part[0]['low_stock_notification'] == true) {
+					$('#low_stock_notification').prop('checked', true);
+				}
+				
+				$('#part_stock').removeClass('text-danger');
 				
 				if(part[0]['image'] != null && part[0]['image'] != ""){
 					
@@ -254,13 +264,26 @@ $(document).ready(function(){
 					$('#part_location').html("N/A");
 				}
 				if ($('#inventory_index').length){
+
 					if(part[0]['stock'] != null && part[0]['stock'] != "") {
 						totalStock = part[0]['stock'];
 						$('#part_stock').html("Total stock: " + part[0]['stock'] + " " + part[0]['stocking_unit']);
+
+						//If notifications are enabled and the stock is less than 5, turn the text red and check the box
+						if(part[0]['low_stock_notification'] == true && totalStock < 10) {
+							$('#part_stock').addClass('text-danger');
+							$('#low_stock_notification').prop('checked', true);
+						}
 					}
 					else {
 						totalStock = 0;
 						$('#part_stock').html("No stock");
+						//If notifications are enabled, turn the text red and check the box
+						if(part[0]['low_stock_notification'] == true) {
+							$('#part_stock').addClass('text-danger');
+							$('#low_stock_notification').prop('checked', true);
+						}
+						
 					}
 				}
 				$('#part_tags_container').html("");
@@ -391,9 +414,6 @@ $(document).ready(function(){
 					$('#add_vendor_button').show();
 					$('#barcode_print_button').show();
 				}
-				else{
-					$('#remove_stock_button').show();
-				}
 				$('#document_list').html("No Documents");
 				load_part_documentation(curr_part_id);
 				
@@ -471,7 +491,6 @@ $(document).ready(function(){
 
 		//update the quantity in repository_parts
 		var new_stock = totalStock + quantityAdded;
-		console.log(totalStock + " " +  quantityAdded);
 		var parameters2 = {'part_id' : part_id, 'new_stock' : new_stock};
 		go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
 
@@ -599,6 +618,38 @@ $(document).ready(function(){
 			);
 		}
 		return false;
+	});
+
+	//Upon checking the 'low stock notification' checkbox, update the database
+	$('#low_stock_notification').on('click', function(e) {
+		var part_id = $('#part_id').html();
+		//if checked
+		if($('#low_stock_notification').is(':checked')) {
+			//update repository_parts
+			var parameters = {'part_id' : part_id, 'low_stock_notification' : 1};
+			go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_low_stock_notification', 0);
+
+			setTimeout(function() {
+				//Reload the SKU
+				loadSku(sku);
+			}, 1000);
+		}
+		//if not checked
+		else {
+			//update repository_parts
+			var parameters = {'part_id' : part_id, 'low_stock_notification' : 0};
+			go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_low_stock_notification', 0);
+
+			setTimeout(function() {
+
+				//take off the red text
+				$('#part_stock').removeClass('text-danger');
+
+				//Reload the SKU
+				loadSku(sku);
+			}, 1000);
+
+		}
 	});
 	
 	//Upload Documents for Part
