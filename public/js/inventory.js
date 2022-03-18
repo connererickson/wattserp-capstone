@@ -5,7 +5,6 @@ var sku;
 var vendorsCopy;
 var vendors;
 var totalStock;
-
 $(document).ready(function(){
 	
 	var context;
@@ -255,9 +254,13 @@ $(document).ready(function(){
 					$('#part_location').html("N/A");
 				}
 				if ($('#inventory_index').length){
-					if(part[0]['stock'] != null && part[0]['stock'] != ""){
+					if(part[0]['stock'] != null && part[0]['stock'] != "") {
 						totalStock = part[0]['stock'];
 						$('#part_stock').html("Total stock: " + part[0]['stock'] + " " + part[0]['stocking_unit']);
+					}
+					else {
+						totalStock = 0;
+						$('#part_stock').html("No stock");
 					}
 				}
 				$('#part_tags_container').html("");
@@ -468,6 +471,7 @@ $(document).ready(function(){
 
 		//update the quantity in repository_parts
 		var new_stock = totalStock + quantityAdded;
+		console.log(totalStock + " " +  quantityAdded);
 		var parameters2 = {'part_id' : part_id, 'new_stock' : new_stock};
 		go_ajax2(parameters2, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
 
@@ -517,6 +521,10 @@ $(document).ready(function(){
 
 					var updated_stock = totalStock - quantity_removed;
 
+					if(updated_stock < 0) {
+						updated_stock = 0;
+					}
+
 					//update repository_parts
 					var parameters = {'part_id' : part_id, 'new_stock' : updated_stock};
 					go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/update_stock', 0);
@@ -531,6 +539,10 @@ $(document).ready(function(){
 				else {
 					
 					var updated_stock = totalStock - currentVendor['quantity'];
+
+					if(updated_stock < 0) {
+						updated_stock = 0;
+					}
 
 					//remove it from vendorsCopy
 					vendorsCopy2.shift();

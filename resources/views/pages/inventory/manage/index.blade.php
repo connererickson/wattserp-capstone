@@ -182,6 +182,10 @@
 										<button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RemoveStockModal">Remove Stock</button>
 									</div>
 								</div>
+								<div class="form-check mt-1">
+									<input class="form-check-input" type="checkbox" id="low_stock_notification">
+									<label for="low_stock_notifications" class="form-check-label">Enable low-stock notification for this part</label>
+								</div>
 								{{-- <div class="row">
 									<div class="text-center">
 										@if (Auth::user()->hasPermission('edit_inventory'))
