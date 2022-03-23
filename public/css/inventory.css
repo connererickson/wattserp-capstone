@@ -171,9 +171,6 @@
 	width: 130px;
 	display: inline-block;
 }
-#remove_stock_button{
-	display: none;
-}
 #croppicModal .loader{
 	height: 60px;
 }
