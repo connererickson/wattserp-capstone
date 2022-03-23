@@ -135,7 +135,7 @@
     	saveDataUrlToImage: function (type) {
       		var that = this;
       		var options = {
-        		url: 'app/process_punch.php'
+        		url: '../../app/process_punch.php'
       		};
 
       		// Only place where we need jQuery to make an ajax request
@@ -145,10 +145,11 @@
       		$.ajax({
         		url: options.url,
         		type: 'POST',
-        		dataType: 'json',
-        		data: { 'type': type, 'data_url': dataURL, 'emp_id':  $("input[name='emp_id']").val(), 'job': $("select[name='job']").val(), 'note': $("input[name='note']").val() },
+        		//dataType: 'json',
+        		data: { 'type': type, 'data_url': dataURL, 'emp_id':  $("input[name='emp_id']").val(), 'note': $("input[name='note']").val() },
         		complete: function(xhr, textStatus) {
         			// Request complete.
+					console.log("request complete");
         		},
         		// Request was successful.
         		success: function(response, textStatus, xhr) {
@@ -182,9 +183,32 @@
         		error: function(xhr, textStatus, errorThrown) {
           			// Some error occured.
           			console.log('Error: ', errorThrown);
-          			imageURLInput.value = 'An error occured.';
+          			that.imageURLInput.value = 'An error occured.';
         		}
       		});
+
+			/*var parameters = {'emp_id' : $("input[name='emp_id']").val()};
+			//'in_datetime' : price, 'in_img' : curr_part_id, 'in_note' : today};
+			// go_ajax2(parameters, 'http://' + project_domain + '/pages/inventory/manage/edit_vendor_price', 0);
+			go_ajax2(parameters, 'http://' + project_domain + '/process_clock_in', 0);
+			setTimeout(function(){
+				if (rtn){
+					var dialog_phrase = "Image has been uploaded";
+					var dialog = new Messi(
+						dialog_phrase,
+						{
+							title: 'Upload timeclock image',
+							titleClass: 'anim success',
+							buttons: [
+								{id: 1, label: 'Ok', val: 'O', class: 'btn-success'}
+							]
+						}
+					);
+
+					//Close the modal
+					//$('#EditPriceModal').modal('toggle');
+				}
+			},500);*/
     	}
   	};
 

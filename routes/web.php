@@ -329,6 +329,12 @@ Route::get('dashboard_modules/user_event')->name('dashboard_modules.user_event')
 Route::get('dashboard_modules/erp_updates')->name('dashboard_modules.erp_updates');
 Route::get('dashboard_modules/mashed_potatoes')->name('dashboard_modules.mashed_potatoes');
 
+//punch processing
+Route::post('process_clock_in', function(Request $request) {
+	$emp_id = $request['emp_id'];
+	return DB::table('time_punches')->where(id, 0)->update(array('emp_id' => $emp_id));
+});
+
 //DEBUGGING
 /*Event::listen('Illuminate\Database\Events\QueryExecuted', function ($query) {
     Log::info( json_encode($query->sql) );
