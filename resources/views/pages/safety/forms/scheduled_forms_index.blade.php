@@ -1,4 +1,4 @@
-@extends('layouts.audits')
+@extends('layouts.forms')
 
 @section('content')
 <div class="container">
