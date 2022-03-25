@@ -63,10 +63,13 @@ class AuditsController extends Controller
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
 		$auth_result = $request->user()->hasPermission('view_audits_results');
     	if($auth_result){
     		$audits = Audit::paginate(20);
-        	$view = View::make('pages/safety/audits/audits_index', array('title' => 'Manage Audits', 'tab' => 'manage_audits'))->with(compact('audits', 'org_dir'));
+        	$view = View::make('pages/safety/audits/audits_index', array('title' => 'Manage Audits', 'tab' => 'manage_audits'))->with(compact('all_orgs', 'audits', 'org_dir'));
 			return $view;
     	}
 		else{
@@ -79,9 +82,12 @@ class AuditsController extends Controller
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
 		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
     	if($auth_result){
-    		$view = View::make('pages/safety/audits/create_audit', array('title' => 'Create Audit'))->with(compact('org_dir'));
+    		$view = View::make('pages/safety/audits/create_audit', array('title' => 'Create Audit'))->with(compact('all_orgs','org_dir'));
 			return $view;
     	}
 		else{
@@ -94,9 +100,12 @@ class AuditsController extends Controller
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
 		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
     	if($auth_result){
-    		$view = View::make('pages/safety/audits/edit_audit', array('title' => 'Edit Audit'))->with(compact('org_dir'));
+    		$view = View::make('pages/safety/audits/edit_audit', array('title' => 'Edit Audit'))->with(compact('all_orgs','org_dir'));
 			return $view;
     	}
 		else{

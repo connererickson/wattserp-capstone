@@ -144,6 +144,19 @@ class InventoryController extends Controller
 			return $update_stock_result;
 		}
 	}
+
+	public function update_low_stock_notification(Request $request){
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+    	$auth_result = $request->user()->hasPermission('edit_inventory');
+		if($auth_result){
+			Event::dispatch(new crmEvent($request->user(), " removed stock for part with id " . $request['part_id']));
+			$update_stock_result = DB::table('repository_parts')->where('id', $request['part_id'])->update(array('low_stock_notification' => $request['new_stock']));
+			return $update_stock_result;
+		}
+	}
 	
 	public function pull(Request $request)
     {

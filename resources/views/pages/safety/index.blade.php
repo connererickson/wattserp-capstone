@@ -33,12 +33,12 @@
 			                    	</div>
 			                    	@endif
 			                    	<div class="col-md-4 padded">
-			                    		<!--<a href="{{ route('safety.audits') }}">-->
+			                    		<a href="{{ route('safety.audits') }}">
 				                    		<div class='safety_topic' id='audits'>
 				                    			<h4>Audits (NOT READY)</h4>
 				                    			<p>Create, Assign and View Audits and Reports</p>
 				                    		</div>
-				                    	<!--</a>-->
+				                    	</a>
 			                    	</div>
 			                    	<div class="col-md-4 padded">
 			                    		<!--<a href="{{ route('safety.jhas') }}">-->
