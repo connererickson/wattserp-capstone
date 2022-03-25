@@ -193,6 +193,7 @@ Route::group(['prefix' => 'pages/inventory/manage'], function () {
 	Route::post('/edit_vendor_price', 'InventoryController@edit_vendor_price')->name('inventory.manage.edit_vendor_price');
 	Route::post('/edit_vendor_quantity', 'InventoryController@edit_vendor_quantity')->name('inventory.manage.edit_vendor_quantity');
 	Route::post('/delete_vendor_row', 'InventoryController@delete_vendor_row')->name('inventory.manage.delete_vendor_row');
+	Route::post('/update_low_stock_notification', 'InventoryController@update_low_stock_notification')->name('inventory.manage.update_low_stock_notification');
 });
 Route::group(['prefix' => 'pages/inventory/pull'], function () {
 	Route::get('/', 'InventoryController@pull')->name('inventory.pull');
@@ -238,7 +239,6 @@ Route::group(['prefix' => 'pages/repository/manage'], function () {
 	Route::post('/generate_sku', 'RepositoryController@generate_sku')->name('repository.manage.generate_sku');
 	Route::post('/parts_list', 'RepositoryController@parts_list')->name('repository.manage.parts_list');
 	Route::post('/get_part', 'RepositoryController@get_part')->name('repository.manage.get_part');
-	// Route::post('/edit_vendor_price', 'RepositoryController@edit_vendor_price')->name('repository.manage.edit_vendor_price');
 	Route::post('/add_vendor', 'RepositoryController@add_vendor')->name('repository.manage.add_vendor');
 	Route::post('/remove_vendor', 'RepositoryController@remove_vendor')->name('repository.manage.remove_vendor');
 	Route::post('/update_tags', 'RepositoryController@update_tags')->name('repository.manage.update_tags');
@@ -328,6 +328,12 @@ Route::get('dashboard_modules/allusers_event')->name('dashboard_modules.allusers
 Route::get('dashboard_modules/user_event')->name('dashboard_modules.user_event');
 Route::get('dashboard_modules/erp_updates')->name('dashboard_modules.erp_updates');
 Route::get('dashboard_modules/mashed_potatoes')->name('dashboard_modules.mashed_potatoes');
+
+//punch processing
+Route::post('process_clock_in', function(Request $request) {
+	$emp_id = $request['emp_id'];
+	return DB::table('time_punches')->where(id, 0)->update(array('emp_id' => $emp_id));
+});
 
 //DEBUGGING
 /*Event::listen('Illuminate\Database\Events\QueryExecuted', function ($query) {

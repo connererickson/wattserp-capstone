@@ -24,9 +24,6 @@
 				<span>ID: </span><input type='text' class='text_input' name='emp_id' />
 				<br />
 				<span>Job: </span>
-				<select name='job' class='select_input'>
-					<option value='Test'>Test</option>
-				</select>
 				<br />
 				<span>Note: </span><input type='text' class='text_input' name='note' />
 				<br />
