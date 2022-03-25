@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateAuditRequest extends FormRequest
+class CreateFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,9 @@ class UpdateAuditRequest extends FormRequest
     public function rules()
     {
         
-	}
+    }
 	public function messages()
-	{
+    {
     	
 	}
 }

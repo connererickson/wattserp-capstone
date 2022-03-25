@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use Illuminate\Http\Request;
-use View;
+use App\Http\Requests\CreateFormRequest;
+use App\Http\Requests\UpdateFormRequest;
 use App\Organization;
 use App\User;
 use App\Role;
+use App\Form;
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use Illuminate\Support\Facades\Session;
+use View;
+use Validator;
 use DB;
 
 class FormsController extends Controller
@@ -30,30 +36,80 @@ class FormsController extends Controller
     public function index(Request $request)
     {
     	if (Auth::user()->authorizeRoles(array('Super Admin'))){
-            $org_id = $request->session()->get('curr_org_id');
-        }
-        else{
-            $org_id = Auth::user()->org_id;
-        }
-        $organization = Organization::find($org_id);
-        $org_dir = $organization->directory;
-        
-        //Get all orgs for the switching dropdown
-        $all_orgs = Organization::all();
+			$org_id = $request->session()->get('curr_org_id');
+    	}
+		else{
+			$org_id = Auth::user()->org_id;
+		}
 		
-		$auth_result = $request->user()->hasPermission('form_builder');
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+		
+    	$auth_result = $request->user()->hasPermission('view_audits_results');
     	if($auth_result){
-    		$view = View::make('pages/form_builder', array('title' => 'Form Builder'))->with(compact('all_orgs', 'org_dir'));
+    		$view = View::make('pages/safety/forms/index', array('title' => 'Overview', 'tab' => 'overview'))->with(compact('all_orgs', 'org_dir'));
 			return $view;
     	}
 		else{
-    		return redirect()->route('dashboard')->with(compact('auth_result'));
-		}
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
     }
-	
-	public function save_form(Request $request)
+	public function forms_index(Request $request)
 	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('view_audits_results');
+    	if($auth_result){
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+	public function create_form(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
 		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+    		$view = View::make('pages/safety/forms/create_form', array('title' => 'Create Form'))->with(compact('all_orgs','org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+	public function edit_form(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+    		$view = View::make('pages/safety/forms/edit_form', array('title' => 'Edit Form'))->with(compact('all_orgs','org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
 	}
 }

@@ -121,32 +121,22 @@ Route::group(['prefix' => 'pages/safety/training/slides'], function () {
 	Route::post('/delete_slide', 'SlideController@delete_slide')->name('safety.training.slides.delete_slide');
 	Route::post('/reorder_slide', 'SlideController@reorder_slide')->name('safety.training.slides.reorder_slide');
 });
-Route::group(['prefix' => 'pages/safety/audits'], function () {
-	Route::get('/', 'AuditsController@index')->name('safety.audits');
-	Route::get('/audits_index', 'AuditsController@audits_index')->name('safety.audits.audits_index');
-	Route::get('/create_audit', 'AuditsController@create_audit')->name('safety.audits.create_audit');
-	Route::post('/store_audit', 'AuditsController@store_audit')->name('safety.audits.store_audit');
-	Route::get('/edit_audit/{id}', 'AuditsController@edit_audit')->name('safety.audits.edit_audit');
-	Route::patch('/update_audit/{id}', 'AuditsController@update_audit')->name('safety.audits.update_audit');
-	Route::get('/scheduled_audits_index', 'AuditsController@scheduled_audits_index')->name('safety.audits.scheduled_audits_index');
-	Route::get('/schedule_audit', 'AuditsController@schedule_audit')->name('safety.audits.schedule_audit');
-	Route::post('/store_scheduled_audit', 'AuditsController@store_scheduled_audit')->name('safety.audits.store_scheduled_audit');
-	Route::get('/edit_scheduled_audit', 'AuditsController@edit_scheduled_audit')->name('safety.audits.edit_scheduled_audit');
-	Route::patch('/update_scheduled_audit', 'AuditsController@update_scheduled_audit')->name('safety.audits.update_scheduled_audit');
-	Route::get('/audit_results_index', 'AuditsController@audit_results_index')->name('safety.audits.audit_history_index');
-	Route::get('/audit_result', 'AuditsController@audit_result')->name('safety.audits.audit_result');
+Route::group(['prefix' => 'pages/safety/forms'], function () {
+	Route::get('/', 'FormsController@index')->name('safety.forms');
+	Route::get('/forms_index', 'FormsController@forms_index')->name('safety.forms.forms_index');
+	Route::get('/create_form', 'FormsController@create_form')->name('safety.forms.create_form');
+	Route::post('/store_form', 'FormsController@store_form')->name('safety.forms.store_form');
+	Route::get('/edit_form/{id}', 'FormsController@edit_form')->name('safety.forms.edit_form');
+	Route::patch('/update_form/{id}', 'FormsController@update_form')->name('safety.forms.update_form');
+	Route::get('/scheduled_forms_index', 'FormsController@scheduled_forms_index')->name('safety.forms.scheduled_forms_index');
+	Route::get('/schedule_form', 'FormsController@schedule_form')->name('safety.forms.schedule_form');
+	Route::post('/store_scheduled_form', 'FormsController@store_scheduled_form')->name('safety.forms.store_scheduled_form');
+	Route::get('/edit_scheduled_form', 'FormsController@edit_scheduled_form')->name('safety.forms.edit_scheduled_form');
+	Route::patch('/update_scheduled_form', 'FormsController@update_scheduled_form')->name('safety.forms.update_scheduled_form');
+	Route::get('/form_results_index', 'FormsController@form_results_index')->name('safety.forms.form_history_index');
+	Route::get('/form_result', 'FormsController@form_result')->name('safety.forms.form_result');
 });
-Route::group(['prefix' => 'pages/safety/jhas'], function () {
-	Route::get('/', 'JhasController@index')->name('safety.jhas');
-	Route::get('/jhas_index', 'JhasController@jhas_index')->name('safety.jhas.jhas_index');
-});
-Route::group(['prefix' => 'pages/safety/incidents'], function () {
-	Route::get('/', 'IncidentsController@index')->name('safety.incidents');
-	Route::get('/incidents_index', 'IncidentsController@incidents_index')->name('safety.incidents.incidents_index');
-    Route::get('/incidents', 'IncidentsController@incidents')->name('safety.incidents.incidents');
-    Route::get('/log_incident', 'IncidentsController@log_incident')->name('safety.incidents.log_incident');
-    Route::get('/osha_reports', 'IncidentsController@osha_reports')->name('safety.incidents.osha_reports');
-});
+
 Route::group(['prefix' => 'pages/leads'], function () {
 	Route::get('/', 'LeadsController@index')->name('leads');
 	Route::get('/settings/settings', 'LeadsController@settings_index')->name('leads.settings.index');

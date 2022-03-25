@@ -33,41 +33,15 @@
 			                    	</div>
 			                    	@endif
 			                    	<div class="col-md-4 padded">
-			                    		<a href="{{ route('safety.audits') }}">
-				                    		<div class='safety_topic' id='audits'>
-				                    			<h4>Audits (NOT READY)</h4>
-				                    			<p>Create, Assign and View Audits and Reports</p>
+			                    		<a href="{{ route('safety.forms') }}">
+				                    		<div class='safety_topic' id='forms'>
+				                    			<h4>Forms (UNDER CONSTRUCTION)</h4>
+				                    			<p>Create, Assign and View Forms</p>
 				                    		</div>
 				                    	</a>
-			                    	</div>
-			                    	<div class="col-md-4 padded">
-			                    		<!--<a href="{{ route('safety.jhas') }}">-->
-				                    		<div class='safety_topic' id='jhas'>
-				                    			<h4>JHAs (NOT READY)</h4>
-				                    			<p>Create, Assign and View Job Hazard Analyses and Reports</p>
-				                    		</div>
-				                    	<!--</a>-->
 			                    	</div>
 			                    </div>
 			                </div>
-	                    	<div class="col-md-1">&nbsp;</div>
-	                    </div>
-	                    <div class="row">
-	                    	<div class="col-md-1">&nbsp;</div>
-	                    	<div class="col-md-10">
-	                    		<div class="row">
-	                    			<div class="col-md-4 padded">
-	                    				<a href="{{ route('safety.incidents') }}">
-				                    		<div class='safety_topic' id='incidents'>
-				                    			<h4>Incidents</h4>
-				                    			<p>Log and Review Jobsite Incidents and Reports</p>
-				                    		</div>
-				                    	</a>
-	                    			</div>
-	                    			<div class="col-md-4">&nbsp;</div>
-	                    			<div class='col-md-4'>&nbsp;</div>
-	                    		</div>
-	                    	</div>
 	                    	<div class="col-md-1">&nbsp;</div>
 	                    </div>
 	            	</div>

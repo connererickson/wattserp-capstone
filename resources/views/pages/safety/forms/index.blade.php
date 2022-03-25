@@ -1,11 +1,11 @@
-@extends('layouts.incidents')
+@extends('layouts.forms')
 
 @section('content')
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="card mt-3">
-                <div class="card-header">Incidents</div>
+                <div class="card-header">Forms</div>
 
                 <div class="card-body" id='safety_index'>
                     @if (session('status'))
@@ -21,39 +21,36 @@
 	                				<?php if ($tab == 'overview'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('safety.incidents') }}">Overview</a>
+	                				><a href="{{ route('safety.forms') }}">Overview</a>
 	                			</li>
 	                			<li 
-	                				<?php if ($tab == 'incidents'){
+	                				<?php if ($tab == 'manage_forms'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('safety.incidents.incidents') }}">Incidents</a>
+	                				><a href="{{ route('safety.forms.forms_index') }}">Manage Forms</a>
 	                			</li>
-	                			@if (Auth::user()->hasPermission('log_incident_reports'))
 	                			<li 
-	                				<?php if ($tab == 'log_incident'){
+	                				<?php if ($tab == 'schedule_forms'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('safety.incidents.log_incident') }}">Log Incident</a>
+	                				><a href="{{ route('safety.forms.scheduled_forms_index') }}">Form Scheduling</a>
 	                			</li>
-	                			@endif
-	                			@if (Auth::user()->hasPermission('create_edit_incident_reports'))
 	                			<li 
-	                				<?php if ($tab == 'osha_reports'){
+	                				<?php if ($tab == 'form_history'){
 	                					echo "class='current_tab'";
 	                				}?>
-	                				><a href="{{ route('safety.incidents.osha_reports') }}">OSHA Reports</a>
+	                				><a href="{{ route('safety.forms.form_history_index') }}">Form History</a>
 	                			</li>
-	                			@endif
 	                		</ul>
 	                	</div>
 	                </div>
 	                
-	                <div class="row" id='audit_index_content'>
+	                <div class="row" id='form_index_content'>
 	                	<div class="col-md-10 col-md-offset-1">
 	                		<p>
-	                			Welcome to the Training Center. Here you can create new Training Courses, 
-	                			schedule them for employees and review the results.
+	                			Welcome to the Forms Center. Here you can create new forms, 
+	                			schedule them for qualified employees to complete, and review
+	                			the results.
 	                		</p>
 	                	</div>
 	                </div>

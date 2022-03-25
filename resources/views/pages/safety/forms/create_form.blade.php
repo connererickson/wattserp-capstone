@@ -1,11 +1,11 @@
-@extends('layouts.audits')
+@extends('layouts.forms')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Create Audit</div>
+                <div class="panel-heading">Create Form</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    CREATE AUDIT FORM
+                    CREATE FORM
                 </div>
             </div>
         </div>
