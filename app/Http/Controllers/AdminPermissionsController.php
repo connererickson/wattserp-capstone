@@ -40,12 +40,15 @@ class AdminPermissionsController extends Controller
 		
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
+
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
 		
     	$auth_result = $request->user()->authorizeRoles('God Mode');
     	if ( $auth_result ){
     		$permissions = Permission::orderBy('display_order')->get();
 			$roles = Role::all();
-        	$view = View::make('pages/admin/permissions/index', array('title' => 'Permissions', 'tab' => 'permissions', 'organization' => $organization ))->with(compact('permissions', 'roles', 'org_dir', 'org_id'));
+        	$view = View::make('pages/admin/permissions/index', array('title' => 'Permissions', 'tab' => 'permissions', 'organization' => $organization ))->with(compact('all_orgs', 'permissions', 'roles', 'org_dir', 'org_id'));
 			return $view;
     	}
 		else{
