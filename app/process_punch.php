@@ -8,6 +8,11 @@
 		exit();
 	}
 	
+	$type = $_REQUEST['type'];
+	$id = $_REQUEST['emp_id'];
+	$note = $_REQUEST['note'];
+	$datetime = date("Y-m-d") . " " . date("h:i:sa");
+
 	// Get the data url.
 	$img = $_REQUEST['data_url'];
 	
@@ -35,8 +40,27 @@
 			'status_code' => 500
 		);
 	}
-	
-	if ($_POST['type'] == 0){
+
+	$db = new mysqli("localhost", "eswaters", "collinsucksnuts", "wattserp"); if ($db->errno) die("Error opening database: " . $db->error());
+
+	$sql = "SELECT * FROM time_punches";
+	if ($result=mysqli_query($db,$sql)) {
+		$rowcount=mysqli_num_rows($result);
+	}
+
+	//clock in type = 1, clock out type = 0
+	if($type == 1) {
+		$query = 'INSERT INTO time_punches (id, emp_id, in_img, in_note, in_datetime) VALUES (?,?,?,?,?)'; 
+		$result = $db->prepare($query); $result->bind_param('issss', $rowcount, $id, $filename, $note, $datetime); 
+		$result->execute(); 
+		free($result);
+	}
+
+	if($type == 0) {
+		//update table row with emp_id = $id with clockout info
+	}
+
+	/*if ($_POST['type'] == 0){
 		if(isset($_POST['emp_id'])){
 			$result = $clock->check_clock_status($_POST['emp_id']);
 			if ($result == 0){
@@ -84,7 +108,7 @@
 				'data' => 'Please complete the form.'
 			);
 		}
-	}
+	}*/
 	
 	// Return JSON response.
 	header("Content-Type: application/json");
