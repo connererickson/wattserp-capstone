@@ -67,7 +67,7 @@
                                         @foreach($forms as $form)
                                             <tr>
                                                 <td> {{ $form->id }} </td>
-                                                <td><a href="{{ route('safety.forms.edit_form', $form->id)}}"> {{ $form->name }} </td>
+                                                <td><a href="{{ route('safety.forms.edit_form', $form->name)}}"> {{ $form->name }} </td>
                                                 <td> {{ $form->type }} </td>
                                                 <td> {{ $form->description }} </td>
                                                 <td> {{ date('M d, Y', strtotime($form->updated_at)) }} </td>
