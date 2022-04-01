@@ -150,4 +150,9 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+	
+	public function store_form(Request $request)
+	{
+
+	}
 }

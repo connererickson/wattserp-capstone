@@ -23,7 +23,8 @@
                         <h1 class="text-center">
                             Employee Write Up
                         </h1>
-                        <form class="px-2">
+                        <form class="px-2" action="pages/safety/forms/store_form" method="POST">
+                            @csrf
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="employeeNameLabel" class="form-label">Employee Name:</label>
