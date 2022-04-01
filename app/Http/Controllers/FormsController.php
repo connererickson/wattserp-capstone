@@ -41,7 +41,6 @@ class FormsController extends Controller
 		else{
 			$org_id = Auth::user()->org_id;
 		}
-		
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
