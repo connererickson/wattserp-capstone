@@ -14,7 +14,7 @@
                         </div>
                     @endif
 					
-	                <div class="row">
+	                <div class="row mb-3">
 	                	<div class="col-md-12">
 	                		<ul class='page_menu'>
 	                			<li 
@@ -47,7 +47,7 @@
 	                
 	                <div class="row" id='form_index_content'>
 	                	<div class="col-md-10 col-md-offset-1">
-	                		<p>
+	                		<p class="text-dark">
 	                			Welcome to the Forms Center. Here you can create new forms, 
 	                			schedule them for qualified employees to complete, and review
 	                			the results.
