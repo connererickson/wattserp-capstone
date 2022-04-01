@@ -103,9 +103,10 @@ class FormsController extends Controller
 		//Get all orgs for the switching dropdown
 		$all_orgs = Organization::all();
 
+		$form_id = $request->id;
 		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
     	if($auth_result){
-    		$view = View::make('pages/safety/forms/edit_form', array('title' => 'Edit Form'))->with(compact('all_orgs','org_dir'));
+    		$view = View::make('pages/safety/forms/edit_form', array('title' => 'Edit Form'))->with(compact('all_orgs','org_dir','form_id'));
 			return $view;
     	}
 		else{
