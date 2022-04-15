@@ -76,6 +76,88 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+
+	public function submit_eod(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$cleanJobsite = $request->cleanJobsite;
+			$looseMaterials = $request->looseMaterials;
+			$completedTasks = $request->completedTasks;
+			$partsToBeOrdered = $request->partsToBeOrdered;
+			$notes = $request->notes;
+
+			$submit_eod_result = DB::table('forms_endofday')->insertGetId(array('date' => $date, 'jobsiteClean' => $cleanJobsite, 'looseMaterialsScrewed' => $looseMaterials, 'tasksCompleted' => $completedTasks, 'partsToOrder' => $partsToBeOrdered, 'notes' => $notes), 'idforms_endofday');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_writeup(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$employeeName = $request->employeeName;
+			$employeeID = $request->employeeID;
+			$jobTitle = $request->jobTitle;
+			$manager = $request->manager;
+			$department = $request->department;
+			$service = $request->service;
+			$warningType = $request->warningType;
+			$offenseType = $request->offenseType;
+			$infractionDescription = $request->infractionDescription;
+			$improvementPlan = $request->improvementPlan;
+			$furtherConsequences = $request->furtherConsequences;
+
+			$submit_hazardanalysis_result = DB::table('forms_writeup')->insertGetId(
+				array('employeeName'=>$employeeName,
+				'employeeID'=>$employeeID ,
+				'manager'=> $manager,
+				'jobTitle'=>$jobTitle ,
+				'department'=>$department ,
+				'service'=>$service,
+				'typeOfWarning'=>$warningType ,
+				'typeOfOffense'=>$offenseType ,
+				'infractionDescription'=>$infractionDescription ,
+				'improvementPlan'=>$improvementPlan ,
+				'furtherConsequences'=>$furtherConsequences ,
+				'date'=>$date), 
+				'idforms_endofday');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
 	public function create_form(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
@@ -114,6 +196,8 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+
+
 	public function scheduled_forms_index(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
