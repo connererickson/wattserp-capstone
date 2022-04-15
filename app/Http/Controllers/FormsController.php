@@ -207,6 +207,74 @@ class FormsController extends Controller
         }
 	}
 
+	public function submit_hazardanalysis(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$task = $request->task;
+			$project = $request->project;
+			$projectManager = $request->projectManager;
+			$projectAddress = $request->projectAddress;
+			$lead = $request->lead;
+			$crewAssigned = $request->crewAssigned;
+			$taskStepsBreakdown = $request->taskStepsBreakdown;
+			$bodyStuck = $request->bodyStuck;
+			$sharpObjects = $request->sharpObjects;
+			$strain = $request->strain;
+			$harmedTools = $request->harmedTools;
+			$slipping = $request->slipping;
+			$heavyEquipment = $request->heavyEquipment;
+			$flammableExplosive = $request->flammableExplosive;
+			$fallingObjects = $request->fallingObjects;
+			$weatherSafety = $request->weatherSafety;
+			$acidContact = $request->acidContact;
+			$hazardsWithSteps = $request->hazardsWithSteps;
+			$safeWorkProcedures = $request->safeWorkProcedures;
+			$name = $request->name;
+
+			$submit_hazardanalysis_result = DB::table('forms_hazardanalysis')->insertGetId(
+				array('task' => $task,
+				'project'=>$project ,
+				'projectManager'=>$projectManager,
+				'date'=> $date,
+				'projectAddress' =>$projectAddress,
+				'lead' => $lead,
+				'crewAssigned' =>$crewAssigned,
+				'taskStepsBreakdown'=> $taskStepsBreakdown,
+				'bodyStuck?'=> $bodyStuck,
+				'sharpObjects?' =>$sharpObjects,
+				'strain?' =>$strain,
+				'harmedTools?'=> $harmedTools,
+				'slipping?'=>$slipping,
+				'heavyEquipment?'=>$heavyEquipment ,
+				'flammableExplosive?'=> $flammableExplosive,
+				'fallingObjects?'=>$fallingObjects ,
+				'weatherSafety?'=>$weatherSafety , 
+				'acidContact?'=> $acidContact,
+				'hazardsWithSteps'=> $hazardsWithSteps, 
+				'safeWorkProcedures' =>$safeWorkProcedures,
+				'name'=> $name), 
+				'idforms_hazardanalysis');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
 	public function create_form(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
