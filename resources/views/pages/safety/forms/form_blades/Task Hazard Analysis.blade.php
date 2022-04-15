@@ -7,7 +7,7 @@
             <div class="card mt-3">
                 <div class="card-header">
                     <a class="" href="{{ route('safety.forms.forms_index') }}"><button class="btn btn-primary text-light">Back</button></a>
-                    <span class="float-end py-auto"><strong>Field Safety Observation</strong></span>
+                    <span class="float-end mt-2"><strong>Field Safety Observation</strong></span>
                 </div>
 
                 <div class="card-body">
@@ -20,7 +20,7 @@
                     
                     
                     <div class="container">
-                    <h1>
+                    <h1 class="text-center">
                         Task Hazard Analysis
                     </h1>
                     <form>
@@ -158,7 +158,11 @@
                             <label for="nameLabel" class="form-label">Name:</label>
                             <input type="text" class="form-control" id="nameLabel" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="row">
+                            <div class="col text-center">
+                                <button type="submit" class="btn btn-primary w-25 text-light">Submit</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 </div>

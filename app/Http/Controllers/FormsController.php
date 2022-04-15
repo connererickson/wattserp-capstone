@@ -41,7 +41,6 @@ class FormsController extends Controller
 		else{
 			$org_id = Auth::user()->org_id;
 		}
-		
 		$organization = Organization::find($org_id);
 		$org_dir = $organization->directory;
 		
@@ -233,5 +232,10 @@ class FormsController extends Controller
 		else{
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
+	}
+	
+	public function store_form(Request $request)
+	{
+
 	}
 }

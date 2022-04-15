@@ -23,11 +23,16 @@
                         <h1 class="text-center">
                             Employee Write Up
                         </h1>
+<<<<<<< HEAD
                         {!! Form::open(array('route' => 'safety.forms.submit_writeup', 'method' => 'POST', 'files' => 'true'))!!}
                             {{-- {{method_field('PUT') }}  
                              @csrf  --}}
                         <form method="post" class="px-2">
                         {{ csrf_field() }}
+=======
+                        <form class="px-2" action="pages/safety/forms/store_form" method="POST">
+                            @csrf
+>>>>>>> dce0323d5a2fc283254584afd3b3649c29ca9f95
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="employeeNameLabel" class="form-label">Employee Name:</label>
