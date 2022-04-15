@@ -145,6 +145,56 @@ class FormsController extends Controller
 				'improvementPlan'=>$improvementPlan ,
 				'furtherConsequences'=>$furtherConsequences ,
 				'date'=>$date), 
+				'idforms_writeup');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_serviceform(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$customerName = $request->customerName;
+			$techName = $request->techName;
+			$address = $request->address;
+			$city = $request->city;
+			$state = $request->state;
+			$zip = $request->zip;
+			$clientNumer = $request->clientNumber;
+			$issue = $request->issue;
+			$diagnosis = $request->diagnosis;
+			$solution = $request->solution;
+			$equipmentToOrder = $request->equipmentToOrder;
+
+			$submit_hazardanalysis_result = DB::table('forms_servicecalls')->insertGetId(
+				array('date' => $date,  
+				'customerName' => $customerName, 
+				'techName' => $techName, 
+				'address' => $address, 
+				'city' => $city, 
+				'state' => $state, 
+				'zip' => $zip, 
+				'clientsNumber' => $clientNumer, 
+				'issue'=> $issue, 
+				'diagnosis' =>$diagnosis , 
+				'solution' =>$solution , 
+				'equipmentToOrder'=>$equipmentToOrder ), 
 				'idforms_endofday');
 
 
