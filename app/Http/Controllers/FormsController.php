@@ -275,6 +275,78 @@ class FormsController extends Controller
         }
 	}
 
+	public function submit_inspection(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$truck = $request->truck;
+			$trailer = $request->trailer;
+			$equipment = $request->equipment;
+			$startingMileage = $request->startingMileage;
+			$endingMileage= $request->endingMileage;
+			$engine = $request->engine;
+			$clutch = $request->clutch;
+			$transmission= $request->transmission;
+			$steeringMechanism = $request->steeringMechanism;
+			$horn = $request->horn;
+			$rearMirrors = $request->rearMirrors;
+			$lightsAndReflectors = $request->lightsAndReflectors;
+			$windshieldWipers = $request->windshieldWipers;
+			$parkingBreak = $request->parkingBreak;
+			$serviceBreaks = $request->serviceBreaks;
+			$tires= $request->tires;
+			$wheelsRims = $request->wheelsRims;
+			$emergencyEquipment = $request->emergencyEquipment;
+			$notes = $request->notes;
+			$safeToDrive = $request->safeToDrive;
+			$driverResponsibility = $request->driverResponsibility;
+			$name = $request->name;
+
+			$submit_hazardanalysis_result = DB::table('forms_vehicleinspection')->insertGetId(
+				array('date' =>$date , 
+				'truck' =>$truck,
+				'trailer'=>$trailer, 
+				'equipment'=>$equipment , 
+				'startingMileage'=>$startingMileage ,
+				'endingMileage'=> $endingMileage, 
+				'engine' =>$engine,
+				'clutch' =>$clutch, 
+				'transmission'=> $transmission,
+				'steeringMechanism'=> $steeringMechanism,
+				'horn' =>$horn,
+				'rearMirrors' =>$rearMirrors,
+				'lightsAndReflectors' =>$lightsAndReflectors,
+				'windshieldWipers'=> $windshieldWipers,
+				'parkingBreak' =>$parkingBreak, 
+				'serviceBreaks'=> $serviceBreaks,
+				'tires'=> $tires,
+				'wheelsRims'=> $wheelsRims,
+				'emergencyEquipment'=>$emergencyEquipment,
+				'notes'=> $notes,
+				'safeToDrive?'=> $safeToDrive,
+				'driverResponsibility'=>$driverResponsibility ,
+				'name'=> $name), 
+				'idforms_vehicleinspection');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
 	public function create_form(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
