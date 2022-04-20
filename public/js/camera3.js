@@ -7,6 +7,7 @@
     	clockInBtn: '#clock_in',
     	clockOutBtn: '#clock_out',
     	statusBtn: '#status',
+		downloadBtn: '#download',
     	imageURLInput: '#image-url-input'
   	};
   
@@ -54,6 +55,9 @@
     		  $('#clock_out').hide();
 	          that.status();
 	        };
+			this.downloadBtn.onclick = function () {
+				that.download();
+			}
 		},
 		handleSuccess: function (stream) {
   			var videoTracks = stream.getVideoTracks();
@@ -131,6 +135,12 @@
           			imageURLInput.value = 'An error occured.';
         		}
 			});
+		},
+		download: function() {
+			var that = this;
+			var options = {
+				url: '../../app/download_csv.php'
+			};
 		},
     	saveDataUrlToImage: function (type) {
       		var that = this;

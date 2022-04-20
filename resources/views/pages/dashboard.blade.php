@@ -23,13 +23,12 @@
 			<form id='clock_form' action='' method='post'>
 				<span>ID: </span><input type='text' class='text_input' name='emp_id' />
 				<br />
-				<span>Job: </span>
-				<br />
 				<span>Note: </span><input type='text' class='text_input' name='note' />
 				<br />
 				<input id='clock_in' type='button' class='button' value='Clock In' />
 				<input id='clock_out' type='button' class='button' value='Clock Out' />
 				<input id='status' type='button' class='button' value='Status' />
+				<a href="/timeclock-csv" class="btn btn-primary">Export as CSV</a>
 			</form>
 		</div>
 	</div>
