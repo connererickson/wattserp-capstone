@@ -14,34 +14,36 @@
                         </div>
                     @endif
 
+
                     <div class="row" id='forms_table'>
                         <div class="col-md-12">
+
                             <table class='table'>
                                 <thead>
                                     <tr>
-                                        <th>User</th>
+                                        <th>User Name</th>
                                         <th>Form Name</th>
                                         <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @if ($forms)
-                                        @foreach($forms as $form)
+                                    @if ($history)
+                                        @foreach($history as $cur_history)
                                             <tr>
-                                                <td> {{ $form->id }} </td>
-                                                <td><a href="{{ route('safety.forms.edit_form', $form->name)}}"> {{ $form->link }} </td>
-                                                <td> {{ $form->date }} </td>
+                                                <td> {{ $cur_history->name }} </td>
+                                                <td><a href="{{ route('safety.forms.edit_form', $cur_history->link)}}"> {{ $cur_history->link }} </td>
+                                                <td> {{ $cur_history->datetime }} </td>
                                             </tr>
                                         @endforeach
                                     @endif
-                                    {{ $forms->links() }}
                                 </tbody>
                             </table>
-                            @if (!$forms->count())
+                            @if (!$history->count())
                                 <div style='padding-left: 5px;'>No Results to Display</div>
                             @endif
                         </div>
                     </div>
+                   
                     
                 </div>
             </div>
