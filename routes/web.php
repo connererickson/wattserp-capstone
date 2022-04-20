@@ -124,7 +124,12 @@ Route::group(['prefix' => 'pages/safety/training/slides'], function () {
 Route::group(['prefix' => 'pages/safety/forms'], function () {
 	Route::get('/', 'FormsController@index')->name('safety.forms');
 	Route::get('/forms_index', 'FormsController@forms_index')->name('safety.forms.forms_index');
-	Route::get('/create_form', 'FormsController@create_form')->name('safety.forms.create_form');
+	Route::post('/create_form', 'FormsController@create_form')->name('safety.forms.create_form');
+	Route::post('/submit_eod', 'FormsController@submit_eod')->name('safety.forms.submit_eod');
+	Route::post('/submit_hazardanalysis', 'FormsController@submit_hazardanalysis')->name('safety.forms.submit_hazardanalysis');
+	Route::post('/submit_writeup', 'FormsController@submit_writeup')->name('safety.forms.submit_writeup');
+	Route::post('/submit_serviceform', 'FormsController@submit_serviceform')->name('safety.forms.submit_serviceform');
+	Route::post('/submit_inspection', 'FormsController@submit_inspection')->name('safety.forms.submit_inspection');
 	Route::post('/store_form', 'FormsController@store_form')->name('safety.forms.store_form');
 	Route::get('/edit_form/{name}', 'FormsController@edit_form')->name('safety.forms.edit_form');
 	Route::patch('/update_form/{id}', 'FormsController@update_form')->name('safety.forms.update_form');

@@ -75,7 +75,283 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+<<<<<<< HEAD
 	public function scheduled_forms_index(Request $request)
+=======
+
+	public function submit_eod(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$cleanJobsite = $request->cleanJobsite;
+			$looseMaterials = $request->looseMaterials;
+			$completedTasks = $request->completedTasks;
+			$partsToBeOrdered = $request->partsToBeOrdered;
+			$notes = $request->notes;
+
+			$submit_eod_result = DB::table('forms_endofday')->insertGetId(array('date' => $date, 'jobsiteClean' => $cleanJobsite, 'looseMaterialsScrewed' => $looseMaterials, 'tasksCompleted' => $completedTasks, 'partsToOrder' => $partsToBeOrdered, 'notes' => $notes), 'idforms_endofday');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_writeup(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$employeeName = $request->employeeName;
+			$employeeID = $request->employeeID;
+			$jobTitle = $request->jobTitle;
+			$manager = $request->manager;
+			$department = $request->department;
+			$service = $request->service;
+			$warningType = $request->warningType;
+			$offenseType = $request->offenseType;
+			$infractionDescription = $request->infractionDescription;
+			$improvementPlan = $request->improvementPlan;
+			$furtherConsequences = $request->furtherConsequences;
+
+			$submit_hazardanalysis_result = DB::table('forms_writeup')->insertGetId(
+				array('employeeName'=>$employeeName,
+				'employeeID'=>$employeeID ,
+				'manager'=> $manager,
+				'jobTitle'=>$jobTitle ,
+				'department'=>$department ,
+				'service'=>$service,
+				'typeOfWarning'=>$warningType ,
+				'typeOfOffense'=>$offenseType ,
+				'infractionDescription'=>$infractionDescription ,
+				'improvementPlan'=>$improvementPlan ,
+				'furtherConsequences'=>$furtherConsequences ,
+				'date'=>$date), 
+				'idforms_writeup');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_serviceform(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$customerName = $request->customerName;
+			$techName = $request->techName;
+			$address = $request->address;
+			$city = $request->city;
+			$state = $request->state;
+			$zip = $request->zip;
+			$clientNumer = $request->clientNumber;
+			$issue = $request->issue;
+			$diagnosis = $request->diagnosis;
+			$solution = $request->solution;
+			$equipmentToOrder = $request->equipmentToOrder;
+
+			$submit_hazardanalysis_result = DB::table('forms_servicecalls')->insertGetId(
+				array('date' => $date,  
+				'customerName' => $customerName, 
+				'techName' => $techName, 
+				'address' => $address, 
+				'city' => $city, 
+				'state' => $state, 
+				'zip' => $zip, 
+				'clientsNumber' => $clientNumer, 
+				'issue'=> $issue, 
+				'diagnosis' =>$diagnosis , 
+				'solution' =>$solution , 
+				'equipmentToOrder'=>$equipmentToOrder ), 
+				'idforms_endofday');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_hazardanalysis(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$task = $request->task;
+			$project = $request->project;
+			$projectManager = $request->projectManager;
+			$projectAddress = $request->projectAddress;
+			$lead = $request->lead;
+			$crewAssigned = $request->crewAssigned;
+			$taskStepsBreakdown = $request->taskStepsBreakdown;
+			$bodyStuck = $request->bodyStuck;
+			$sharpObjects = $request->sharpObjects;
+			$strain = $request->strain;
+			$harmedTools = $request->harmedTools;
+			$slipping = $request->slipping;
+			$heavyEquipment = $request->heavyEquipment;
+			$flammableExplosive = $request->flammableExplosive;
+			$fallingObjects = $request->fallingObjects;
+			$weatherSafety = $request->weatherSafety;
+			$acidContact = $request->acidContact;
+			$hazardsWithSteps = $request->hazardsWithSteps;
+			$safeWorkProcedures = $request->safeWorkProcedures;
+			$name = $request->name;
+
+			$submit_hazardanalysis_result = DB::table('forms_hazardanalysis')->insertGetId(
+				array('task' => $task,
+				'project'=>$project ,
+				'projectManager'=>$projectManager,
+				'date'=> $date,
+				'projectAddress' =>$projectAddress,
+				'lead' => $lead,
+				'crewAssigned' =>$crewAssigned,
+				'taskStepsBreakdown'=> $taskStepsBreakdown,
+				'bodyStuck?'=> $bodyStuck,
+				'sharpObjects?' =>$sharpObjects,
+				'strain?' =>$strain,
+				'harmedTools?'=> $harmedTools,
+				'slipping?'=>$slipping,
+				'heavyEquipment?'=>$heavyEquipment ,
+				'flammableExplosive?'=> $flammableExplosive,
+				'fallingObjects?'=>$fallingObjects ,
+				'weatherSafety?'=>$weatherSafety , 
+				'acidContact?'=> $acidContact,
+				'hazardsWithSteps'=> $hazardsWithSteps, 
+				'safeWorkProcedures' =>$safeWorkProcedures,
+				'name'=> $name), 
+				'idforms_hazardanalysis');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function submit_inspection(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			//Get Our Request Data
+			$date = $request->date;
+			$truck = $request->truck;
+			$trailer = $request->trailer;
+			$equipment = $request->equipment;
+			$startingMileage = $request->startingMileage;
+			$endingMileage= $request->endingMileage;
+			$engine = $request->engine;
+			$clutch = $request->clutch;
+			$transmission= $request->transmission;
+			$steeringMechanism = $request->steeringMechanism;
+			$horn = $request->horn;
+			$rearMirrors = $request->rearMirrors;
+			$lightsAndReflectors = $request->lightsAndReflectors;
+			$windshieldWipers = $request->windshieldWipers;
+			$parkingBreak = $request->parkingBreak;
+			$serviceBreaks = $request->serviceBreaks;
+			$tires= $request->tires;
+			$wheelsRims = $request->wheelsRims;
+			$emergencyEquipment = $request->emergencyEquipment;
+			$notes = $request->notes;
+			$safeToDrive = $request->safeToDrive;
+			$driverResponsibility = $request->driverResponsibility;
+			$name = $request->name;
+
+			$submit_hazardanalysis_result = DB::table('forms_vehicleinspection')->insertGetId(
+				array('date' =>$date , 
+				'truck' =>$truck,
+				'trailer'=>$trailer, 
+				'equipment'=>$equipment , 
+				'startingMileage'=>$startingMileage ,
+				'endingMileage'=> $endingMileage, 
+				'engine' =>$engine,
+				'clutch' =>$clutch, 
+				'transmission'=> $transmission,
+				'steeringMechanism'=> $steeringMechanism,
+				'horn' =>$horn,
+				'rearMirrors' =>$rearMirrors,
+				'lightsAndReflectors' =>$lightsAndReflectors,
+				'windshieldWipers'=> $windshieldWipers,
+				'parkingBreak' =>$parkingBreak, 
+				'serviceBreaks'=> $serviceBreaks,
+				'tires'=> $tires,
+				'wheelsRims'=> $wheelsRims,
+				'emergencyEquipment'=>$emergencyEquipment,
+				'notes'=> $notes,
+				'safeToDrive?'=> $safeToDrive,
+				'driverResponsibility'=>$driverResponsibility ,
+				'name'=> $name), 
+				'idforms_vehicleinspection');
+
+
+    		$forms = Form::paginate(20);
+        	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+	public function create_form(Request $request)
+>>>>>>> d9cbb4661b1c5b1d0a153b11943966efb672b484
 	{
 		$org_id = Auth::user()->org_id;
 		$organization = Organization::find($org_id);
@@ -114,7 +390,13 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+<<<<<<< HEAD
 	public function edit_form(Request $request)
+=======
+
+
+	public function scheduled_forms_index(Request $request)
+>>>>>>> d9cbb4661b1c5b1d0a153b11943966efb672b484
 	{
 		$org_id = Auth::user()->org_id;
 		$organization = Organization::find($org_id);

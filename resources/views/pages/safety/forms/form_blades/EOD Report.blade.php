@@ -22,40 +22,44 @@
                         <h1 class="text-center">
                             EOD Report
                         </h1>
-                        <form>
+                        {!! Form::open(array('route' => 'safety.forms.submit_eod', 'method' => 'POST', 'files' => 'true'))!!}
+                            {{-- {{method_field('PUT') }}  
+                             @csrf  --}}
+                        <form method="post">
+                        {{ csrf_field() }}
                             <div class="mb-3">
                               <label for="dateLabel" class="form-label">Date</label>
-                              <input type="date" class="form-control" id="dateLabel" required>
+                              <input name="date" type="date" class="form-control" id="dateLabel" required>
                             </div>
                             <div class="mb-3">
                               <label for="jobsiteClean" class="form-label">Is jobsite clean?</label>
                               <br>
-                              <select class="form-select" required>
+                              <select name="cleanJobsite" class="form-select" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                  <option value="1">No</option>
-                                  <option value="2">Yes</option>
+                                  <option value="no">No</option>
+                                  <option value="yes">Yes</option>
                               </select>
                             </div>
                             <div class="mb-3">
                                 <label for="materials" class="form-label">Are all loose materials secured?</label>
                                 <br>
-                                <select class="form-select" required>
+                                <select name="looseMaterials" class="form-select" required>
                                     <option style="display: none;">-- Select your answer --</option>
-                                    <option value="1">No</option>
-                                    <option value="2">Yes</option>
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="tasks" class="form-label">What tasks were completed today?</label>
-                                <textarea class="form-control" id="textarea" rows="3" required></textarea>
+                                <textarea name="completedTasks" class="form-control" id="textarea" rows="3" required></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="parts" class="form-label">Do you need parts to be ordered?</label>
-                                <textarea class="form-control" id="textarea" rows="3" required></textarea>
+                                <textarea name="partsToBeOrdered" class="form-control" id="textarea" rows="3" required></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="notes" class="form-label">Notes:</label>
-                                <textarea class="form-control" id="textarea" rows="3" required></textarea>
+                                <textarea name="notes" class="form-control" id="textarea" rows="3" required></textarea>
                             </div>
                             <div class="row">
                                 <div class="col text-center">
@@ -69,4 +73,15 @@
         </div>
     </div>
 </div>
+
+<?php 
+
+function pre_r ( $array ) {
+    echo '<pre>';
+    print_r($array);
+    echo '<pre>';
+}
+
+?>
+
 @endsection
