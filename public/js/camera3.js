@@ -130,17 +130,10 @@
 			    error: function(xhr, textStatus, errorThrown) {
           			// Some error occured.
           			console.log('Error: ', xhr);
-          			console.log('Error: ', text_status);
+          			//console.log('Error: ', text_status);
           			console.log('Error: ', errorThrown);
-          			imageURLInput.value = 'An error occured.';
         		}
 			});
-		},
-		download: function() {
-			var that = this;
-			var options = {
-				url: '../../app/download_csv.php'
-			};
 		},
     	saveDataUrlToImage: function (type) {
       		var that = this;
