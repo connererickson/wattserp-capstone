@@ -22,7 +22,6 @@ function add_to_history(int $whichForm, int $idforms_foreignKey)
 	// ADD USER TO EACH TABLE
 	$user = Auth::user()->id;
 
-
 	DB::table('form_history')->insertGetId(array('datetime'=>$date, 'userID'=>$user, 'whichForm'=>$whichForm, 'form_entry'=>$idforms_foreignKey), 'idform_history');
 	return;
 }
@@ -438,9 +437,13 @@ class FormsController extends Controller
 
 
 
-			//$history = DB::select()
+			$history = DB::table('form_history')->
+			join('users', 'form_history.userID', '=', 'users.id')->
+			join('forms', 'form_history.whichForm', '=', 'forms.id')->
+			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime')->
+			orderBy('datetime', 'desc')->get();
 
-    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','org_dir'));
+    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','history','org_dir'));
 			return $view;
     	}
 		else{
