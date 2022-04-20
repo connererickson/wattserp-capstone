@@ -22,6 +22,7 @@ function add_to_history(int $whichForm, int $idforms_foreignKey)
 	// ADD USER TO EACH TABLE
 	$user = Auth::user()->id;
 
+	DB::table('form_notifications')->where([['user_id', '=', $user], ['form_id', '=', $whichForm]])->delete();
 	DB::table('form_history')->insertGetId(array('datetime'=>$date, 'userID'=>$user, 'whichForm'=>$whichForm, 'form_entry'=>$idforms_foreignKey), 'idform_history');
 	return;
 }
