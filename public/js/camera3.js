@@ -55,9 +55,6 @@
     		  $('#clock_out').hide();
 	          that.status();
 	        };
-			this.downloadBtn.onclick = function () {
-				that.download();
-			}
 		},
 		handleSuccess: function (stream) {
   			var videoTracks = stream.getVideoTracks();
