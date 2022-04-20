@@ -30,43 +30,43 @@
                     {{ csrf_field() }}
                         <div class="mb-3">
                         <label for="taskLabel" class="form-label">Task:</label>
-                        <input name="task" type="text" class="form-control" id="taskLabel" required>
+                        <input name="task" type="text" class="form-control" id="taskLabel" value='<?php if(isset($form_data)) echo $form_data[0]->task; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="projectLabel" class="form-label">Project:</label>
-                            <input name="project" type="text" class="form-control" id="projectLabel" required>
+                            <input name="project" type="text" class="form-control" id="projectLabel" value='<?php if(isset($form_data)) echo $form_data[0]->project; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="managerLabel" class="form-label">Project Manager:</label>
-                            <input name="projectManager" type="text" class="form-control" id="managerLabel" required>
+                            <input name="projectManager" type="text" class="form-control" id="managerLabel" value='<?php if(isset($form_data)) echo $form_data[0]->projectManager; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="dateLabel" class="form-label">Date</label>
-                            <input name="date" type="date" class="form-control" id="dateLabel" required>
+                            <input name="date" type="date" class="form-control" id="dateLabel" value='<?php if(isset($form_data)) echo $form_data[0]->date; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="addressLabel" class="form-label">Project Address:</label>
-                            <input name="projectAddress" type="text" class="form-control" id="addressLabel" required>
+                            <input name="projectAddress" type="text" class="form-control" id="addressLabel" value='<?php if(isset($form_data)) echo $form_data[0]->projectAddress; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="leadLabel" class="form-label">Lead:</label>
-                            <input name="lead" type="text" class="form-control" id="leadLabel" required>
+                            <input name="lead" type="text" class="form-control" id="leadLabel" value='<?php if(isset($form_data)) echo $form_data[0]->lead; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="crewAssignLabel" class="form-label">Crew Assigned:</label>
-                            <input name="crewAssigned" type="text" class="form-control" id="crewAssignLabel" required>
+                            <input name="crewAssigned" type="text" class="form-control" id="crewAssignLabel" value='<?php if(isset($form_data)) echo $form_data[0]->crewAssigned; ?>' required>
                         </div>
                         <div class="mb-3">
                             <label for="tasks" class="form-label">Break Tasks Into Steps:</label>
-                            <textarea name="taskStepsBreakdown" class="form-control" id="textarea" rows="3" required></textarea>
+                            <textarea name="taskStepsBreakdown" class="form-control" id="textarea" rows="3" required><?php if(isset($form_data)) echo $form_data[0]->taskStepsBreakdown; ?> </textarea>
                         </div>
                         <div class="mb-3">
                         <label for="q1" class="form-label">Can any body part get caught in, struckby, or caught between objects?</label>
                         <br>
                         <select name="bodyStuck" class="form-control" required>
                             <option style="display: none;">-- Select your answer --</option>
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
+                            <option value="no" <?php if(isset($form_data) && strcmp($form_data[0]->{'bodyStuck?'},"no")==0) echo 'selected';?> >No</option>
+                            <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'bodyStuck?'},"yes")==0) echo 'selected';?> >Yes</option>
                         </select>
                         </div>
                         <div class="mb-3">
@@ -74,8 +74,8 @@
                             <br>
                             <select name="sharpObjects" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no" <?php if(isset($form_data) && strcmp($form_data[0]->{'sharpObjects?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'sharpObjects?'},"yes")==0) echo 'selected';?> >Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -83,8 +83,8 @@
                             <br>
                             <select name="strain" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no" <?php if(isset($form_data) && strcmp($form_data[0]->{'strain?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'strain?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -92,8 +92,8 @@
                             <br>
                             <select name="harmedTools" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'harmedTools?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'harmedTools?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -101,8 +101,8 @@
                             <br>
                             <select name="slipping" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'slipping?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'slipping?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -110,8 +110,8 @@
                             <br>
                             <select name="heavyEquipment" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'heavyEquipment?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'heavyEquipment?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -119,8 +119,8 @@
                             <br>
                             <select name="flammableExplosive" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'flammableExplosive?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'flammableExplosive?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -128,8 +128,8 @@
                             <br>
                             <select name="fallingObjects" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'fallingObjects?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'fallingObjects?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -137,8 +137,8 @@
                             <br>
                             <select name="weatherSafety" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'weatherSafety?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'weatherSafety?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -146,27 +146,29 @@
                             <br>
                             <select name="acidContact" class="form-control" required>
                                 <option style="display: none;">-- Select your answer --</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="no"  <?php if(isset($form_data) && strcmp($form_data[0]->{'acidContact?'},"no")==0) echo 'selected';?>>No</option>
+                                <option value="yes" <?php if(isset($form_data) && strcmp($form_data[0]->{'acidContact?'},"yes")==0) echo 'selected';?>>Yes</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="hazardsTextArea" class="form-label">Hazards Associated With Steps:</label>
-                            <textarea name="hazardsWithSteps" class="form-control" id="textarea" rows="3" required></textarea>
+                            <textarea name="hazardsWithSteps" class="form-control" id="textarea" rows="3" required><?php if(isset($form_data)) echo $form_data[0]->hazardsWithSteps; ?></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="safePPE" class="form-label">Safe Work Procedures/PPE:</label>
-                            <textarea name="safeWorkProcedures" class="form-control" id="textarea" rows="3" required></textarea>
+                            <textarea name="safeWorkProcedures" class="form-control" id="textarea" rows="3" required><?php if(isset($form_data)) echo $form_data[0]->safeWorkProcedures; ?></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="nameLabel" class="form-label">Name:</label>
-                            <input name="name" type="text" class="form-control" id="nameLabel" required>
+                            <input name="name" type="text" class="form-control" id="nameLabel" value='<?php if(isset($form_data)) echo $form_data[0]->name; ?>' required>
                         </div>
+                        @if(!isset($form_data))
                         <div class="row">
                             <div class="col text-center">
                                 <button type="submit" class="btn btn-primary w-25 text-light">Submit</button>
                             </div>
                         </div>
+                        @endif
                     </form>
                 </div>
                 </div>
