@@ -13,7 +13,36 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <ul class='page_menu'>
+                                <li 
+                                    <?php if ($tab == 'overview'){
+                                        echo "class='current_tab'";
+                                    }?>
+                                    ><a href="{{ route('safety.forms') }}">Overview</a>
+                                </li>
+                                <li 
+                                    <?php if ($tab == 'manage_forms'){
+                                        echo "class='current_tab'";
+                                    }?>
+                                    ><a href="{{ route('safety.forms.forms_index') }}">Manage Forms</a>
+                                </li>
+                                <li 
+                                    <?php if ($tab == 'schedule_forms'){
+                                        echo "class='current_tab'";
+                                    }?>
+                                    ><a href="{{ route('safety.forms.scheduled_forms_index') }}">Form Scheduling</a>
+                                </li>
+                                <li 
+                                    <?php if ($tab == 'form_history'){
+                                        echo "class='current_tab'";
+                                    }?>
+                                    ><a href="{{ route('safety.forms.form_history_index') }}">Form History</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <div class="row" id='forms_table'>
                         <div class="col-md-12">

@@ -457,6 +457,8 @@ class FormsController extends Controller
 				break;
 		}
 
+		
+
 		//Get all orgs for the switching dropdown
 		$all_orgs = Organization::all();
 
@@ -495,7 +497,7 @@ class FormsController extends Controller
 			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime', 'form_history.form_entry as form_entry')->
 			orderBy('datetime', 'desc')->get();
 
-    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','history','org_dir'));
+    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History', 'tab' => 'form_history'))->with(compact('all_orgs','history','org_dir'));
 			return $view;
     	}
 		else{
