@@ -14,6 +14,7 @@
 	    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/messi.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/fonts.css') }}" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	    <script src="{{ URL::asset('js/app.js') }}"></script>
 	    <link href="{{ URL::asset('css/fontawesome.min.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/all.min.css') }}" rel="stylesheet">
@@ -41,7 +42,7 @@
 	    <script src="{{ URL::asset('/js/custom.js') }}"></script>
 	    <script src="{{ URL::asset('/js/ajax_functions.js' ) }}"></script>
 	    <script src="{{ URL::asset('/js/draggie.js') }}"></script>
-	    <script src="{{ URL::asset('/js/audits.js') }}"></script>
+	    <script src="{{ URL::asset('/js/forms.js') }}"></script>
 	    <script type='text/javascript'>
 	    	$('.phone').text(function(i, text) {
 			    return text.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');

@@ -9,7 +9,7 @@
 			<?php
 			if ($modules_data){
 				$module_id = $installed_module['id'];
-				foreach($modules_data[$module_id] as $key => $task){
+				foreach($modules_data[$module_id] as $key => $task) {
 					if(is_array($task) && !empty($task)){
 						switch($key){
 							case 'training_courses' :	
@@ -19,6 +19,13 @@
 									<?php
 								}
 								break;
+							
+							case 'forms' :
+								foreach($task as $a_task) {
+									?>
+									<p>Complete <a href="{{ route('safety.forms.edit_form', $a_task->form_name)}}">{{$a_task->form_name}}</a></p>
+									<?php
+								}
 							default :
 								break;
 						}
