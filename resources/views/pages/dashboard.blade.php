@@ -8,7 +8,7 @@
     	<h1 class="offcanvas-title">Time Clock</h1>
     	<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
 	</div>
-	<div class="offcanvas-body">
+	<div class="offcanvas-body text-center">
     	<!--<p>Some text lorem ipsum.</p>
     	<p>Some text lorem ipsum.</p>
     	<button class="btn btn-secondary" type="button">A Button</button>-->
@@ -21,14 +21,22 @@
 		</div>
 		<div id='id_entry'>
 			<form id='clock_form' action='' method='post'>
-				<span>ID: </span><input type='text' class='text_input' name='emp_id' />
+				<span>Employee ID: </span><input type='text' class='form-control' name='emp_id' />
 				<br />
+<<<<<<< HEAD
 				<span>Note: </span><input type='text' class='text_input' name='note' />
 				<br />
 				<input id='clock_in' type='button' class='button' value='Clock In' />
 				<input id='clock_out' type='button' class='button' value='Clock Out' />
 				<input id='status' type='button' class='button' value='Status' />
 				<a href="/timeclock-csv" class="btn btn-primary">Export as CSV</a>
+=======
+				<span>Note: </span><input type='text' class='form-control' name='note' />
+				<br />
+				<input id='clock_in' type='button' class='btn btn-primary text-light' value='Clock In' />
+				<input id='clock_out' type='button' class='btn btn-primary text-light' value='Clock Out' />
+				<input id='status' type='button' class='btn btn-primary text-light' value='Status' />
+>>>>>>> e7685adc0ef31fc406b2d733fa5b857a6bbe17b3
 			</form>
 		</div>
 	</div>

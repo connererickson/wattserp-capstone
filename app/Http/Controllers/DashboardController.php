@@ -98,6 +98,9 @@ class DashboardController extends Controller
 								->join('employees', 'employees.id', '=', 'training_courses_employees.employee_id')
 								->where([['employees.user_id', '=', $user_id],['training_courses_employees.completed', '=', 0]])->get()->toArray();
 					$modules_data[6]['training_courses'] = $my_training;
+
+					$my_forms = DB::table('form_notifications')->select('form_id', 'form_name')->where('user_id', '=', $user_id)->get()->toArray();
+					$modules_data[6]['forms'] = $my_forms;
 					break;
 				case 7 :
 					$modules_data[7] = array(1);

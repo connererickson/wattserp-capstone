@@ -140,6 +140,7 @@ Route::group(['prefix' => 'pages/safety/forms'], function () {
 	Route::patch('/update_scheduled_form', 'FormsController@update_scheduled_form')->name('safety.forms.update_scheduled_form');
 	Route::get('/form_results_index', 'FormsController@form_results_index')->name('safety.forms.form_history_index');
 	Route::get('/form_result', 'FormsController@form_result')->name('safety.forms.form_result');
+	Route::post('/form_notification', 'FormsController@form_notification')->name('safety.forms.form_notification');
 });
 
 Route::group(['prefix' => 'pages/leads'], function () {
