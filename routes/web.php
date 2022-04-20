@@ -132,6 +132,7 @@ Route::group(['prefix' => 'pages/safety/forms'], function () {
 	Route::post('/submit_inspection', 'FormsController@submit_inspection')->name('safety.forms.submit_inspection');
 	Route::post('/store_form', 'FormsController@store_form')->name('safety.forms.store_form');
 	Route::get('/edit_form/{name}', 'FormsController@edit_form')->name('safety.forms.edit_form');
+	Route::get('/view_form/{name}/form_entry/{form_entry}', 'FormsController@view_form')->name('safety.forms.view_form');
 	Route::patch('/update_form/{id}', 'FormsController@update_form')->name('safety.forms.update_form');
 	Route::get('/scheduled_forms_index', 'FormsController@scheduled_forms_index')->name('safety.forms.scheduled_forms_index');
 	Route::get('/schedule_form', 'FormsController@schedule_form')->name('safety.forms.schedule_form');

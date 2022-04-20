@@ -31,7 +31,7 @@
                                         @foreach($history as $cur_history)
                                             <tr>
                                                 <td> {{ $cur_history->name }} </td>
-                                                <td><a href="{{ route('safety.forms.edit_form', $cur_history->link)}}"> {{ $cur_history->link }} </td>
+                                                <td><a href="{{ route('safety.forms.view_form',['link'=>$cur_history->link, 'form_entry' => $cur_history->form_entry])}}"> {{ $cur_history->link }} </td>
                                                 <td> {{ $cur_history->datetime }} </td>
                                             </tr>
                                         @endforeach

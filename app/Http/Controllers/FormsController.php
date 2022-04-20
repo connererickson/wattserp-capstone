@@ -421,6 +421,58 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+
+	public function view_form(Request $request)
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		$form = 'pages/safety/forms/form_blades/' . $request->name;
+		$form_entry = $request->form_entry;
+
+
+
+		switch($request->name)
+		{
+			case 'Employee Write Up': //write up
+
+				$form_data = DB::table('forms_writeup')->where('idforms_writeup', '=', $form_entry)->get();
+
+				break;
+			case 'EOD Report': //eod report
+				$form_data = DB::table('forms_endofday')->where('idforms_endofday', '=', $form_entry)->get();
+
+				break;
+			case 'Service Calls Form':	// service calls form
+				$form_data = DB::table('forms_servicecalls')->where('idforms_servicecalls', '=', $form_entry)->get();
+
+				break;
+			case 'Task Hazard Analysis':	// task hazard analysis
+				$form_data = DB::table('forms_hazardanalysis')->where('idforms_hazardanalysis', '=', $form_entry)->get();
+
+				break;
+			case 'Vehicle Inspection': //vehicle inspection
+				$form_data = DB::table('forms_vehicleinspection')->where('idforms_vehicleinspection', '=', $form_entry)->get();
+
+				break;
+		}
+
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
+
+		$form_id = $request->id;
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+    		$view = View::make($form, array('title' => 'Edit Form'))->with(compact('all_orgs','org_dir', 'form_data'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
+
+
+
 	public function form_results_index(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
@@ -440,7 +492,7 @@ class FormsController extends Controller
 			$history = DB::table('form_history')->
 			join('users', 'form_history.userID', '=', 'users.id')->
 			join('forms', 'form_history.whichForm', '=', 'forms.id')->
-			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime')->
+			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime', 'form_history.form_entry as form_entry')->
 			orderBy('datetime', 'desc')->get();
 
     		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','history','org_dir'));
