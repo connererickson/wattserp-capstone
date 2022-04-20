@@ -495,10 +495,10 @@ class FormsController extends Controller
 			$history = DB::table('form_history')->
 			join('users', 'form_history.userID', '=', 'users.id')->
 			join('forms', 'form_history.whichForm', '=', 'forms.id')->
-			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime')->
+			select('users.name as name', 'forms.name as link', 'form_history.datetime as datetime', 'form_history.form_entry as form_entry')->
 			orderBy('datetime', 'desc')->get();
 
-    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','history','org_dir'));
+    		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History', 'tab' => 'form_history'))->with(compact('all_orgs','history','org_dir'));
 			return $view;
     	}
 		else{
