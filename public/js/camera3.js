@@ -114,7 +114,7 @@
 		status: function() {
       		$.ajax({
 			    type: "POST",
-			    url: "app/get_current_punch.php",
+			    url: "../../app/get_current_punch.php",
 			    data: { emp_id: $("input[name='emp_id']").val() },
 			    success: function(response){
 			    	if (response.status_code === 800){
@@ -171,7 +171,7 @@
 		         		$('#punch_result').html("<label>ALREADY PUNCHED IN!</label>");
 		          	}
 		          	if (response.status_code === 900){
-		         		$('#punch_result').html("<label>ALREADY PUNCHED OUT!</label>");
+		         		$('#punch_result').html("<label>NOT CLOCKED IN!</label>");
 		          	}
           			// Conversion successful.
           			if (response.status_code === 200) {
