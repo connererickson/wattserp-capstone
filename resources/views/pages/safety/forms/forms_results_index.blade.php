@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Safety</div>
+            <div class="card mt-3">
+                <div class="card-header">Form History</div>
 
-                <div class="panel-body">
+                    <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
