@@ -1,12 +1,12 @@
 @extends('layouts.form')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Permissions for {{ $organization->name }}</div>
-                <div class="panel-body">
+            <div class="card">
+                <div class="card-header">Permissions for {{ $organization->name }}</div>
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -50,7 +50,7 @@
 							?>
 	                		{!! Form::open([ 'route' => array('admin.permissions.update'), 'method' => 'post', 'id' => 'permissions_form' ]) !!}
 	                		{!! Form::hidden('url', url('pages/admin/permissions/update'), ['id'=>'url']) !!}
-	                		<table>
+	                		<table class="">
 	                			<thead>
 	                				<tr>
 	                					<th>Permissions</th>

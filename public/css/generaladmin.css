@@ -344,7 +344,10 @@ form .crm_checkbox{
     overflow-x: hidden;
 }
 .grid-item {
-	width: 50%;
+	/* width: 50% (original -- changed due to draggabilly not working) */
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #EEEEEE;
 	padding: 10px;
 	border: 3px solid #222222;
