@@ -14,7 +14,9 @@
 
   			//m = m < 10 ? '0'+m : m;
   			var strTime = "CURRENT TIME &nbsp&nbsp" + h + ':' + m + ":" + s + ' ' + ampm;
-        document.getElementById('time').innerHTML = strTime;
+        if(document.getElementById('time')) {
+            document.getElementById('time').innerHTML = strTime;
+        }
         t = setTimeout(function () {
             startTime()
         }, 500);

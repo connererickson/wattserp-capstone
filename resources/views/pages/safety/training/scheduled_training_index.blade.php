@@ -1,13 +1,13 @@
 @extends('layouts.training_course')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">Scheduled Training Courses</div>
+            <div class="card">
+                <div class="card-header">Scheduled Training Courses</div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -44,7 +44,7 @@
 	                		</ul>
 	                	</div>
 	                	<div class="col-md-7">
-	                	    <div class="row" id='schedule_training_form'>
+	                	    <div class="row justify-content-center" id='schedule_training_form'>
                                 <select name="employees" class="form-control" id='training_employees'>
                                     <option value="select">-- Select --</option>
                                     <?php foreach($employees as $employee){ ?>
@@ -57,7 +57,7 @@
                                         <option value="<?php echo $training_course->id; ?>"><?php echo $training_course->name; ?></option>
                                     <?php } ?>
                                 </select>
-                                <a id='schedule_training' class='crm_btn2 left_side padding-20' href="">Schedule Training</a>
+                                <a id='schedule_training' class='btn btn-primary text-light w-25 ms-3' href="">Schedule Training</a>
                             </div>
 	                    </div>
                     </div>
