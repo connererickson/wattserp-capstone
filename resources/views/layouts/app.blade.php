@@ -196,7 +196,6 @@
 	    	$('.phone').text(function(i, text) {
 			    return text.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
 			});
-			console.log("executed");
 	    </script>
 	    @if (null !== session('auth_result') && session('auth_result') == 0)
 		    <script type='text/javascript'>

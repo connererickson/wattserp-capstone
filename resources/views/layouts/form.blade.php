@@ -11,7 +11,7 @@
 	    <title>CRM</title>
 	
 	    <!-- Styles -->
-	    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
+		<link href="{{ URL::asset('css/app.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/messi.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/generaladmin.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/messi.css') }}" rel="stylesheet">
@@ -25,6 +25,7 @@
 	    <link href="{{ URL::asset('css/projects.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/directory.css') }}" rel="stylesheet">
 	    <link href="{{ URL::asset('css/Chart.css') }}" rel="stylesheet">
+
 	</head>
 	<body>
 	    <div id="app">
