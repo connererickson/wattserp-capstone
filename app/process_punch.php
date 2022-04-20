@@ -50,14 +50,53 @@
 
 	//clock in type = 1, clock out type = 0
 	if($type == 1) {
-		$query = 'INSERT INTO time_punches (id, emp_id, in_img, in_note, in_datetime) VALUES (?,?,?,?,?)'; 
-		$result = $db->prepare($query); $result->bind_param('issss', $rowcount, $id, $filename, $note, $datetime); 
-		$result->execute(); 
-		free($result);
+		// check if there is a clock_in with clock_out  = null
+		//if there is one with null dont add clock_in
+		//Tell user to clock_out first
+		// if id is varcahr use '".$id."' if int use '.$id.'
+		$sql = "SELECT * FROM time_punches where emp_id = '".$id."'";
+		$result=mysqli_query($db,$sql);
+		
+
+		
+		$i = mysqli_num_rows($result);
+		debug_to_console("$i");
+		
+		if($i == 0){
+			$query = 'INSERT INTO time_punches (id, emp_id, in_img, in_note, in_datetime) VALUES (?,?,?,?,?)'; 
+			$result = $db->prepare($query); $result->bind_param('issss', $rowcount, $id, $filename, $note, $datetime); 
+			$result->execute(); 
+			free($result);
+		}	
+		else{
+			$query = "UPDATE time_punches SET out_img = '$filename', out_note = '$note', out_datetime = '$datetime' WHERE emp_id = $id";
+			$result = $db->prepare($query); 
+			$result->execute(); 
+			free($result);
+
+			$query = 'INSERT INTO time_punches (id, emp_id, in_img, in_note, in_datetime) VALUES (?,?,?,?,?)'; 
+			$result = $db->prepare($query); $result->bind_param('issss', $rowcount, $id, $filename, $note, $datetime); 
+			$result->execute(); 
+			free($result);
+		}
+		
+		
+		// insert data into most recent row
+
+		//$query = 'INSERT INTO time_punches (id, emp_id, in_img, in_note, in_datetime) VALUES (?,?,?,?,?)'; 
+		//$result = $db->prepare($query); $result->bind_param('issss', $rowcount, $id, $filename, $note, $datetime); 
+		//$result->execute(); 
+		//free($result);
 	}
 
 	if($type == 0) {
-		//update table row with emp_id = $id with clockout info
+		// update table row with emp_id = $id with clockout info
+		// order by in_datetime descending
+		// check if id has clock_in with clock_out = null
+		$query = "UPDATE time_punches SET out_img = '$filename', out_note = '$note', out_datetime = '$datetime' WHERE emp_id = $id";
+		$result = $db->prepare($query); 
+		$result->execute(); 
+		free($result);	
 	}
 
 	/*if ($_POST['type'] == 0){
