@@ -140,6 +140,7 @@ Route::group(['prefix' => 'pages/safety/forms'], function () {
 	Route::patch('/update_scheduled_form', 'FormsController@update_scheduled_form')->name('safety.forms.update_scheduled_form');
 	Route::get('/form_results_index', 'FormsController@form_results_index')->name('safety.forms.form_history_index');
 	Route::get('/form_result', 'FormsController@form_result')->name('safety.forms.form_result');
+	Route::post('/form_notification', 'FormsController@form_notification')->name('safety.forms.form_notification');
 });
 
 Route::group(['prefix' => 'pages/leads'], function () {
@@ -324,10 +325,25 @@ Route::get('dashboard_modules/user_event')->name('dashboard_modules.user_event')
 Route::get('dashboard_modules/erp_updates')->name('dashboard_modules.erp_updates');
 Route::get('dashboard_modules/mashed_potatoes')->name('dashboard_modules.mashed_potatoes');
 
-//punch processing
-Route::post('process_clock_in', function(Request $request) {
-	$emp_id = $request['emp_id'];
-	return DB::table('time_punches')->where(id, 0)->update(array('emp_id' => $emp_id));
+//punch csv processing
+Route::get('/timeclock-csv', function(){
+
+    $table = time_punches::all();
+    $filename = "timeclock.csv";
+    $handle = fopen($filename, 'w+');
+    fputcsv($handle, array('Employee ID', 'Time In', 'In Note', 'Time Out', 'Out Note'));
+
+    foreach($table as $row) {
+        fputcsv($handle, array($row['emp_id'], $row['in_datetime'], $row['in_note'], $row['out_datetime'], $row['out_note']));
+    }
+
+    fclose($handle);
+
+    $headers = array(
+        'Content-Type' => 'text/csv',
+    );
+
+    return Response::download($filename, 'timeclock.csv', $headers);
 });
 
 //DEBUGGING

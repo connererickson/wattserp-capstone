@@ -49,6 +49,9 @@ class User extends Authenticatable
 	{
 		return $this->belongsToMany(DashboardModule::class, 'dashboardmodules_users');
 	}
+	public function getName() {
+		return $this->username;
+	}
 	
 	/**
 	* @param string|array $roles
