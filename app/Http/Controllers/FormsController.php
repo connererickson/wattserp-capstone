@@ -16,6 +16,17 @@ use View;
 use Validator;
 use DB;
 
+function add_to_history(int $whichForm, int $idforms_foreignKey)
+{
+	$date = now();//Carbon::parse($request->startFrom)->format('d-m-Y H:i:s');
+	// ADD USER TO EACH TABLE
+	$user = Auth::user()->id;
+
+
+	DB::table('form_history')->insertGetId(array('datetime'=>$date, 'userID'=>$user, 'whichForm'=>$whichForm, 'form_entry'=>$idforms_foreignKey), 'idform_history');
+	return;
+}
+
 class FormsController extends Controller
 {
     /**
@@ -27,6 +38,7 @@ class FormsController extends Controller
     {
         $this->middleware('auth');
     }
+
 
     /**
      * Show the application dashboard.
@@ -85,6 +97,7 @@ class FormsController extends Controller
 		//Get all orgs for the switching dropdown
 		$all_orgs = Organization::all();
 
+
 		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
     	if($auth_result){
 			//Get Our Request Data
@@ -97,7 +110,7 @@ class FormsController extends Controller
 
 			$submit_eod_result = DB::table('forms_endofday')->insertGetId(array('date' => $date, 'jobsiteClean' => $cleanJobsite, 'looseMaterialsScrewed' => $looseMaterials, 'tasksCompleted' => $completedTasks, 'partsToOrder' => $partsToBeOrdered, 'notes' => $notes), 'idforms_endofday');
 
-
+			add_to_history(3, $submit_eod_result);
     		$forms = Form::paginate(20);
         	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
 			return $view;
@@ -147,6 +160,7 @@ class FormsController extends Controller
 				'date'=>$date), 
 				'idforms_writeup');
 
+			add_to_history(2, $submit_hazardanalysis_result);
 
     		$forms = Form::paginate(20);
         	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
@@ -197,7 +211,7 @@ class FormsController extends Controller
 				'equipmentToOrder'=>$equipmentToOrder ), 
 				'idforms_endofday');
 
-
+				add_to_history(4, $submit_hazardanalysis_result);
     		$forms = Form::paginate(20);
         	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
 			return $view;
@@ -265,7 +279,7 @@ class FormsController extends Controller
 				'name'=> $name), 
 				'idforms_hazardanalysis');
 
-
+			add_to_history(5, $submit_hazardanalysis_result);
     		$forms = Form::paginate(20);
         	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
 			return $view;
@@ -311,6 +325,8 @@ class FormsController extends Controller
 			$driverResponsibility = $request->driverResponsibility;
 			$name = $request->name;
 
+			
+
 			$submit_hazardanalysis_result = DB::table('forms_vehicleinspection')->insertGetId(
 				array('date' =>$date , 
 				'truck' =>$truck,
@@ -337,8 +353,9 @@ class FormsController extends Controller
 				'name'=> $name), 
 				'idforms_vehicleinspection');
 
-
-    		$forms = Form::paginate(20);
+			add_to_history(6, $submit_hazardanalysis_result);
+    		
+			$forms = Form::paginate(20);
         	$view = View::make('pages/safety/forms/forms_index', array('title' => 'Manage Forms', 'tab' => 'manage_forms'))->with(compact('all_orgs', 'forms', 'org_dir'));
 			return $view;
     	}
@@ -346,6 +363,7 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
+
 
 	public function create_form(Request $request)
 	{
@@ -416,6 +434,13 @@ class FormsController extends Controller
 
 		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
     	if($auth_result){
+
+			//I Need to make a SQL Query
+
+
+
+			//$history = DB::select()
+
     		$view = View::make('pages/safety/forms/forms_results_index', array('title' => 'Forms History'))->with(compact('all_orgs','org_dir'));
 			return $view;
     	}
