@@ -28,8 +28,10 @@
 				<input id='clock_in' type='button' class='btn btn-primary text-light' value='Clock In' />
 				<input id='clock_out' type='button' class='btn btn-primary text-light' value='Clock Out' />
 				<input id='status' type='button' class='btn btn-primary text-light' value='Status' />
-				<a href="/timeclock-csv" class="btn btn-primary mt-1 text-light">Export as CSV</a>
 			</form>
+		</div>
+		<div id='punch_result'>
+			-
 		</div>
 	</div>
 </div>
