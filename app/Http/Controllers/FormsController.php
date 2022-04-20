@@ -75,10 +75,27 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
-<<<<<<< HEAD
 	public function scheduled_forms_index(Request $request)
-=======
+	{
+		$org_id = Auth::user()->org_id;
+		$organization = Organization::find($org_id);
+		$org_dir = $organization->directory;
+		$org_users = $organization->users;
+		$users = User::all();
+		
+		//Get all orgs for the switching dropdown
+		$all_orgs = Organization::all();
 
+		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
+    	if($auth_result){
+			$forms = Form::paginate(20);
+			$view = View::make('pages/safety/forms/scheduled_forms_index', array('title' => 'Form Scheduling', 'tab' => 'schedule_forms'))->with(compact('all_orgs', 'forms', 'org_dir', 'org_users', 'users'));
+			return $view;
+    	}
+		else{
+            return redirect()->route('dashboard')->with(compact('auth_result'));
+        }
+	}
 	public function submit_eod(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
@@ -349,29 +366,6 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
-
-	public function create_form(Request $request)
->>>>>>> d9cbb4661b1c5b1d0a153b11943966efb672b484
-	{
-		$org_id = Auth::user()->org_id;
-		$organization = Organization::find($org_id);
-		$org_dir = $organization->directory;
-		$org_users = $organization->users;
-		$users = User::all();
-		
-		//Get all orgs for the switching dropdown
-		$all_orgs = Organization::all();
-
-		$auth_result = $request->user()->hasPermission('create_edit_assign_audits');
-    	if($auth_result){
-			$forms = Form::paginate(20);
-			$view = View::make('pages/safety/forms/scheduled_forms_index', array('title' => 'Form Scheduling', 'tab' => 'schedule_forms'))->with(compact('all_orgs', 'forms', 'org_dir', 'org_users', 'users'));
-			return $view;
-    	}
-		else{
-            return redirect()->route('dashboard')->with(compact('auth_result'));
-        }
-	}
 	public function create_form(Request $request)
 	{
 		$org_id = Auth::user()->org_id;
@@ -390,13 +384,7 @@ class FormsController extends Controller
             return redirect()->route('dashboard')->with(compact('auth_result'));
         }
 	}
-<<<<<<< HEAD
 	public function edit_form(Request $request)
-=======
-
-
-	public function scheduled_forms_index(Request $request)
->>>>>>> d9cbb4661b1c5b1d0a153b11943966efb672b484
 	{
 		$org_id = Auth::user()->org_id;
 		$organization = Organization::find($org_id);
