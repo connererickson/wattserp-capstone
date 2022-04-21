@@ -41,7 +41,7 @@
 </button>
 
 <div class="container-fluid">
-	<div class="border border-primary border-2 rounded p-4 col-md-12 text-center">
+	<div class="rounded p-4 col-md-12 text-center">
 		<div class="mt-2">
 			<h2>Dashboard</h2>
 			<div>
