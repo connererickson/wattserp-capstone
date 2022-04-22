@@ -179,7 +179,7 @@
 										<p class="" id="part_stock" style="margin: auto 0;"></p>
 									</div>
 									<div class="col d-flex justify-content-start">
-										<button id="remove_stock_button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#RemoveStockModal" hidden>Remove Stock</button>
+										<button id="remove_stock_button" class="btn btn-primary btn-sm text-light" data-bs-toggle="modal" data-bs-target="#RemoveStockModal" hidden>Remove Stock</button>
 									</div>
 								</div>
 								<div id="low_stock_notification_div" class="form-check mt-1" hidden>

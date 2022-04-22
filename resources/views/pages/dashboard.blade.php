@@ -89,7 +89,7 @@
 							//var_dump($modules_data);
 							$filename = $installed_module['filename'];?>
 					
-							<div class="grid-item" data-item-id="{{ $counter }}" id='<?php echo $filename; ?>'>
+							<div class="grid-item my-4" data-item-id="{{ $counter }}" id='<?php echo $filename; ?>'>
 								@include('dashboard_modules.' . $filename)
 							</div>
 							<?php $counter++; ?>

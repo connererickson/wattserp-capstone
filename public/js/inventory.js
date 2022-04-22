@@ -324,7 +324,7 @@ $(document).ready(function(){
 					//Create Column for the Edit Price Button
 					var EditPriceColumn = document.createElement("td");
 					var EditPriceButton = document.createElement("button");
-					EditPriceButton.setAttribute("class", "btn btn-primary btn-xs");
+					EditPriceButton.setAttribute("class", "btn btn-primary btn-xs text-light");
 					EditPriceButton.innerHTML = "Edit Price";
 					EditPriceButton.setAttribute("data-bs-toggle", "modal");
 					EditPriceButton.setAttribute("data-bs-target", "#EditPriceModal");
@@ -343,7 +343,7 @@ $(document).ready(function(){
 					//Create Column for the Purchase Stock Button
 					var PurchaseStockColumn = document.createElement("td");
 					var PurchaseStockButton = document.createElement("button");
-					PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs");
+					PurchaseStockButton.setAttribute("class", "btn btn-primary btn-xs text-light");
 					PurchaseStockButton.innerHTML = "Purchase Stock";
 					PurchaseStockButton.setAttribute("data-bs-toggle", "modal");
 					PurchaseStockButton.setAttribute("data-bs-target", "#PurchaseStockModal");
